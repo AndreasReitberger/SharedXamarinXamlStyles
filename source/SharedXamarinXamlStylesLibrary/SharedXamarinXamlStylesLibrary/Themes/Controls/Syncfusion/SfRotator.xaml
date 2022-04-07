@@ -1,0 +1,18 @@
+﻿<?xml version="1.0" encoding="UTF-8" ?>
+<?xaml-comp compile="true" ?>
+<ResourceDictionary
+    xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    
+    xmlns:rotator="clr-namespace:Syncfusion.SfRotator.XForms;assembly=Syncfusion.SfRotator.XForms"
+    >
+    <!-- OPTIMIZED -->
+    <Style TargetType="rotator:SfRotator">
+        <!--<Setter Property="BackgroundColor" Value="{DynamicResource Transparent}"/>-->
+        <Setter Property="DotsBorderColor" Value="{DynamicResource Gray-200}"/>
+        <Setter Property="UnselectedDotColor" Value="{DynamicResource White}"/>
+        <Setter Property="SelectedDotColor" Value="{DynamicResource Pink}"/>
+        <Setter Property="DotPlacement" Value="Default"/>
+        <Setter Property="NavigationStripPosition" Value="Bottom"/>
+    </Style>
+</ResourceDictionary>

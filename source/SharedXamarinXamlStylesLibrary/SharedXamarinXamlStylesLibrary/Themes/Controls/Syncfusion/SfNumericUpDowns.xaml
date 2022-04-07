@@ -1,0 +1,48 @@
+﻿<?xml version="1.0" encoding="UTF-8" ?>
+<?xaml-comp compile="true" ?>
+<ResourceDictionary
+    xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    
+    xmlns:numeric="clr-namespace:Syncfusion.SfNumericUpDown.XForms;assembly=Syncfusion.SfNumericUpDown.XForms"  
+    >
+    <!-- OPTIMIZED -->
+    <ResourceDictionary.MergedDictionaries>
+        <!--<ResourceDictionary Source="/Themes/Icons.xaml" />-->
+        <ResourceDictionary Source="/Themes/Fonts.xaml" />
+    </ResourceDictionary.MergedDictionaries>
+
+    <!-- Common style for numeric up down input -->
+    <Style x:Key="NumericUpDownDefaultStyle" TargetType="numeric:SfNumericUpDown">
+        <Setter Property="TextColor" Value="{DynamicResource Gray-900}" />
+        <!--<Setter Property="BackgroundColor" Value="{DynamicResource Transparent}" />-->
+        <Setter Property="FontFamily" Value="{StaticResource Montserrat-Regular}" />
+        <Setter Property="FontSize" Value="{OnIdiom Desktop=20, Tablet=20, Phone=14, Default=14}"/>
+        <Setter Property="FontAttribute" Value="Bold"/>
+        <Setter Property="BorderColor" Value="{OnPlatform Android={DynamicResource Gray-900}, Default={DynamicResource Gray-100}}" />
+        <Setter Property="TextAlignment" Value="Start"/>
+        <Setter Property="UpDownButtonColor" Value="{DynamicResource PrimaryColor}"/>
+        <Setter Property="HeightRequest" Value="{OnPlatform Default=50, Android=50, iOS=40}"/>
+        <Setter Property="DecrementButtonSettings">
+            <Setter.Value>
+                <numeric:UpDownButtonSettings 
+                    ButtonFontColor="{DynamicResource PrimaryColor}"
+                    />
+            </Setter.Value>
+        </Setter>
+        <Setter Property="IncrementButtonSettings">
+            <Setter.Value>
+                <numeric:UpDownButtonSettings 
+                    ButtonFontColor="{DynamicResource PrimaryColor}"
+                    />
+            </Setter.Value>
+        </Setter>
+        <Style.Triggers>
+            <Trigger Property="IsEnabled" Value="False" TargetType="numeric:SfNumericUpDown">
+                <Setter Property="BackgroundColor" Value="{DynamicResource Gray-100}" />
+            </Trigger>
+        </Style.Triggers>
+    </Style>
+
+    <Style TargetType="numeric:SfNumericUpDown" BasedOn="{StaticResource NumericUpDownDefaultStyle}"/>
+</ResourceDictionary>

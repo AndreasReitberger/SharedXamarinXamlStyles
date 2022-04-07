@@ -1,0 +1,39 @@
+﻿<?xml version="1.0" encoding="UTF-8" ?>
+<?xaml-comp compile="true" ?>
+<ResourceDictionary
+    xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    
+    xmlns:badge ="clr-namespace:Syncfusion.XForms.BadgeView;assembly=Syncfusion.SfBadgeView.XForms"     
+    >
+    <!-- OPTIMIZED -->
+    <Style TargetType="badge:SfBadgeView">
+        <Setter Property="BadgeSettings">
+            <Setter.Value>
+                <badge:BadgeSetting
+                    CornerRadius="4"
+                    BadgePosition="BottomRight"
+                    Offset="12,-20"
+                    BadgeType="None"
+                    BackgroundColor="{DynamicResource PrimaryColor}"
+                    TextColor="{DynamicResource White}"
+                    />
+            </Setter.Value>
+        </Setter>
+    </Style>
+
+    <Style x:Key="HyperlinkBadgedViewStyle" TargetType="badge:SfBadgeView" BasedOn="{StaticResource DefaultBadgedViewStyle}">
+        <Setter Property="BadgeSettings">
+            <Setter.Value>
+                <badge:BadgeSetting
+                    CornerRadius="4"
+                    BadgePosition="BottomRight"
+                    Offset="12,-20"
+                    BadgeType="None"
+                    BackgroundColor="{DynamicResource HyperLink}"
+                    TextColor="{DynamicResource White}"
+                    />
+            </Setter.Value>
+        </Setter>
+    </Style>
+</ResourceDictionary>

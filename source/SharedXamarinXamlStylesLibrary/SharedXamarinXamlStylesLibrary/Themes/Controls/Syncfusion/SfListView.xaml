@@ -1,0 +1,28 @@
+﻿<?xml version="1.0" encoding="UTF-8" ?>
+<?xaml-comp compile="true" ?>
+<ResourceDictionary
+    xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    
+    xmlns:listView="clr-namespace:Syncfusion.ListView.XForms;assembly=Syncfusion.SfListView.XForms"
+    >
+    <!-- OPTIMIZED -->
+    <Style x:Key="DefaultListViewStyle" TargetType="listView:SfListView">
+        <Setter Property="SelectionBackgroundColor" Value="{DynamicResource Gray-200}" />
+        <!--<Setter Property="BackgroundColor" Value="{DynamicResource Transparent}" />-->
+        <Setter Property="AllowSwiping" Value="True" />
+        <!--
+        <Setter Property="ListViewCachingStrategy" Value="{OnPlatform Android=RecycleTemplate, Default=CreateNewTemplate}" />
+        -->
+        <!--
+        <Setter Property="ItemsSourceChangeCachingStrategy" Value="RecycleItems" />
+        -->
+        <Style.Triggers>
+            <Trigger Property="IsEnabled" Value="False" TargetType="listView:SfListView">
+                <Setter Property="BackgroundColor" Value="{DynamicResource Gray-600}" />
+            </Trigger>
+        </Style.Triggers>
+    </Style>
+
+    <!--<Style TargetType="listView:SfListView" BasedOn="{StaticResource DefaultListViewStyle}"/>-->
+</ResourceDictionary>

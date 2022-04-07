@@ -1,0 +1,331 @@
+﻿<?xml version="1.0" encoding="UTF-8" ?>
+<?xaml-comp compile="true" ?>
+<ResourceDictionary
+    xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    
+    xmlns:buttons="clr-namespace:Syncfusion.XForms.Buttons;assembly=Syncfusion.Buttons.XForms"     
+    xmlns:gradient="clr-namespace:Syncfusion.XForms.Graphics;assembly=Syncfusion.Core.XForms"
+    xmlns:graphics="clr-namespace:Syncfusion.XForms.Graphics;assembly=Syncfusion.Core.XForms"
+    >
+    <!-- OPTIMIZED -->
+    <ResourceDictionary.MergedDictionaries>
+        <ResourceDictionary Source="/Themes/Icons.xaml" />
+        <ResourceDictionary Source="/Themes/Fonts.xaml" />
+    </ResourceDictionary.MergedDictionaries>
+
+    <!-- DEFAULT BUTTON STYLE -->
+    <Style x:Key="DefaultButtonStyle" TargetType="buttons:SfButton">
+        <Setter Property="FontFamily" Value="{StaticResource Montserrat-SemiBold}" />
+        <Setter Property="TextColor" Value="{DynamicResource Gray-700}" />
+        <Setter Property="BackgroundColor" Value="{DynamicResource Gray-White}" />
+        <Setter Property="FontSize" Value="{OnIdiom Tablet=20, Default=16}" />
+        <Style.Triggers>
+            <Trigger Property="IsEnabled" Value="False" TargetType="buttons:SfButton">
+                <Setter Property="TextColor" Value="{DynamicResource Gray-800}" />
+                <Setter Property="BackgroundGradient" Value="{x:Null}"/>
+            </Trigger>
+        </Style.Triggers>
+    </Style>
+
+    <Style TargetType="buttons:SfButton" BasedOn="{StaticResource DefaultButtonStyle}"/>
+
+    <!-- CHECKBOX -->
+    <!-- DEFAULT CEHCKBOX STYLE -->
+    <Style x:Key="DefaultCheckBoxStyle" TargetType="buttons:SfCheckBox">
+        <Setter Property="CheckedColor" Value="{DynamicResource PrimaryColor}"/>
+        <Setter Property="BackgroundColor" Value="{DynamicResource Transparent}"/>
+        <Setter Property="UncheckedColor" Value="{DynamicResource Gray-600}"/>
+        <Setter Property="Visual" Value="Default"/>
+        <Setter Property="VisualStateManager.VisualStateGroups">
+            <VisualStateGroupList>
+                <VisualStateGroup x:Name="CommonStates">
+                    <VisualState x:Name="Checked">
+                        <VisualState.Setters>
+                            <Setter Property="CheckedColor" Value="{DynamicResource PrimaryColor}"/>
+                        </VisualState.Setters>
+                    </VisualState>
+                    <VisualState x:Name="Unchecked">
+                        <VisualState.Setters>
+                            <Setter Property="UncheckedColor" Value="{DynamicResource Gray-600}"/>
+                        </VisualState.Setters>
+                    </VisualState>
+                    <VisualState x:Name="Disabled">
+                        <VisualState.Setters>
+                            <Setter Property="CheckedColor" Value="{DynamicResource PrimaryColor}" />
+                            <Setter Property="UncheckedColor" Value="{DynamicResource PrimaryColor}"/>
+                        </VisualState.Setters>
+                    </VisualState>
+                </VisualStateGroup>
+            </VisualStateGroupList>
+        </Setter>
+        <Style.Triggers>
+            <Trigger Property="IsEnabled" Value="False" TargetType="buttons:SfCheckBox">
+                <Setter Property="CheckedColor" Value="{DynamicResource PrimaryDarkColor}" />
+            </Trigger>
+        </Style.Triggers>
+    </Style>
+
+    <!--  Common style for icon buttons  -->
+    <Style x:Key="IconButtonStyle" TargetType="buttons:SfButton"
+           BasedOn="{StaticResource DefaultButtonStyle}">
+        <Setter Property="TextColor" Value="{DynamicResource Gray-600}" />
+        <Setter Property="BackgroundColor" Value="{DynamicResource Transparent}" />
+        <Setter Property="FontFamily" Value="{StaticResource FontIcons}" />
+        <Setter Property="FontSize" Value="{OnIdiom Desktop=24, Tablet=22, Phone=18, Default=18}" />
+        <Setter Property="HorizontalTextAlignment" Value="Center" />
+        <Setter Property="VerticalTextAlignment" Value="Center" />
+        <Setter Property="HeightRequest" Value="{OnIdiom Desktop=60, Tablet=60, Default=40}" />
+        <Setter Property="WidthRequest" Value="{OnIdiom Desktop=60, Tablet=60, Default=40}" />
+    </Style>
+
+    <Style x:Key="MaterialDesignIconButtonStyle" TargetType="buttons:SfButton" BasedOn="{StaticResource IconButtonStyle}">
+        <Setter Property="FontFamily" Value="{StaticResource MaterialFontFamily}" />
+        <Setter Property="FontSize" Value="{OnIdiom Desktop=32, Tablet=26, Default=22}" />
+    </Style>
+
+    <Style x:Key="LinkButton" TargetType="buttons:SfButton" BasedOn="{StaticResource DefaultButtonStyle}">
+        <Setter Property="TextColor" Value="{DynamicResource HyperLink}" />
+        <Setter Property="BackgroundColor" Value="Transparent" />
+    </Style>
+
+    <!--  Common style for completely round buttons  -->
+    <Style
+        x:Key="RoundIconGradientButtonStyle"
+        BasedOn="{StaticResource IconButtonStyle}"
+        TargetType="buttons:SfButton">
+        <Setter Property="BorderColor" Value="{DynamicResource Gray-300}" />
+        <Setter Property="BorderWidth" Value="1" />
+        <Setter Property="CornerRadius" Value="22" />
+        <Setter Property="WidthRequest" Value="44" />
+        <Setter Property="HeightRequest" Value="44" />
+        <Setter Property="TextColor" Value="{DynamicResource White}" />
+        <Setter Property="BackgroundColor" Value="{DynamicResource Gray-100}" />
+        <Setter Property="BackgroundGradient">
+            <Setter.Value>
+                <graphics:SfLinearGradientBrush>
+                    <graphics:SfLinearGradientBrush.GradientStops>
+                        <graphics:SfGradientStop Offset="0" Color="{DynamicResource GradientStart}" />
+                        <graphics:SfGradientStop Offset="1" Color="{DynamicResource GradientEnd}" />
+                    </graphics:SfLinearGradientBrush.GradientStops>
+                </graphics:SfLinearGradientBrush>
+            </Setter.Value>
+        </Setter>
+    </Style>
+
+    <!--  Common style for long buttons with rounded corners  -->
+    <Style x:Key="RoundedLongButtonStyle" TargetType="buttons:SfButton">
+        <Setter Property="Margin" Value="20" />
+        <Setter Property="TextColor" Value="{DynamicResource White}" />
+        <Setter Property="FontFamily" Value="{StaticResource Montserrat-SemiBold}" />
+        <Setter Property="FontSize" Value="{OnIdiom Desktop=18, Tablet=18, Phone=14, Default=14}" />
+        <Setter Property="FontAttributes" Value="Bold" />
+        <Setter Property="HeightRequest" Value="{OnIdiom Desktop=60, Tablet=60, Phone=45, Default=45}" />
+        <Setter Property="CornerRadius" Value="{OnIdiom Desktop=30, Tablet=30, Phone=20, Default=20}" />
+        <Setter Property="WidthRequest" Value="{OnIdiom Desktop=300, Tablet=300, Phone=250, Default=250}" />
+
+        <Setter Property="BorderWidth" Value="0" />
+        <Setter Property="VerticalTextAlignment" Value="Center" />
+        <Setter Property="BackgroundGradient">
+            <Setter.Value>
+                <gradient:SfLinearGradientBrush StartPoint="0, 0" EndPoint="1, 1">
+                    <gradient:SfLinearGradientBrush.GradientStops>
+                        <gradient:SfGradientStop Offset="0" Color="{DynamicResource GradientStart}" />
+                        <gradient:SfGradientStop Offset="1" Color="{DynamicResource GradientEnd}" />
+                    </gradient:SfLinearGradientBrush.GradientStops>
+                </gradient:SfLinearGradientBrush>
+            </Setter.Value>
+        </Setter>
+
+        <Style.Triggers>
+            <Trigger Property="IsEnabled" Value="False" TargetType="buttons:SfButton">
+                <Setter Property="BackgroundColor" Value="{DynamicResource Gray-200}" />
+                <Setter Property="TextColor" Value="{DynamicResource Gray-800}" />
+                <Setter Property="BackgroundGradient" Value="{x:Null}"/>
+            </Trigger>
+            <Trigger Property="IsEnabled" Value="True" TargetType="buttons:SfButton">
+                <Setter Property="TextColor" Value="{DynamicResource White}" />
+            </Trigger>
+        </Style.Triggers>
+    </Style>
+
+    <!-- unused in project -->
+    <Style TargetType="buttons:SfSwitch">
+        <Setter Property="AllowIndeterminateState" Value="False"/>
+        <Setter Property="HeightRequest" Value="28"/>
+        <!--
+        <Setter Property="VisualType" Value="Cupertino"/>
+        <Setter Property="VisualStateManager.VisualStateGroups">
+            <VisualStateGroupList>
+                <VisualStateGroup x:Name="CommonStates">
+                    <VisualState x:Name="On">
+                            <VisualState.Setters>
+                                <Setter Property="SwitchSettings">
+                                    <Setter.Value>
+                                        <buttons:CupertinoSwitchSettings
+                                            x:TypeArguments="buttons:OnState"
+                                            ThumbBorderColor="{DynamicResource Gray-200}"
+                                            ThumbColor="{DynamicResource Gray-White}"
+                                            TrackBorderColor="{DynamicResource Gray-200}"
+                                            TrackColor="{DynamicResource PrimaryColor}" />
+                                    </Setter.Value>
+                                </Setter>
+                            </VisualState.Setters>
+                        </VisualState>
+                    <VisualState x:Name="Off">
+                        <VisualState.Setters>
+                            <Setter Property="SwitchSettings">
+                                <Setter.Value>
+                                    <buttons:CupertinoSwitchSettings
+                                        x:TypeArguments="buttons:OffState"
+                                        ThumbBorderColor="{DynamicResource Gray-200}"
+                                        ThumbColor="{DynamicResource Gray-White}"
+                                        TrackBorderColor="{DynamicResource Gray-200}"
+                                        TrackColor="{DynamicResource Gray-200}" />
+                                </Setter.Value>
+                            </Setter>
+                        </VisualState.Setters>
+                    </VisualState>
+                </VisualStateGroup>
+            </VisualStateGroupList>
+        </Setter>
+        -->
+    </Style>
+
+
+    <!--Common button style-->
+    <Style x:Key="SetupButtonStyle" TargetType="buttons:SfButton" BasedOn="{StaticResource RoundedLongButtonStyle}">
+        <!--<Setter Property="HeightRequest" Value="40"/> -->
+        <Setter Property="BackgroundColor" Value="{DynamicResource Gray-White}"/>
+        <Setter Property="BackgroundGradient" Value="{x:Null}"/>
+        <Setter Property="TextColor" Value="{DynamicResource PrimaryColor}"/>
+    </Style>
+
+    <!--  Common style for swipe template content border control  -->
+    <Style x:Key="SwipeTemplateBorderStyle" TargetType="buttons:SfButton">
+        <Setter Property="HeightRequest" Value="32" />
+        <Setter Property="WidthRequest" Value="32" />
+        <Setter Property="BorderColor" Value="{DynamicResource Gray-White}" />
+        <Setter Property="BorderWidth" Value="0" />
+        <Setter Property="CornerRadius" Value="16" />
+        <Setter Property="BackgroundColor" Value="{DynamicResource Gray-White}" />
+    </Style>
+
+    <Style x:Key="SfSegmentedControlMaterialFontStyle" TargetType="buttons:SfSegmentedControl">
+        <Setter Property="DisplayMode" Value="ImageWithText"/>
+        <Setter Property="FontSize" Value="14" />
+        <Setter Property="FontFamily" Value="{StaticResource Montserrat-Bold}" />
+        <Setter Property="FontColor" Value="{DynamicResource Gray-900}" />
+        <Setter Property="SelectionTextColor" Value="{DynamicResource Gray-White}" />
+        <Setter Property="BackgroundColor" Value="{DynamicResource Transparent}" />
+        <Setter Property="BorderThickness" Value="0" />
+        <Setter Property="SegmentBackgroundColor" Value="{DynamicResource Gray-White}" />
+        <Setter Property="SegmentBorderColor" Value="{DynamicResource Gray-White}" />
+        <Setter Property="SegmentBorderThickness" Value="0" />
+        <Setter Property="SegmentCornerRadius" Value="8" />
+
+        <Setter Property="SegmentPadding" Value="16" />
+        <Setter Property="SelectionAnimationDuration" Value="0" />
+        <Setter Property="HorizontalOptions" Value="CenterAndExpand" />
+        <Setter Property="SelectionIndicatorSettings">
+            <Setter.Value>
+                <buttons:SelectionIndicatorSettings
+                    CornerRadius="8"
+                    StrokeThickness="0"
+                    Color="{DynamicResource PrimaryColor}" >
+                </buttons:SelectionIndicatorSettings>
+
+            </Setter.Value>
+        </Setter>
+
+    </Style>
+
+    <Style x:Key="DefaultSegmentControlStyle" TargetType="buttons:SfSegmentedControl">
+        <Setter Property="DisplayMode" Value="ImageWithText"/>
+        <Setter Property="FontSize" Value="{OnIdiom Tablet=18, Default=14}" />
+        <Setter Property="FontFamily" Value="{StaticResource Montserrat-Bold}" />
+        <Setter Property="FontIconFontFamily" Value="{StaticResource MaterialFontFamily}" />
+        <Setter Property="FontColor" Value="{DynamicResource Gray-900}" />
+        <Setter Property="FontIconFontColor" Value="{DynamicResource Gray-900}" />
+        <Setter Property="SelectionTextColor" Value="{DynamicResource Gray-White}" />
+        <Setter Property="BorderThickness" Value="0" />
+        <Setter Property="SegmentBackgroundColor" Value="{DynamicResource Gray-300}" />
+        <Setter Property="SegmentBorderColor" Value="{DynamicResource Gray-300}" />
+        <Setter Property="SegmentBorderThickness" Value="0" />
+        <Setter Property="SegmentCornerRadius" Value="0" />
+        <Setter Property="CornerRadius" Value="8" />
+        <Setter Property="HorizontalOptions" Value="Center" />
+        <Setter Property="SegmentPadding" Value="0" />
+        <Setter Property="SelectionAnimationDuration" Value="1" />
+        <Setter Property="SelectionIndicatorSettings">
+            <Setter.Value>
+                <buttons:SelectionIndicatorSettings
+                    CornerRadius="0"
+                    StrokeThickness="0"
+                    Color="{DynamicResource PrimaryColor}" 
+                    >
+                </buttons:SelectionIndicatorSettings>
+
+            </Setter.Value>
+        </Setter>
+    </Style>
+
+    <Style x:Key="PrinterSegmentControlStyle" TargetType="buttons:SfSegmentedControl" BasedOn="{StaticResource DefaultSegmentControlStyle}">
+        <Setter Property="SegmentBackgroundColor" Value="{DynamicResource Gray-White}" />
+        <Setter Property="SegmentBorderColor" Value="{DynamicResource Gray-White}" />
+        <Setter Property="SegmentWidth" Value="48" />
+
+    </Style>
+
+    <Style x:Key="TemperatureProfilesSegmentControlStyle" TargetType="buttons:SfSegmentedControl" BasedOn="{StaticResource DefaultSegmentControlStyle}">
+        <Setter Property="FontSize" Value="{OnIdiom Tablet=14, Default=10}" />
+        <Setter Property="DisplayMode" Value="Text"/>
+        <Setter Property="SegmentWidth" Value="{OnIdiom Tablet=92, Default=64}" />
+    </Style>
+
+    <!-- Default ChipGroup style -->
+    <Style x:Key="DefaultChipGroupStyle" TargetType="buttons:SfChipGroup">
+        <Setter Property="SelectedChipBackgroundColor" Value="{DynamicResource PrimaryColor}"/>
+        <Setter Property="SelectedChipTextColor" Value="{DynamicResource White}" />
+        <Setter Property="ChipBackgroundColor" Value="{DynamicResource Gray-900}" />
+        <Setter Property="ChipTextColor" Value="{DynamicResource Gray-White}" />
+        <Setter Property="ChipTextSize" Value="12" />
+        <Setter Property="BackgroundColor" Value="{DynamicResource Transparent}" />
+
+        <Setter Property="SelectionIndicatorColor" Value="{DynamicResource Pink}" />
+    </Style>
+
+    <Style x:Key="RoundMaterialDesignIconButtonStyle" TargetType="buttons:SfButton">
+        <Setter Property="TextColor" Value="{DynamicResource Gray-600}" />
+        <Setter Property="BackgroundColor" Value="{DynamicResource Transparent}" />
+        <Setter Property="FontFamily" Value="{StaticResource MaterialFontFamily}" />
+        <Setter Property="FontSize" Value="{OnIdiom Desktop=32, Tablet=32, Phone=22, Default=22}" />
+        <Setter Property="HorizontalTextAlignment" Value="Center" />
+        <Setter Property="VerticalTextAlignment" Value="Center" />
+        <Setter Property="HeightRequest" Value="{OnIdiom Desktop=60, Tablet=60, Phone=40, Default=40}" />
+        <Setter Property="WidthRequest" Value="{OnIdiom Desktop=60, Tablet=60, Phone=40, Default=40}" />
+        <Setter Property="CornerRadius" Value="{OnIdiom Desktop=30, Tablet=30, Phone=20, Default=20}" />
+    </Style>
+
+    <Style x:Key="RoundEmergencyStopIconButtonStyle" TargetType="buttons:SfButton" BasedOn="{StaticResource RoundMaterialDesignIconButtonStyle}">
+        <Setter Property="Text" Value="{StaticResource MaterialDesign_HandRight}" />
+        <Setter Property="TextColor" Value="{DynamicResource White}" />
+        <Setter Property="BackgroundColor" Value="{DynamicResource Red}" />
+        <Setter Property="BorderColor" Value="{DynamicResource Yellow}" />
+        <Setter Property="BorderThickness" Value="3" />
+        <Setter Property="HeightRequest" Value="{OnIdiom Tablet=70, Phone=50, Default=50}" />
+        <Setter Property="WidthRequest" Value="{OnIdiom Tablet=70, Phone=50, Default=50}" />
+        <Setter Property="CornerRadius" Value="{OnIdiom Tablet=35, Phone=25, Default=25}" />
+    </Style>
+
+    <Style x:Key="ColorSelectionChipStyle" TargetType="buttons:SfChip">
+        <Setter Property="FontSize" Value="{OnIdiom Tablet=14, Default=12}" />
+        <Setter Property="FontFamily" Value="{StaticResource Montserrat-Bold}" />
+        <Setter Property="ShowSelectionIndicator" Value="False"/>
+        <Setter Property="SelectionIndicatorColor" Value="{DynamicResource Transparent}"/>
+        <Setter Property="BorderWidth" Value="0"/>
+        <Setter Property="Padding" Value="2"/>
+        <Setter Property="WidthRequest" Value="140"/>
+        <Setter Property="HeightRequest" Value="30"/>
+    </Style>
+</ResourceDictionary>

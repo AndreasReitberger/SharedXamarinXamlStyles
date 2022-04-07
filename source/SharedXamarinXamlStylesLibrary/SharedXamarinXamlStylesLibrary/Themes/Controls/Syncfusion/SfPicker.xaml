@@ -1,0 +1,32 @@
+﻿<?xml version="1.0" encoding="UTF-8" ?>
+<?xaml-comp compile="true" ?>
+<ResourceDictionary
+    xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+
+    xmlns:picker="clr-namespace:Syncfusion.XForms.Pickers;assembly=Syncfusion.SfPicker.XForms"
+    >
+    <!-- Optimized -->
+    <ResourceDictionary.MergedDictionaries>
+        <ResourceDictionary Source="/Themes/Fonts.xaml" />
+    </ResourceDictionary.MergedDictionaries>
+
+    <Style TargetType="picker:SfDatePicker">
+        <Setter Property="UnselectedItemTextColor" Value="{DynamicResource Gray-900}" />
+        <Setter Property="SelectedItemTextColor" Value="{DynamicResource PrimaryColor}" />
+        <Setter Property="HeaderTextColor" Value="{DynamicResource PrimaryColor}" />
+        <Setter Property="HeaderBackgroundColor" Value="{DynamicResource Gray-200}" />
+        <Setter Property="ColumnHeaderBackgroundColor" Value="{DynamicResource Gray-100}" />
+        <Setter Property="ColumnHeaderTextColor" Value="{DynamicResource Gray-900}" />
+        <Setter Property="HeaderFontFamily" Value="{StaticResource Montserrat-Bold}" />
+        <Setter Property="SelectedItemFontFamily" Value="{StaticResource Montserrat-Bold}" />
+        <Setter Property="UnselectedItemFontFamily" Value="{StaticResource Montserrat-SemiBold}" />
+        <Setter Property="ShowHeader" Value="False" />
+
+        <Style.Triggers>
+            <Trigger Property="IsEnabled" Value="False" TargetType="picker:SfDatePicker">
+                <Setter Property="BackgroundColor" Value="{DynamicResource Gray-600}" />
+            </Trigger>
+        </Style.Triggers>
+    </Style>
+</ResourceDictionary>

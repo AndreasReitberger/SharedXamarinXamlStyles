@@ -1,0 +1,22 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<?xaml-comp compile="true" ?>
+<ResourceDictionary
+    xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+
+    xmlns:gradient="clr-namespace:Syncfusion.XForms.Graphics;assembly=Syncfusion.Core.XForms"
+    >
+    <!-- OPTIMIZED -->
+    <Style x:Key="GradientViewStyle" TargetType="gradient:SfGradientView">
+        <Setter Property="BackgroundBrush">
+            <Setter.Value>
+                <gradient:SfLinearGradientBrush StartPoint="0, 0" EndPoint="1, 1">
+                    <gradient:SfLinearGradientBrush.GradientStops>
+                        <gradient:SfGradientStop Offset="0" Color="{DynamicResource GradientStart}" />
+                        <gradient:SfGradientStop Offset="1" Color="{DynamicResource GradientEnd}" />
+                    </gradient:SfLinearGradientBrush.GradientStops>
+                </gradient:SfLinearGradientBrush>
+            </Setter.Value>
+        </Setter>
+    </Style>
+</ResourceDictionary>

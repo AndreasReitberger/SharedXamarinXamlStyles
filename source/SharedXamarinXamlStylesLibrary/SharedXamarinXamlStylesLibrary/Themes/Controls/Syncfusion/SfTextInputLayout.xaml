@@ -1,0 +1,54 @@
+﻿<?xml version="1.0" encoding="UTF-8" ?>
+<?xaml-comp compile="true" ?>
+<ResourceDictionary
+    xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+
+    xmlns:inputLayout="clr-namespace:Syncfusion.XForms.TextInputLayout;assembly=Syncfusion.Core.XForms"
+    >
+    <ResourceDictionary.MergedDictionaries>
+        <!--<ResourceDictionary Source="/Themes/Icons.xaml" />-->
+        <ResourceDictionary Source="/Themes/Fonts.xaml" />
+    </ResourceDictionary.MergedDictionaries>
+    <!-- OPTIMIZED -->
+    <Style x:Key="DefaultTextInputLayoutStyle" TargetType="inputLayout:SfTextInputLayout">
+        <Setter Property="UnfocusedColor" Value="{DynamicResource Gray-900}" />
+        <Setter Property="FocusedColor" Value="{DynamicResource PrimaryColor}" />
+        <!--<Setter Property="BackgroundColor" Value="{DynamicResource Transparent}" />-->
+        <Setter Property="ErrorColor" Value="{DynamicResource Red}" />
+
+        <Setter Property="HintLabelStyle">
+            <Setter.Value>
+                <inputLayout:LabelStyle 
+                    FontAttributes="None" 
+                    FontSize="{OnIdiom Desktop=20, Tablet=20, Phone=14, Default=14}" 
+                    FontFamily="{StaticResource Montserrat-Bold}"/>
+            </Setter.Value>
+        </Setter>
+        <Setter Property="ErrorLabelStyle">
+            <Setter.Value>
+                <inputLayout:LabelStyle 
+                    FontAttributes="None" 
+                    FontSize="{OnIdiom Desktop=20, Tablet=20, Phone=14, Default=14}" 
+                    FontFamily="{StaticResource Montserrat-Bold}"/>
+            </Setter.Value>
+        </Setter>
+        <Setter Property="HelperLabelStyle">
+            <Setter.Value>
+                <inputLayout:LabelStyle 
+                    FontAttributes="None" 
+                    FontSize="{OnIdiom Desktop=18, Tablet=18, Phone=12, Default=12}" 
+                    FontFamily="{StaticResource Montserrat-SemiBold}"
+                    
+                    />
+            </Setter.Value>
+        </Setter>
+        <Style.Triggers>
+            <Trigger Property="IsEnabled" Value="False" TargetType="inputLayout:SfTextInputLayout">
+                <Setter Property="BackgroundColor" Value="{DynamicResource Gray-600}" />
+            </Trigger>
+        </Style.Triggers>
+    </Style>
+
+    <Style TargetType="inputLayout:SfTextInputLayout" BasedOn="{StaticResource DefaultTextInputLayoutStyle}"/>
+</ResourceDictionary>

@@ -1,0 +1,38 @@
+﻿<?xml version="1.0" encoding="UTF-8" ?>
+<?xaml-comp compile="true" ?>
+<ResourceDictionary
+    xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+
+    xmlns:range="clr-namespace:Syncfusion.SfRangeSlider.XForms;assembly=Syncfusion.SfRangeSlider.XForms"
+    >
+    <!-- OPTIMIZED -->
+    <Style x:Key="DefaultRangeSliderStyle" TargetType="range:SfRangeSlider">
+        <Setter Property="ToolTipBackgroundColor" Value="{DynamicResource Gray-200}" />
+        <Setter Property="ToolTipTextColor" Value="{DynamicResource Gray-Black}" />
+        <Setter Property="KnobColor" Value="{OnPlatform Android={DynamicResource Green}, Default={DynamicResource White}}" />
+        <Setter Property="TrackSelectionColor" Value="{DynamicResource Green}" />
+        <Setter Property="TrackColor" Value="{DynamicResource Gray-300}" />
+        <Setter Property="LabelColor" Value="{DynamicResource Gray-Black}" />
+        <Setter Property="Visual" Value="Default" />
+        <Setter Property="HeightRequest" Value="48" />
+
+        <Style.Triggers>
+            <Trigger Property="IsEnabled" Value="False" TargetType="range:SfRangeSlider">
+                <Setter Property="KnobColor" Value="{DynamicResource Gray-600}" />
+                <Setter Property="TrackColor" Value="{DynamicResource Gray-600}" />
+            </Trigger>
+        </Style.Triggers>
+    </Style>
+
+    <Style TargetType="range:SfRangeSlider" BasedOn="{StaticResource DefaultRangeSliderStyle}"/>
+
+    <Style x:Key="PrimrayRangeSliderStyle" TargetType="range:SfRangeSlider" BasedOn="{StaticResource DefaultRangeSliderStyle}">
+        <Setter Property="KnobColor" Value="{OnPlatform Android={DynamicResource PrimaryColor}, Default={DynamicResource White}}" />
+        <Setter Property="TrackSelectionColor" Value="{DynamicResource PrimaryColor}" />
+        <Setter Property="ShowRange" Value="False" />
+        <Setter Property="ShowValueLabel" Value="False" />
+        <Setter Property="WidthRequest" Value="290" />
+        <Setter Property="HeightRequest" Value="36" />
+    </Style>
+</ResourceDictionary>

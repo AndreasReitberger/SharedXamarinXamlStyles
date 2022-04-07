@@ -1,0 +1,22 @@
+﻿<?xml version="1.0" encoding="UTF-8" ?>
+<?xaml-comp compile="true" ?>
+<ResourceDictionary
+    xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    
+    xmlns:PullToRefresh="clr-namespace:Syncfusion.SfPullToRefresh.XForms;assembly=Syncfusion.SfPullToRefresh.XForms" 
+    >
+    <!-- OPTIMIZED -->
+    <Style x:Key="DefaultPullToRefreshStyle" TargetType="PullToRefresh:SfPullToRefresh">
+        <Setter Property="ProgressStrokeColor" Value="{DynamicResource PrimaryColor}" />
+        <Setter Property="ProgressBackgroundColor" Value="{DynamicResource Gray-200}" />
+        <Setter Property="ProgressStrokeWidth" Value="2" />
+        <Setter Property="TransitionMode" Value="Push" />
+        <Setter Property="PullingThreshold" Value="100" />
+        <Setter Property="RefreshContentHeight" Value="48" />
+        <Setter Property="RefreshContentThreshold" Value="48" />
+        <Setter Property="RefreshContentWidth" Value="48" />
+    </Style>
+
+    <Style TargetType="PullToRefresh:SfPullToRefresh" BasedOn="{StaticResource DefaultPullToRefreshStyle}"/>
+</ResourceDictionary>
