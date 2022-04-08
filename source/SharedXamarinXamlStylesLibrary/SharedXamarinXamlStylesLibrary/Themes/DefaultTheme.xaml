@@ -7,30 +7,21 @@
     
     xmlns:ios="clr-namespace:Xamarin.Forms.PlatformConfiguration.iOSSpecific;assembly=Xamarin.Forms.Core"
     >
-    <!-- xmlns:ads="clr-namespace:MarcTron.Plugin.Controls;assembly=Plugin.MtAdmob" -->
     <ResourceDictionary.MergedDictionaries>
-        <!-- END - LITE VERSION ONLY -->
         <ResourceDictionary Source="/Themes/Controls/BoxView.xaml" />
-        <!-- Empty 
-        <ResourceDictionary Source="/Themes/Controls/CustomControl.xaml" />-->
-        <!-- -->
         <ResourceDictionary Source="/Themes/Controls/Editor.xaml" />
-        <ResourceDictionary Source="/Themes/Controls/Entries.xaml" />
-        <ResourceDictionary Source="/Themes/Controls/Labels.xaml" />
-        <ResourceDictionary Source="/Themes/Controls/Grids.xaml" />
+        <ResourceDictionary Source="/Themes/Controls/Entry.xaml" />
+        <ResourceDictionary Source="/Themes/Controls/Label.xaml" />
+        <ResourceDictionary Source="/Themes/Controls/Grid.xaml" />
         <ResourceDictionary Source="/Themes/Controls/Frame.xaml" />
         <ResourceDictionary Source="/Themes/Controls/StackLayout.xaml" />
-
         <ResourceDictionary Source="/Themes/Controls/Syncfusion/SfAutoComplete.xaml" />
         <ResourceDictionary Source="/Themes/Controls/Syncfusion/SfBadgeView.xaml" />
         <ResourceDictionary Source="/Themes/Controls/Syncfusion/SfBorder.xaml" />
         <ResourceDictionary Source="/Themes/Controls/Syncfusion/SfBusyIndicator.xaml" />
         <ResourceDictionary Source="/Themes/Controls/Syncfusion/SfButtons.xaml" />
         <ResourceDictionary Source="/Themes/Controls/Syncfusion/SfCardView.xaml" />
-
-        <!-- Empty 
-        <ResourceDictionary Source="/Themes/Controls/Syncfusion/SfCharts.xaml" />-->
-
+        <ResourceDictionary Source="/Themes/Controls/Syncfusion/SfCharts.xaml" />
         <ResourceDictionary Source="/Themes/Controls/Syncfusion/SfCircularProgressBar.xaml" />
         <ResourceDictionary Source="/Themes/Controls/Syncfusion/SfCircularGauge.xaml" />
         <ResourceDictionary Source="/Themes/Controls/Syncfusion/SfComboBoxes.xaml" />
@@ -45,8 +36,6 @@
         <ResourceDictionary Source="/Themes/Controls/Syncfusion/SfRangeSlider.xaml" />
         <ResourceDictionary Source="/Themes/Controls/Syncfusion/SfTabView.xaml" />
         <ResourceDictionary Source="/Themes/Controls/Syncfusion/SfTextInputLayout.xaml" />
-
-        <!--<ResourceDictionary Source="/Themes/GlobalTemplates.xaml" />-->
     </ResourceDictionary.MergedDictionaries>
 
     <Color x:Key="Transparent">Transparent</Color>

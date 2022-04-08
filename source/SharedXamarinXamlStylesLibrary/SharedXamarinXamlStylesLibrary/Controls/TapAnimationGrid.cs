@@ -9,7 +9,7 @@ namespace AndreasReitberger.Shared.Controls
     /// Customizes the tap animation effects of the grid control.
     /// </summary>
     [Preserve(AllMembers = true)]
-    public class TapAnimationGrid : Grid
+    public partial class TapAnimationGrid : Grid
     {
         #region Fields
 

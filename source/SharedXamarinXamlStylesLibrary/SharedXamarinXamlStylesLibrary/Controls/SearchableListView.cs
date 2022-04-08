@@ -1,4 +1,4 @@
-﻿#if false
+﻿using AndreasReitberger.Shared.Interfaces;
 using Syncfusion.DataSource;
 using Syncfusion.ListView.XForms;
 using System;
@@ -12,7 +12,7 @@ using Xamarin.Forms.Internals;
 namespace AndreasReitberger.Shared.Controls
 {
     [Preserve(AllMembers = true)]
-    public class SearchableListView : SfListView
+    public partial class SearchableListView : SfListView
     {
         #region Field
 
@@ -39,7 +39,7 @@ namespace AndreasReitberger.Shared.Controls
             BindableProperty.Create(nameof(SearchText), typeof(string), typeof(SearchableListView), string.Empty, BindingMode.TwoWay, null, OnSearchTextChanged);
 
         public static readonly BindableProperty FilterProperty =
-            BindableProperty.Create(nameof(Filter), typeof(ListViewFilterBase), typeof(SearchableListView), null, BindingMode.TwoWay, null, OnFilterChanged);
+            BindableProperty.Create(nameof(Filter), typeof(IListViewFilterBase), typeof(SearchableListView), null, BindingMode.TwoWay, null, OnFilterChanged);
 
         public static readonly BindableProperty IsFilterProperty =
             BindableProperty.Create(nameof(IsFiltered), typeof(bool), typeof(SearchableListView), false, BindingMode.OneWay, null);
@@ -74,9 +74,9 @@ namespace AndreasReitberger.Shared.Controls
             get { return (string)GetValue(SearchTextProperty); }
             set { this.SetValue(SearchTextProperty, value); }
         }
-        public ListViewFilterBase Filter
+        public IListViewFilterBase Filter
         {
-            get { return (ListViewFilterBase)GetValue(FilterProperty); }
+            get { return (IListViewFilterBase)GetValue(FilterProperty); }
             set { this.SetValue(FilterProperty, value); }
         }
         //bool _isFiltered = false;
@@ -94,8 +94,8 @@ namespace AndreasReitberger.Shared.Controls
 
         public ICommand OnFilterCommand
         {
-            get => (ICommand)GetValue(CommandProperty);
-            set => SetValue(CommandProperty, value);
+            get => (ICommand)GetValue(OnFilterCommandProperty);
+            set => SetValue(OnFilterCommandProperty, value);
         }
 
         /// <summary>
@@ -154,7 +154,7 @@ namespace AndreasReitberger.Shared.Controls
                     listView.DataSource.Filter = listView.FilterListView;
                     listView.IsFiltered = true;
                     // Update sorting
-                    if (newValue is ListViewFilterBase _filter && _filter.SortDescriptors.Count > 0)
+                    if (newValue is IListViewFilterBase _filter && _filter.SortDescriptors.Count > 0)
                     {
                         listView.DataSource.SortDescriptors.Clear();
                         foreach (SortDescriptor descriptor in _filter.SortDescriptors)
@@ -194,10 +194,13 @@ namespace AndreasReitberger.Shared.Controls
             {
                 return false;
             }
-            if(OnFilterCommand?.CanExecute(OnFilterCommandParameter) ?? false)
+            if (OnFilterCommand?.CanExecute(OnFilterCommandParameter) ?? false)
             {
                 OnFilterCommand.Execute(OnFilterCommandParameter);
+                return true;
             }
+            else
+                return false;
         }
 
         static void OnDefaultSortDescriptorChanged(BindableObject bindable, object oldValue, object newValue)
@@ -297,4 +300,3 @@ namespace AndreasReitberger.Shared.Controls
 
     }
 }
-#endif

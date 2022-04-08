@@ -14,7 +14,7 @@ namespace AndreasReitberger.Shared.Controls
 
         void MultiSelectAutoComplete_SelectionChanged(object sender, Syncfusion.SfAutoComplete.XForms.SelectionChangedEventArgs e)
         {
-            if (!(e.Value is IList list))
+            if (e.Value is not IList list)
             {
                 // Single item (if token is set to 'none')
                 list = new ArrayList

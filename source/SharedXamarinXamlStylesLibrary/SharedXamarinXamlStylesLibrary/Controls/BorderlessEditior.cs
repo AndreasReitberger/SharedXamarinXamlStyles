@@ -4,7 +4,7 @@ using Xamarin.Forms.Internals;
 namespace AndreasReitberger.Shared.Controls
 {
     [Preserve(AllMembers = true)]
-    public class BorderlessEditor : Editor
+    public partial class BorderlessEditor : Editor
     {
         /// <summary>
         /// Initializes a new instance of the <see cref="BorderlessEditor"/> class.

@@ -11,7 +11,14 @@
     <RepositoryUrl>https://github.com/AndreasReitberger/SharedXamarinXamlStyles</RepositoryUrl>
     <PackageTags>Xamarin, Forms, Styles, Common, Shared, Library, Controls</PackageTags>
     <RootNamespace>AndreasReitberger.Shared</RootNamespace>
+    <LangVersion>10.0</LangVersion>
   </PropertyGroup>
+
+  <ItemGroup>
+    <Compile Remove="Resources\Styles\**" />
+    <EmbeddedResource Remove="Resources\Styles\**" />
+    <None Remove="Resources\Styles\**" />
+  </ItemGroup>
 
   <ItemGroup>
     <None Remove="Resources\Fonts\Montserrat-Bold.ttf" />
@@ -25,10 +32,6 @@
     <EmbeddedResource Include="Resources\Fonts\Montserrat-Medium.ttf" />
     <EmbeddedResource Include="Resources\Fonts\Montserrat-Regular.ttf" />
     <EmbeddedResource Include="Resources\Fonts\Montserrat-SemiBold.ttf" />
-  </ItemGroup>
-
-  <ItemGroup>
-    <Folder Include="Resources\Styles\" />
   </ItemGroup>
 
   <ItemGroup>
@@ -60,16 +63,16 @@
     <EmbeddedResource Update="Themes\Controls\Editor.xaml">
       <Generator>MSBuild:Compile</Generator>
     </EmbeddedResource>
-    <EmbeddedResource Update="Themes\Controls\Entries.xaml">
+    <EmbeddedResource Update="Themes\Controls\Entry.xaml">
       <Generator>MSBuild:Compile</Generator>
     </EmbeddedResource>
     <EmbeddedResource Update="Themes\Controls\Frame.xaml">
       <Generator>MSBuild:Compile</Generator>
     </EmbeddedResource>
-    <EmbeddedResource Update="Themes\Controls\Grids.xaml">
+    <EmbeddedResource Update="Themes\Controls\Grid.xaml">
       <Generator>MSBuild:Compile</Generator>
     </EmbeddedResource>
-    <EmbeddedResource Update="Themes\Controls\Labels.xaml">
+    <EmbeddedResource Update="Themes\Controls\Label.xaml">
       <Generator>MSBuild:Compile</Generator>
     </EmbeddedResource>
     <EmbeddedResource Update="Themes\Controls\StackLayout.xaml">

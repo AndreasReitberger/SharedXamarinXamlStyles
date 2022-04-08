@@ -6,12 +6,9 @@
     >
     <!-- OPTIMIZED -->
     <!-- Frames -->
-    <Style x:Key="ListViewItemFrameStyle"
-               TargetType="Frame">
+    <Style x:Key="ListViewItemFrameStyle" TargetType="Frame">
         <Setter Property="BorderColor" Value="{DynamicResource TransparentColor}"/>
-        <Setter Property="BackgroundColor"
-                    Value="{DynamicResource TransparentColor}" />
-        <Setter Property="OutlineColor"
-                    Value="{DynamicResource ItemTemplateBorder}" />
+        <Setter Property="BackgroundColor" Value="{DynamicResource TransparentColor}" />
+        <Setter Property="OutlineColor" Value="{DynamicResource ItemTemplateBorder}" />
     </Style>
 </ResourceDictionary>
