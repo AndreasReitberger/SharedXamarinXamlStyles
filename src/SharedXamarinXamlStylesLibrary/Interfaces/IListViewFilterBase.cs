@@ -1,8 +1,8 @@
-﻿using AndreasReitberger.Shared.Models.Filtering;
+﻿using AndreasReitberger.Shared.XForm.Models.Filtering;
 using Syncfusion.DataSource;
 using System.Collections.Generic;
 
-namespace AndreasReitberger.Shared.Interfaces
+namespace AndreasReitberger.Shared.XForm.Interfaces
 {
     public interface IListViewFilterBase
     {

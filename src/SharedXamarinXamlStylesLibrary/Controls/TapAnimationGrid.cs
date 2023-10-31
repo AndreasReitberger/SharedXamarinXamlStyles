@@ -3,7 +3,7 @@ using System.Windows.Input;
 using Xamarin.Forms;
 using Xamarin.Forms.Internals;
 
-namespace AndreasReitberger.Shared.Controls
+namespace AndreasReitberger.Shared.XForm.Controls
 {
     /// <summary>
     /// Customizes the tap animation effects of the grid control.

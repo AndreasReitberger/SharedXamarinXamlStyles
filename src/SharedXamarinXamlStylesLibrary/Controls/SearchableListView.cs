@@ -1,4 +1,4 @@
-﻿using AndreasReitberger.Shared.Interfaces;
+﻿using AndreasReitberger.Shared.XForm.Interfaces;
 using Syncfusion.DataSource;
 using Syncfusion.ListView.XForms;
 using System;
@@ -9,7 +9,7 @@ using System.Windows.Input;
 using Xamarin.Forms;
 using Xamarin.Forms.Internals;
 
-namespace AndreasReitberger.Shared.Controls
+namespace AndreasReitberger.Shared.XForm.Controls
 {
     [Preserve(AllMembers = true)]
     public partial class SearchableListView : SfListView

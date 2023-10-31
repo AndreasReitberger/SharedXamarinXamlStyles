@@ -2,7 +2,7 @@
 using System.Collections;
 using Xamarin.Forms;
 
-namespace AndreasReitberger.Shared.Controls
+namespace AndreasReitberger.Shared.XForm.Controls
 {
     public class MultiSelectAutoComplete : SfAutoComplete
     {

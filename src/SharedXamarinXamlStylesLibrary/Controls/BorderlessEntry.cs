@@ -1,7 +1,7 @@
 ﻿using Xamarin.Forms;
 using Xamarin.Forms.Internals;
 
-namespace AndreasReitberger.Shared.Controls
+namespace AndreasReitberger.Shared.XForm.Controls
 {
     /// <summary>
     /// This class is inherited from Xamarin.Forms.Entry to remove the border for Entry control in the Android platform.

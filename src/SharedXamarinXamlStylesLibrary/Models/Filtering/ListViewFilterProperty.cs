@@ -1,4 +1,4 @@
-﻿namespace AndreasReitberger.Shared.Models.Filtering
+﻿namespace AndreasReitberger.Shared.XForm.Models.Filtering
 {
     public class ListViewFilterProperty
     {

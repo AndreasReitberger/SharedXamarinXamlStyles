@@ -1,7 +1,7 @@
 ﻿using Xamarin.Forms;
 using Xamarin.Forms.Internals;
 
-namespace AndreasReitberger.Shared.Controls
+namespace AndreasReitberger.Shared.XForm.Controls
 {
     /// <summary>
     /// The Title view

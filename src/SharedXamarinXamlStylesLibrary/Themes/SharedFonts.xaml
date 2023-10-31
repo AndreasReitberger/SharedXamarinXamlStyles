@@ -1,0 +1,39 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<!--<?xaml-comp compile="true" ?>-->
+<ResourceDictionary
+    x:Class="AndreasReitberger.Shared.XForm.Themes.SharedColors"
+    xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    
+    xmlns:ios="clr-namespace:Xamarin.Forms.PlatformConfiguration.iOSSpecific;assembly=Xamarin.Forms.Core"
+    >
+    <Color x:Key="Transparent">Transparent</Color>
+    <Color x:Key="TappedBackgroundColor">#eaeaea</Color>
+
+    <Color x:Key="Green">#33AD79</Color>
+    <Color x:Key="LightGreen">#38ef7d</Color>
+    <Color x:Key="DarkGreen">#11998e</Color>
+    <Color x:Key="Red">#ff4a4a</Color>
+    <Color x:Key="DarkRed">#93291e</Color>
+    <Color x:Key="Orange">#F78836</Color>
+    <Color x:Key="DarkOrange">#F83017</Color>
+    <Color x:Key="Blue">#3C8CF1</Color>
+    <Color x:Key="LightBlue">#6dd5ed</Color>
+    <Color x:Key="DarkBlue">#2193b0</Color>
+    <Color x:Key="HyperLink">#567cd7</Color>
+    <Color x:Key="White">#ffffff</Color>
+    <Color x:Key="Black">#000000</Color>
+    <Color x:Key="primary-lighter">#edcacd</Color>
+    <Color x:Key="Liliac">#d483fc</Color>
+    <Color x:Key="Purpleish-Blue">#5d4cf7</Color>
+    <Color x:Key="Link">#567cd7</Color>
+    <Color x:Key="Bright-Cyan">#3cdeff</Color>
+    <Color x:Key="Lemon-Lime">#bdff27</Color>
+    <Color x:Key="Yellow">#E9B31A</Color>
+    <Color x:Key="Pink">#C6275C</Color>
+
+    <!-- Circular Gauge Temprange Colors -->
+    <Color x:Key="TempLow">#DD4E38</Color>
+    <Color x:Key="TempMiddle">#B72316</Color>
+    <Color x:Key="TempHigh">#93291e</Color>
+</ResourceDictionary>
