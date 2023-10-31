@@ -6,8 +6,8 @@
     xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
     >
     <ResourceDictionary.MergedDictionaries>
-        <!-- Item Templates 
-        <ResourceDictionary Source="/Resources/Themes/ItemTemplates/GeneralItemTemplates.xaml" />
-        -->
+        <!-- Item Templates  -->
+        <ResourceDictionary Source="/Themes/ItemTemplates/ShellItemTemplates.xaml" />
+       
     </ResourceDictionary.MergedDictionaries>
 </ResourceDictionary>

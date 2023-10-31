@@ -7,7 +7,7 @@
     xmlns:badge ="clr-namespace:Syncfusion.XForms.BadgeView;assembly=Syncfusion.SfBadgeView.XForms"     
     >
     <!-- OPTIMIZED -->
-    <Style TargetType="badge:SfBadgeView">
+    <Style x:Key="DefaultBadgedViewStyle" TargetType="badge:SfBadgeView">
         <Setter Property="BadgeSettings">
             <Setter.Value>
                 <badge:BadgeSetting
@@ -21,7 +21,8 @@
             </Setter.Value>
         </Setter>
     </Style>
-
+    <Style TargetType="badge:SfBadgeView" BasedOn="{StaticResource DefaultBadgedViewStyle}"/>
+    
     <Style x:Key="HyperlinkBadgedViewStyle" TargetType="badge:SfBadgeView" BasedOn="{StaticResource DefaultBadgedViewStyle}">
         <Setter Property="BadgeSettings">
             <Setter.Value>
