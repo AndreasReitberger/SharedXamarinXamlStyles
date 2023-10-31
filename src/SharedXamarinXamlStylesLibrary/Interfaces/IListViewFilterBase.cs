@@ -1,6 +1,5 @@
 ﻿using AndreasReitberger.Shared.XForm.Models.Filtering;
 using Syncfusion.DataSource;
-using System.Collections.Generic;
 
 namespace AndreasReitberger.Shared.XForm.Interfaces
 {

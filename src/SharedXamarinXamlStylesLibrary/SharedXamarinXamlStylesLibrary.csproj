@@ -41,9 +41,11 @@
   <ItemGroup>
     <PackageReference Include="Syncfusion.Xamarin.Buttons" Version="23.1.43" />
     <PackageReference Include="Syncfusion.Xamarin.Cards" Version="23.1.43" />
+    <PackageReference Include="Syncfusion.Xamarin.Expander" Version="23.1.43" />
     <PackageReference Include="Syncfusion.Xamarin.SfAutoComplete" Version="23.1.43" />
     <PackageReference Include="Syncfusion.Xamarin.SfBadgeView" Version="23.1.43" />
     <PackageReference Include="Syncfusion.Xamarin.SfBusyIndicator" Version="23.1.43" />
+    <PackageReference Include="Syncfusion.Xamarin.SfCalendar" Version="23.1.43" />
     <PackageReference Include="Syncfusion.Xamarin.SfChart" Version="23.1.43" />
     <PackageReference Include="Syncfusion.Xamarin.SfComboBox" Version="23.1.43" />
     <PackageReference Include="Syncfusion.Xamarin.SfGauge" Version="23.1.43" />
