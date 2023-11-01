@@ -4,10 +4,13 @@
     xmlns="http://xamarin.com/schemas/2014/forms"
     xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
     >
+    <ResourceDictionary.MergedDictionaries>
+        <ResourceDictionary Source="/Themes/SharedColors.xaml" />
+    </ResourceDictionary.MergedDictionaries>
     <!-- OPTIMIZED -->
     <Style x:Key="SeparatorStyle" TargetType="BoxView">
         <Setter Property="HeightRequest" Value="1" />
-        <Setter Property="BackgroundColor" Value="{DynamicResource Gray-200}" />
+        <Setter Property="BackgroundColor" Value="{AppThemeBinding Light={StaticResource Gray200}, Dark={StaticResource Gray800}}" />
     </Style>
 
     <!--  Common style for separator BoxView  -->

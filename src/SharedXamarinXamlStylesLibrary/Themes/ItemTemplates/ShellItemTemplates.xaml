@@ -13,12 +13,12 @@
     </ResourceDictionary.MergedDictionaries>
 
     <Style x:Key="DefaultShellStyle" TargetType="Shell">
-        <Setter Property="BackgroundColor" Value="{DynamicResource Gray-White}"/>
+        <Setter Property="BackgroundColor" Value="{AppThemeBinding Light={StaticResource White}, Dark={StaticResource Black}}"/>
         <Setter Property="ForegroundColor" Value="{DynamicResource PrimaryColor}"/>
         <Setter Property="TitleColor" Value="{DynamicResource PrimaryColor}"/>
-        <Setter Property="UnselectedColor" Value="{DynamicResource Gray-900}"/>
-        <Setter Property="DisabledColor" Value="{DynamicResource Gray-400}"/>
-        <Setter Property="FlyoutBackgroundColor" Value="{DynamicResource Gray-White}"/>
+        <Setter Property="UnselectedColor" Value="{AppThemeBinding Light={StaticResource Gray900}, Dark={StaticResource Gray100}}"/>
+        <Setter Property="DisabledColor" Value="{AppThemeBinding Light={StaticResource Gray400}, Dark={StaticResource Gray500}}"/>
+        <Setter Property="FlyoutBackgroundColor" Value="{AppThemeBinding Light={StaticResource White}, Dark={StaticResource Black}}"/>
     </Style>
 
     <DataTemplate x:Key="DefaultFlyoutTemplate">

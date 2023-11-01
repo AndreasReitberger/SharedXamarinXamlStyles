@@ -128,7 +128,7 @@ namespace AndreasReitberger.Shared.XForm.Controls
             var grid = (TapAnimationGrid)bindable;
             if (grid.IsAnimated)
             {
-                Application.Current.Resources.TryGetValue("Gray-100", out var retVal);
+                Application.Current.Resources.TryGetValue("Gray100", out var retVal);
                 grid.BackgroundColor = (Color)retVal;
 
                 // To make the selected item color changes for 100 milliseconds.

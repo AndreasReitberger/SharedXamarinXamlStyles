@@ -6,10 +6,13 @@
     
     xmlns:border="clr-namespace:Syncfusion.XForms.Border;assembly=Syncfusion.Core.XForms"
     >
+    <ResourceDictionary.MergedDictionaries>
+        <ResourceDictionary Source="/Themes/SharedColors.xaml" />
+    </ResourceDictionary.MergedDictionaries>
     <!-- OPTIMIZED -->
     <Style TargetType="border:SfBorder">
-        <Setter Property="BackgroundColor" Value="{DynamicResource Gray-White}" />
-        <Setter Property="BorderColor" Value="{DynamicResource Gray-White}" />
+        <Setter Property="BackgroundColor" Value="{AppThemeBinding Light={StaticResource White}, Dark={StaticResource Black}}" />
+        <Setter Property="BorderColor" Value="{AppThemeBinding Light={StaticResource White}, Dark={StaticResource Black}}" />
         <Setter Property="CornerRadius" Value="25" />
     </Style>
 
@@ -22,7 +25,7 @@
         <Setter Property="BorderWidth" Value="0" />
         <Setter Property="CornerRadius" Value="0" />
         <Setter Property="Margin" Value="1,2" />
-        <Setter Property="BackgroundColor" Value="{DynamicResource Gray-400}" />
-        <Setter Property="BorderColor" Value="{DynamicResource Gray-400}" />
+        <Setter Property="BackgroundColor" Value="{AppThemeBinding Light={StaticResource Gray400}, Dark={StaticResource Gray500}}" />
+        <Setter Property="BorderColor" Value="{AppThemeBinding Light={StaticResource Gray400}, Dark={StaticResource Gray500}}" />
     </Style>
 </ResourceDictionary>

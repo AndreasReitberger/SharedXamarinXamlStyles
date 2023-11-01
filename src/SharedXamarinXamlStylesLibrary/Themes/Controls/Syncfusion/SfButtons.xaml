@@ -7,35 +7,36 @@
     xmlns:buttons="clr-namespace:Syncfusion.XForms.Buttons;assembly=Syncfusion.Buttons.XForms"     
     xmlns:gradient="clr-namespace:Syncfusion.XForms.Graphics;assembly=Syncfusion.Core.XForms"
     xmlns:graphics="clr-namespace:Syncfusion.XForms.Graphics;assembly=Syncfusion.Core.XForms"
+    xmlns:icons="clr-namespace:AndreasReitberger.Shared.XForm.FontIcons"
     >
     <!-- OPTIMIZED -->
     <ResourceDictionary.MergedDictionaries>
-        <ResourceDictionary Source="/Themes/Icons.xaml" />
-        <ResourceDictionary Source="/Themes/Fonts.xaml" />
+        <ResourceDictionary Source="/Themes/SharedColors.xaml" />
+        <ResourceDictionary Source="/Themes/SharedFonts.xaml" />
     </ResourceDictionary.MergedDictionaries>
 
     <!-- DEFAULT BUTTON STYLE -->
-    <Style x:Key="DefaultButtonStyle" TargetType="buttons:SfButton">
-        <Setter Property="FontFamily" Value="{StaticResource Montserrat-SemiBold}" />
-        <Setter Property="TextColor" Value="{DynamicResource Gray-700}" />
-        <Setter Property="BackgroundColor" Value="{DynamicResource Gray-White}" />
+    <Style x:Key="DefaultSfButtonStyle" TargetType="buttons:SfButton">
+        <Setter Property="FontFamily" Value="{StaticResource MontserratSemiBold}" />
+        <Setter Property="TextColor" Value="{AppThemeBinding Light={StaticResource Gray700}, Dark={StaticResource Gray300}}" />
+        <Setter Property="BackgroundColor" Value="{AppThemeBinding Light={StaticResource White}, Dark={StaticResource Black}}" />
         <Setter Property="FontSize" Value="{OnIdiom Tablet=20, Default=16}" />
         <Style.Triggers>
             <Trigger Property="IsEnabled" Value="False" TargetType="buttons:SfButton">
-                <Setter Property="TextColor" Value="{DynamicResource Gray-800}" />
+                <Setter Property="TextColor" Value="{AppThemeBinding Light={StaticResource Gray800}, Dark={StaticResource Gray200}}" />
                 <Setter Property="BackgroundGradient" Value="{x:Null}"/>
             </Trigger>
         </Style.Triggers>
     </Style>
 
-    <Style TargetType="buttons:SfButton" BasedOn="{StaticResource DefaultButtonStyle}"/>
+    <Style TargetType="buttons:SfButton" BasedOn="{StaticResource DefaultSfButtonStyle}"/>
 
     <!-- CHECKBOX -->
     <!-- DEFAULT CEHCKBOX STYLE -->
-    <Style x:Key="DefaultCheckBoxStyle" TargetType="buttons:SfCheckBox">
+    <Style x:Key="DefaultSfCheckBoxStyle" TargetType="buttons:SfCheckBox">
         <Setter Property="CheckedColor" Value="{DynamicResource PrimaryColor}"/>
-        <Setter Property="BackgroundColor" Value="{DynamicResource Transparent}"/>
-        <Setter Property="UncheckedColor" Value="{DynamicResource Gray-600}"/>
+        <Setter Property="BackgroundColor" Value="{StaticResource Transparent}"/>
+        <Setter Property="UncheckedColor" Value="{AppThemeBinding Light={StaticResource Gray600}, Dark={StaticResource Gray400}}"/>
         <Setter Property="Visual" Value="Default"/>
         <Setter Property="VisualStateManager.VisualStateGroups">
             <VisualStateGroupList>
@@ -47,7 +48,7 @@
                     </VisualState>
                     <VisualState x:Name="Unchecked">
                         <VisualState.Setters>
-                            <Setter Property="UncheckedColor" Value="{DynamicResource Gray-600}"/>
+                            <Setter Property="UncheckedColor" Value="{AppThemeBinding Light={StaticResource Gray600}, Dark={StaticResource Gray400}}"/>
                         </VisualState.Setters>
                     </VisualState>
                     <VisualState x:Name="Disabled">
@@ -67,10 +68,9 @@
     </Style>
 
     <!--  Common style for icon buttons  -->
-    <Style x:Key="IconButtonStyle" TargetType="buttons:SfButton"
-           BasedOn="{StaticResource DefaultButtonStyle}">
-        <Setter Property="TextColor" Value="{DynamicResource Gray-600}" />
-        <Setter Property="BackgroundColor" Value="{DynamicResource Transparent}" />
+    <Style x:Key="IconSfButtonStyle" TargetType="buttons:SfButton" BasedOn="{StaticResource DefaultSfButtonStyle}">
+        <Setter Property="TextColor" Value="{AppThemeBinding Light={StaticResource Gray600}, Dark={StaticResource Gray400}}" />
+        <Setter Property="BackgroundColor" Value="{StaticResource Transparent}" />
         <Setter Property="FontFamily" Value="{StaticResource FontIcons}" />
         <Setter Property="FontSize" Value="{OnIdiom Desktop=24, Tablet=22, Phone=18, Default=18}" />
         <Setter Property="HorizontalTextAlignment" Value="Center" />
@@ -79,28 +79,28 @@
         <Setter Property="WidthRequest" Value="{OnIdiom Desktop=60, Tablet=60, Default=40}" />
     </Style>
 
-    <Style x:Key="MaterialDesignIconButtonStyle" TargetType="buttons:SfButton" BasedOn="{StaticResource IconButtonStyle}">
-        <Setter Property="FontFamily" Value="{StaticResource MaterialFontFamily}" />
+    <Style x:Key="MaterialDesignIconSfButtonStyle" TargetType="buttons:SfButton" BasedOn="{StaticResource IconSfButtonStyle}">
+        <Setter Property="FontFamily" Value="{StaticResource MaterialDesignIcons}" />
         <Setter Property="FontSize" Value="{OnIdiom Desktop=32, Tablet=26, Default=22}" />
     </Style>
 
-    <Style x:Key="LinkButton" TargetType="buttons:SfButton" BasedOn="{StaticResource DefaultButtonStyle}">
-        <Setter Property="TextColor" Value="{DynamicResource HyperLink}" />
+    <Style x:Key="LinkSfButtonStyle" TargetType="buttons:SfButton" BasedOn="{StaticResource DefaultSfButtonStyle}">
+        <Setter Property="TextColor" Value="{StaticResource Blue}" />
         <Setter Property="BackgroundColor" Value="Transparent" />
     </Style>
 
     <!--  Common style for completely round buttons  -->
     <Style
-        x:Key="RoundIconGradientButtonStyle"
-        BasedOn="{StaticResource IconButtonStyle}"
+        x:Key="RoundIconGradientSfButtonStyle"
+        BasedOn="{StaticResource IconSfButtonStyle}"
         TargetType="buttons:SfButton">
-        <Setter Property="BorderColor" Value="{DynamicResource Gray-300}" />
+        <Setter Property="BorderColor" Value="{AppThemeBinding Light={StaticResource Gray300}, Dark={StaticResource Gray700}}" />
         <Setter Property="BorderWidth" Value="1" />
         <Setter Property="CornerRadius" Value="22" />
         <Setter Property="WidthRequest" Value="44" />
         <Setter Property="HeightRequest" Value="44" />
-        <Setter Property="TextColor" Value="{DynamicResource White}" />
-        <Setter Property="BackgroundColor" Value="{DynamicResource Gray-100}" />
+        <Setter Property="TextColor" Value="{StaticResource White}" />
+        <Setter Property="BackgroundColor" Value="{AppThemeBinding Light={StaticResource Gray100}, Dark={StaticResource Gray900}}" />
         <Setter Property="BackgroundGradient">
             <Setter.Value>
                 <graphics:SfLinearGradientBrush>
@@ -114,10 +114,10 @@
     </Style>
 
     <!--  Common style for long buttons with rounded corners  -->
-    <Style x:Key="RoundedLongButtonStyle" TargetType="buttons:SfButton">
+    <Style x:Key="RoundedLongSfButtonStyle" TargetType="buttons:SfButton">
         <Setter Property="Margin" Value="20" />
-        <Setter Property="TextColor" Value="{DynamicResource White}" />
-        <Setter Property="FontFamily" Value="{StaticResource Montserrat-SemiBold}" />
+        <Setter Property="TextColor" Value="{StaticResource White}" />
+        <Setter Property="FontFamily" Value="{StaticResource MontserratSemiBold}" />
         <Setter Property="FontSize" Value="{OnIdiom Desktop=18, Tablet=18, Phone=14, Default=14}" />
         <Setter Property="FontAttributes" Value="Bold" />
         <Setter Property="HeightRequest" Value="{OnIdiom Desktop=60, Tablet=60, Phone=45, Default=45}" />
@@ -139,12 +139,12 @@
 
         <Style.Triggers>
             <Trigger Property="IsEnabled" Value="False" TargetType="buttons:SfButton">
-                <Setter Property="BackgroundColor" Value="{DynamicResource Gray-200}" />
-                <Setter Property="TextColor" Value="{DynamicResource Gray-800}" />
+                <Setter Property="BackgroundColor" Value="{AppThemeBinding Light={StaticResource Gray200}, Dark={StaticResource Gray800}}" />
+                <Setter Property="TextColor" Value="{AppThemeBinding Light={StaticResource Gray800}, Dark={StaticResource Gray200}}" />
                 <Setter Property="BackgroundGradient" Value="{x:Null}"/>
             </Trigger>
             <Trigger Property="IsEnabled" Value="True" TargetType="buttons:SfButton">
-                <Setter Property="TextColor" Value="{DynamicResource White}" />
+                <Setter Property="TextColor" Value="{StaticResource White}" />
             </Trigger>
         </Style.Triggers>
     </Style>
@@ -164,9 +164,9 @@
                                     <Setter.Value>
                                         <buttons:CupertinoSwitchSettings
                                             x:TypeArguments="buttons:OnState"
-                                            ThumbBorderColor="{DynamicResource Gray-200}"
-                                            ThumbColor="{DynamicResource Gray-White}"
-                                            TrackBorderColor="{DynamicResource Gray-200}"
+                                            ThumbBorderColor="{AppThemeBinding Light={StaticResource Gray200}, Dark={StaticResource Gray800}}"
+                                            ThumbColor="{AppThemeBinding Light={StaticResource White}, Dark={StaticResource Black}}"
+                                            TrackBorderColor="{AppThemeBinding Light={StaticResource Gray200}, Dark={StaticResource Gray800}}"
                                             TrackColor="{DynamicResource PrimaryColor}" />
                                     </Setter.Value>
                                 </Setter>
@@ -178,10 +178,10 @@
                                 <Setter.Value>
                                     <buttons:CupertinoSwitchSettings
                                         x:TypeArguments="buttons:OffState"
-                                        ThumbBorderColor="{DynamicResource Gray-200}"
-                                        ThumbColor="{DynamicResource Gray-White}"
-                                        TrackBorderColor="{DynamicResource Gray-200}"
-                                        TrackColor="{DynamicResource Gray-200}" />
+                                        ThumbBorderColor="{AppThemeBinding Light={StaticResource Gray200}, Dark={StaticResource Gray800}}"
+                                        ThumbColor="{AppThemeBinding Light={StaticResource White}, Dark={StaticResource Black}}"
+                                        TrackBorderColor="{AppThemeBinding Light={StaticResource Gray200}, Dark={StaticResource Gray800}}"
+                                        TrackColor="{AppThemeBinding Light={StaticResource Gray200}, Dark={StaticResource Gray800}}" />
                                 </Setter.Value>
                             </Setter>
                         </VisualState.Setters>
@@ -194,33 +194,33 @@
 
 
     <!--Common button style-->
-    <Style x:Key="SetupButtonStyle" TargetType="buttons:SfButton" BasedOn="{StaticResource RoundedLongButtonStyle}">
+    <Style x:Key="SetupSfButtonStyle" TargetType="buttons:SfButton" BasedOn="{StaticResource RoundedLongSfButtonStyle}">
         <!--<Setter Property="HeightRequest" Value="40"/> -->
-        <Setter Property="BackgroundColor" Value="{DynamicResource Gray-White}"/>
+        <Setter Property="BackgroundColor" Value="{AppThemeBinding Light={StaticResource White}, Dark={StaticResource Black}}"/>
         <Setter Property="BackgroundGradient" Value="{x:Null}"/>
         <Setter Property="TextColor" Value="{DynamicResource PrimaryColor}"/>
     </Style>
 
     <!--  Common style for swipe template content border control  -->
-    <Style x:Key="SwipeTemplateBorderStyle" TargetType="buttons:SfButton">
+    <Style x:Key="SwipeTemplateSfButtonStyle" TargetType="buttons:SfButton">
         <Setter Property="HeightRequest" Value="32" />
         <Setter Property="WidthRequest" Value="32" />
-        <Setter Property="BorderColor" Value="{DynamicResource Gray-White}" />
+        <Setter Property="BorderColor" Value="{AppThemeBinding Light={StaticResource White}, Dark={StaticResource Black}}" />
         <Setter Property="BorderWidth" Value="0" />
         <Setter Property="CornerRadius" Value="16" />
-        <Setter Property="BackgroundColor" Value="{DynamicResource Gray-White}" />
+        <Setter Property="BackgroundColor" Value="{AppThemeBinding Light={StaticResource White}, Dark={StaticResource Black}}" />
     </Style>
 
     <Style x:Key="SfSegmentedControlMaterialFontStyle" TargetType="buttons:SfSegmentedControl">
         <Setter Property="DisplayMode" Value="ImageWithText"/>
         <Setter Property="FontSize" Value="14" />
-        <Setter Property="FontFamily" Value="{StaticResource Montserrat-Bold}" />
-        <Setter Property="FontColor" Value="{DynamicResource Gray-900}" />
-        <Setter Property="SelectionTextColor" Value="{DynamicResource Gray-White}" />
+        <Setter Property="FontFamily" Value="{StaticResource MontserratBold}" />
+        <Setter Property="FontColor" Value="{AppThemeBinding Light={StaticResource Gray900}, Dark={StaticResource Gray100}}" />
+        <Setter Property="SelectionTextColor" Value="{AppThemeBinding Light={StaticResource White}, Dark={StaticResource Black}}" />
         <Setter Property="BackgroundColor" Value="{DynamicResource Transparent}" />
         <Setter Property="BorderThickness" Value="0" />
-        <Setter Property="SegmentBackgroundColor" Value="{DynamicResource Gray-White}" />
-        <Setter Property="SegmentBorderColor" Value="{DynamicResource Gray-White}" />
+        <Setter Property="SegmentBackgroundColor" Value="{AppThemeBinding Light={StaticResource White}, Dark={StaticResource Black}}" />
+        <Setter Property="SegmentBorderColor" Value="{AppThemeBinding Light={StaticResource White}, Dark={StaticResource Black}}" />
         <Setter Property="SegmentBorderThickness" Value="0" />
         <Setter Property="SegmentCornerRadius" Value="8" />
 
@@ -240,17 +240,17 @@
 
     </Style>
 
-    <Style x:Key="DefaultSegmentControlStyle" TargetType="buttons:SfSegmentedControl">
+    <Style x:Key="DefaultSfSegmentControlStyle" TargetType="buttons:SfSegmentedControl">
         <Setter Property="DisplayMode" Value="ImageWithText"/>
         <Setter Property="FontSize" Value="{OnIdiom Tablet=18, Default=14}" />
-        <Setter Property="FontFamily" Value="{StaticResource Montserrat-Bold}" />
-        <Setter Property="FontIconFontFamily" Value="{StaticResource MaterialFontFamily}" />
-        <Setter Property="FontColor" Value="{DynamicResource Gray-900}" />
-        <Setter Property="FontIconFontColor" Value="{DynamicResource Gray-900}" />
-        <Setter Property="SelectionTextColor" Value="{DynamicResource Gray-White}" />
+        <Setter Property="FontFamily" Value="{StaticResource MontserratBold}" />
+        <Setter Property="FontIconFontFamily" Value="{StaticResource MaterialDesignIcons}" />
+        <Setter Property="FontColor" Value="{AppThemeBinding Light={StaticResource Gray900}, Dark={StaticResource Gray100}}" />
+        <Setter Property="FontIconFontColor" Value="{AppThemeBinding Light={StaticResource Gray900}, Dark={StaticResource Gray100}}" />
+        <Setter Property="SelectionTextColor" Value="{AppThemeBinding Light={StaticResource White}, Dark={StaticResource Black}}" />
         <Setter Property="BorderThickness" Value="0" />
-        <Setter Property="SegmentBackgroundColor" Value="{DynamicResource Gray-300}" />
-        <Setter Property="SegmentBorderColor" Value="{DynamicResource Gray-300}" />
+        <Setter Property="SegmentBackgroundColor" Value="{AppThemeBinding Light={StaticResource Gray300}, Dark={StaticResource Gray700}}" />
+        <Setter Property="SegmentBorderColor" Value="{AppThemeBinding Light={StaticResource Gray300}, Dark={StaticResource Gray700}}" />
         <Setter Property="SegmentBorderThickness" Value="0" />
         <Setter Property="SegmentCornerRadius" Value="0" />
         <Setter Property="CornerRadius" Value="8" />
@@ -270,35 +270,35 @@
         </Setter>
     </Style>
 
-    <Style x:Key="PrinterSegmentControlStyle" TargetType="buttons:SfSegmentedControl" BasedOn="{StaticResource DefaultSegmentControlStyle}">
-        <Setter Property="SegmentBackgroundColor" Value="{DynamicResource Gray-White}" />
-        <Setter Property="SegmentBorderColor" Value="{DynamicResource Gray-White}" />
+    <Style x:Key="PrinterSfSegmentControlStyle" TargetType="buttons:SfSegmentedControl" BasedOn="{StaticResource DefaultSfSegmentControlStyle}">
+        <Setter Property="SegmentBackgroundColor" Value="{AppThemeBinding Light={StaticResource White}, Dark={StaticResource Black}}" />
+        <Setter Property="SegmentBorderColor" Value="{AppThemeBinding Light={StaticResource White}, Dark={StaticResource Black}}" />
         <Setter Property="SegmentWidth" Value="48" />
 
     </Style>
 
-    <Style x:Key="TemperatureProfilesSegmentControlStyle" TargetType="buttons:SfSegmentedControl" BasedOn="{StaticResource DefaultSegmentControlStyle}">
+    <Style x:Key="TemperatureProfilesSfSegmentControlStyle" TargetType="buttons:SfSegmentedControl" BasedOn="{StaticResource DefaultSfSegmentControlStyle}">
         <Setter Property="FontSize" Value="{OnIdiom Tablet=14, Default=10}" />
         <Setter Property="DisplayMode" Value="Text"/>
         <Setter Property="SegmentWidth" Value="{OnIdiom Tablet=92, Default=64}" />
     </Style>
 
     <!-- Default ChipGroup style -->
-    <Style x:Key="DefaultChipGroupStyle" TargetType="buttons:SfChipGroup">
+    <Style x:Key="DefaultSfChipGroupStyle" TargetType="buttons:SfChipGroup">
         <Setter Property="SelectedChipBackgroundColor" Value="{DynamicResource PrimaryColor}"/>
-        <Setter Property="SelectedChipTextColor" Value="{DynamicResource White}" />
-        <Setter Property="ChipBackgroundColor" Value="{DynamicResource Gray-900}" />
-        <Setter Property="ChipTextColor" Value="{DynamicResource Gray-White}" />
+        <Setter Property="SelectedChipTextColor" Value="{StaticResource White}" />
+        <Setter Property="ChipBackgroundColor" Value="{AppThemeBinding Light={StaticResource Gray900}, Dark={StaticResource Gray100}}" />
+        <Setter Property="ChipTextColor" Value="{AppThemeBinding Light={StaticResource White}, Dark={StaticResource Black}}" />
         <Setter Property="ChipTextSize" Value="12" />
-        <Setter Property="BackgroundColor" Value="{DynamicResource Transparent}" />
+        <Setter Property="BackgroundColor" Value="{StaticResource Transparent}" />
 
-        <Setter Property="SelectionIndicatorColor" Value="{DynamicResource Pink}" />
+        <Setter Property="SelectionIndicatorColor" Value="{StaticResource Pink}" />
     </Style>
 
-    <Style x:Key="RoundMaterialDesignIconButtonStyle" TargetType="buttons:SfButton">
-        <Setter Property="TextColor" Value="{DynamicResource Gray-600}" />
-        <Setter Property="BackgroundColor" Value="{DynamicResource Transparent}" />
-        <Setter Property="FontFamily" Value="{StaticResource MaterialFontFamily}" />
+    <Style x:Key="RoundMaterialDesignIconSfButtonStyle" TargetType="buttons:SfButton">
+        <Setter Property="TextColor" Value="{AppThemeBinding Light={StaticResource Gray600}, Dark={StaticResource Gray400}}" />
+        <Setter Property="BackgroundColor" Value="{StaticResource Transparent}" />
+        <Setter Property="FontFamily" Value="{StaticResource MaterialDesignIcons}" />
         <Setter Property="FontSize" Value="{OnIdiom Desktop=32, Tablet=32, Phone=22, Default=22}" />
         <Setter Property="HorizontalTextAlignment" Value="Center" />
         <Setter Property="VerticalTextAlignment" Value="Center" />
@@ -307,22 +307,22 @@
         <Setter Property="CornerRadius" Value="{OnIdiom Desktop=30, Tablet=30, Phone=20, Default=20}" />
     </Style>
 
-    <Style x:Key="RoundEmergencyStopIconButtonStyle" TargetType="buttons:SfButton" BasedOn="{StaticResource RoundMaterialDesignIconButtonStyle}">
-        <Setter Property="Text" Value="{StaticResource MaterialDesign_HandRight}" />
-        <Setter Property="TextColor" Value="{DynamicResource White}" />
-        <Setter Property="BackgroundColor" Value="{DynamicResource Red}" />
-        <Setter Property="BorderColor" Value="{DynamicResource Yellow}" />
+    <Style x:Key="RoundEmergencyStopIconSfButtonStyle" TargetType="buttons:SfButton" BasedOn="{StaticResource RoundMaterialDesignIconSfButtonStyle}">
+        <Setter Property="Text" Value="{x:Static icons:MaterialIcons.HandBackRight}" />
+        <Setter Property="TextColor" Value="{StaticResource White}" />
+        <Setter Property="BackgroundColor" Value="{StaticResource Red}" />
+        <Setter Property="BorderColor" Value="{StaticResource Yellow}" />
         <Setter Property="BorderThickness" Value="3" />
         <Setter Property="HeightRequest" Value="{OnIdiom Tablet=70, Phone=50, Default=50}" />
         <Setter Property="WidthRequest" Value="{OnIdiom Tablet=70, Phone=50, Default=50}" />
         <Setter Property="CornerRadius" Value="{OnIdiom Tablet=35, Phone=25, Default=25}" />
     </Style>
 
-    <Style x:Key="ColorSelectionChipStyle" TargetType="buttons:SfChip">
+    <Style x:Key="ColorSelectionSfChipStyle" TargetType="buttons:SfChip">
         <Setter Property="FontSize" Value="{OnIdiom Tablet=14, Default=12}" />
-        <Setter Property="FontFamily" Value="{StaticResource Montserrat-Bold}" />
+        <Setter Property="FontFamily" Value="{StaticResource MontserratBold}" />
         <Setter Property="ShowSelectionIndicator" Value="False"/>
-        <Setter Property="SelectionIndicatorColor" Value="{DynamicResource Transparent}"/>
+        <Setter Property="SelectionIndicatorColor" Value="{StaticResource Transparent}"/>
         <Setter Property="BorderWidth" Value="0"/>
         <Setter Property="Padding" Value="2"/>
         <Setter Property="WidthRequest" Value="140"/>

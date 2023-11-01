@@ -6,11 +6,14 @@
 
     xmlns:progressBar="clr-namespace:Syncfusion.XForms.ProgressBar;assembly=Syncfusion.SfProgressBar.XForms"
     >
+    <ResourceDictionary.MergedDictionaries>
+        <ResourceDictionary Source="/Themes/SharedColors.xaml" />
+    </ResourceDictionary.MergedDictionaries>
     <!-- OPTIMIZED -->
     <!-- Common style for cicular progress bars -->
     <Style x:Key="CircularProgressBarStyle" TargetType="progressBar:SfCircularProgressBar">
         <Setter Property="ProgressColor" Value="{DynamicResource PrimaryColor}" />
-        <Setter Property="TrackColor" Value="{DynamicResource White}" />
+        <Setter Property="TrackColor" Value="{StaticResource White}" />
     </Style>
 
     <Style TargetType="progressBar:SfCircularProgressBar" BasedOn="{StaticResource CircularProgressBarStyle}"/>

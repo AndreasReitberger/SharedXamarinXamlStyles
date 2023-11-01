@@ -6,12 +6,15 @@
     
     xmlns:rotator="clr-namespace:Syncfusion.SfRotator.XForms;assembly=Syncfusion.SfRotator.XForms"
     >
+    <ResourceDictionary.MergedDictionaries>
+        <ResourceDictionary Source="/Themes/SharedColors.xaml" />
+    </ResourceDictionary.MergedDictionaries>
     <!-- OPTIMIZED -->
     <Style TargetType="rotator:SfRotator">
-        <!--<Setter Property="BackgroundColor" Value="{DynamicResource Transparent}"/>-->
-        <Setter Property="DotsBorderColor" Value="{DynamicResource Gray-200}"/>
-        <Setter Property="UnselectedDotColor" Value="{DynamicResource White}"/>
-        <Setter Property="SelectedDotColor" Value="{DynamicResource Pink}"/>
+        <!--<Setter Property="BackgroundColor" Value="{StaticResource Transparent}"/>-->
+        <Setter Property="DotsBorderColor" Value="{AppThemeBinding Light={StaticResource Gray200}, Dark={StaticResource Gray800}}"/>
+        <Setter Property="UnselectedDotColor" Value="{StaticResource White}"/>
+        <Setter Property="SelectedDotColor" Value="{StaticResource Pink}"/>
         <Setter Property="DotPlacement" Value="Default"/>
         <Setter Property="NavigationStripPosition" Value="Bottom"/>
     </Style>

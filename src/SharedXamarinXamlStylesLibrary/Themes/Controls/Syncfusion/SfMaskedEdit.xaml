@@ -5,21 +5,22 @@
     xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
     
     xmlns:maskedEdit="clr-namespace:Syncfusion.XForms.MaskedEdit;assembly=Syncfusion.SfMaskedEdit.XForms"
+    xmlns:icons="clr-namespace:AndreasReitberger.Shared.XForm.FontIcons"
     >
     <!-- OPTIMIZED -->
     <ResourceDictionary.MergedDictionaries>
-        <ResourceDictionary Source="/Themes/Icons.xaml" />
-        <ResourceDictionary Source="/Themes/Fonts.xaml" />
+        <ResourceDictionary Source="/Themes/SharedColors.xaml" />
+        <ResourceDictionary Source="/Themes/SharedFonts.xaml" />
     </ResourceDictionary.MergedDictionaries>
 
     <Style x:Key="MaskedEditDefaultStyle" TargetType="maskedEdit:SfMaskedEdit">
-        <Setter Property="TextColor" Value="{DynamicResource Gray-900}" />
-        <Setter Property="BackgroundColor" Value="{DynamicResource Gray-100}" />
-        <Setter Property="FontFamily" Value="{StaticResource Montserrat-Bold}" />
-        <Setter Property="WatermarkFontFamily" Value="{StaticResource Montserrat-Regular}"/>
+        <Setter Property="TextColor" Value="{AppThemeBinding Light={StaticResource Gray900}, Dark={StaticResource Gray100}}" />
+        <Setter Property="BackgroundColor" Value="{AppThemeBinding Light={StaticResource Gray100}, Dark={StaticResource Gray900}}" />
+        <Setter Property="FontFamily" Value="{StaticResource MontserratBold}" />
+        <Setter Property="WatermarkFontFamily" Value="{StaticResource MontserratRegular}"/>
         <Setter Property="FontSize" Value="22" />
         <Setter Property="ErrorBorderColor" Value="{DynamicResource PrimaryColor}" />
-        <Setter Property="BorderColor" Value="{DynamicResource Gray-300}" />
+        <Setter Property="BorderColor" Value="{AppThemeBinding Light={StaticResource Gray300}, Dark={StaticResource Gray700}}" />
         <Setter Property="HeightRequest" Value="42"/>
         <Setter Property="ClearButtonVisibility" Value="WhileEditing"/>
     </Style>
@@ -29,6 +30,6 @@
 
     <Style x:Key="BorderlessMaskedEditDefaultStyle" TargetType="maskedEdit:SfMaskedEdit" BasedOn="{StaticResource MaskedEditDefaultStyle}">
         <Setter Property="FontSize" Value="16" />
-        <Setter Property="BorderColor" Value="{DynamicResource Transparent}" />
+        <Setter Property="BorderColor" Value="{StaticResource Transparent}" />
     </Style>
 </ResourceDictionary>
