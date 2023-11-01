@@ -8,18 +8,17 @@
     >
     <!-- OPTIMIZED -->
     <ResourceDictionary.MergedDictionaries>
-        <!--<ResourceDictionary Source="/Themes/Icons.xaml" />-->
-        <ResourceDictionary Source="/Themes/Fonts.xaml" />
+        <ResourceDictionary Source="/Themes/SharedColors.xaml" />
+        <ResourceDictionary Source="/Themes/SharedFonts.xaml" />
     </ResourceDictionary.MergedDictionaries>
 
     <!-- Common style for numeric up down input -->
     <Style x:Key="NumericUpDownDefaultStyle" TargetType="numeric:SfNumericUpDown">
-        <Setter Property="TextColor" Value="{DynamicResource Gray-900}" />
-        <!--<Setter Property="BackgroundColor" Value="{DynamicResource Transparent}" />-->
-        <Setter Property="FontFamily" Value="{StaticResource Montserrat-Regular}" />
+        <Setter Property="TextColor" Value="{AppThemeBinding Light={StaticResource Gray900}, Dark={StaticResource Gray100}}" />
+        <Setter Property="FontFamily" Value="{StaticResource MontserratRegular}" />
         <Setter Property="FontSize" Value="{OnIdiom Desktop=20, Tablet=20, Phone=14, Default=14}"/>
         <Setter Property="FontAttribute" Value="Bold"/>
-        <Setter Property="BorderColor" Value="{OnPlatform Android={DynamicResource Gray-900}, Default={DynamicResource Gray-100}}" />
+        <Setter Property="BorderColor" Value="{OnPlatform Android={AppThemeBinding Light={StaticResource Gray900}, Dark={StaticResource Gray100}}, Default={AppThemeBinding Light={StaticResource Gray100}, Dark={StaticResource Gray900}}}" />
         <Setter Property="TextAlignment" Value="Start"/>
         <Setter Property="UpDownButtonColor" Value="{DynamicResource PrimaryColor}"/>
         <Setter Property="HeightRequest" Value="{OnPlatform Default=50, Android=50, iOS=40}"/>
@@ -39,7 +38,7 @@
         </Setter>
         <Style.Triggers>
             <Trigger Property="IsEnabled" Value="False" TargetType="numeric:SfNumericUpDown">
-                <Setter Property="BackgroundColor" Value="{DynamicResource Gray-100}" />
+                <Setter Property="BackgroundColor" Value="{AppThemeBinding Light={StaticResource Gray100}, Dark={StaticResource Gray900}}" />
             </Trigger>
         </Style.Triggers>
     </Style>

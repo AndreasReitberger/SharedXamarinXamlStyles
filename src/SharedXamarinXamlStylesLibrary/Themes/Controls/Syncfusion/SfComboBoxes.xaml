@@ -6,22 +6,23 @@
     
     xmlns:controls="clr-namespace:AndreasReitberger.Shared.XForm.Controls"
     xmlns:combobox="clr-namespace:Syncfusion.XForms.ComboBox;assembly=Syncfusion.SfComboBox.XForms"
+    xmlns:icons="clr-namespace:AndreasReitberger.Shared.XForm.FontIcons"
     >
     <!-- OPTIMIZED -->
     <ResourceDictionary.MergedDictionaries>
-        <ResourceDictionary Source="/Themes/Icons.xaml" />
-        <ResourceDictionary Source="/Themes/Fonts.xaml" />
+        <ResourceDictionary Source="/Themes/SharedColors.xaml" />
+        <ResourceDictionary Source="/Themes/SharedFonts.xaml" />
     </ResourceDictionary.MergedDictionaries>
 
     <!--  Common style for combobox  -->
     <Style x:Key="DefaultComboBoxStyle" TargetType="combobox:SfComboBox">
-        <Setter Property="BorderColor" Value="{OnPlatform Android={DynamicResource Gray-100}, Default={DynamicResource Gray-200}}" />
-        <Setter Property="BackgroundColor" Value="{OnPlatform Android={DynamicResource Gray-100}, Default={DynamicResource Gray-200}}" />
+        <Setter Property="BorderColor" Value="{OnPlatform Android={AppThemeBinding Light={StaticResource Gray100}, Dark={StaticResource Gray900}}, Default={AppThemeBinding Light={StaticResource Gray200}, Dark={StaticResource Gray800}}}" />
+        <Setter Property="BackgroundColor" Value="{OnPlatform Android={AppThemeBinding Light={StaticResource Gray100}, Dark={StaticResource Gray900}}, Default={AppThemeBinding Light={StaticResource Gray200}, Dark={StaticResource Gray800}}}" />
         <Setter Property="DropDownButtonSettings">
             <Setter.Value>
                 <combobox:DropDownButtonSettings
                     FontColor="{DynamicResource PrimaryColor}"
-                    BackgroundColor="{DynamicResource Transparent}"
+                    BackgroundColor="{StaticResource Transparent}"
                     HighlightFontColor="{DynamicResource PrimaryColor}"
                     HighlightedBackgroundColor="{DynamicResource PrimaryColor}"
                     />
@@ -29,17 +30,17 @@
         </Setter>
         <Setter Property="ClearButtonColor" Value="{DynamicResource PrimaryColor}" />
         <Setter Property="ShowClearButton" Value="True" />
-        <Setter Property="TextColor" Value="{DynamicResource Gray-900}" />
-        <Setter Property="FontFamily" Value="{StaticResource Montserrat-Regular}"/>
+        <Setter Property="TextColor" Value="{AppThemeBinding Light={StaticResource Gray900}, Dark={StaticResource Gray100}}" />
+        <Setter Property="FontFamily" Value="{StaticResource MontserratRegular}"/>
         <Setter Property="TextSize" Value="{OnIdiom Desktop=20, Tablet=20, Phone=14, Default=14}"/>
         <Setter Property="Margin" Value="4,2"/>
         <Setter Property="IsSelectedItemsVisibleInDropDown" Value="False"/>
-        <Setter Property="DropDownBackgroundColor" Value="{DynamicResource Gray-200}"/>
-        <Setter Property="DropDownBorderColor" Value="{DynamicResource Gray-400}"/>
-        <Setter Property="DropDownTextColor" Value="{DynamicResource Gray-900}"/>
-        <Setter Property="DropDownItemFontFamily" Value="{DynamicResource Montserrat-Regular}"/>
+        <Setter Property="DropDownBackgroundColor" Value="{AppThemeBinding Light={StaticResource Gray200}, Dark={StaticResource Gray800}}"/>
+        <Setter Property="DropDownBorderColor" Value="{AppThemeBinding Light={StaticResource Gray400}, Dark={StaticResource Gray500}}"/>
+        <Setter Property="DropDownTextColor" Value="{AppThemeBinding Light={StaticResource Gray900}, Dark={StaticResource Gray100}}"/>
+        <Setter Property="DropDownItemFontFamily" Value="{StaticResource MontserratRegular}"/>
         <Setter Property="DropDownTextSize" Value="{OnIdiom Desktop=20, Tablet=20, Phone=14, Default=14}"/>
-        <Setter Property="SelectedDropDownItemColor" Value="{DynamicResource Gray-100}"/>
+        <Setter Property="SelectedDropDownItemColor" Value="{AppThemeBinding Light={StaticResource Gray100}, Dark={StaticResource Gray900}}"/>
         <Setter Property="HeightRequest" Value="{OnPlatform Default=42, Android=50, iOS=40}"/>
 
 
@@ -48,9 +49,9 @@
             <Setter.Value>
                 <combobox:TokenSettings 
                     FontSize="{OnIdiom Desktop=20, Tablet=20, Phone={OnPlatform Android=12, Default=14}, Default=14}" 
-                    BackgroundColor="{DynamicResource Gray-100}" 
-                    FontFamily="{StaticResource Montserrat-Regular}"
-                    TextColor="{DynamicResource Gray-900}" 
+                    BackgroundColor="{AppThemeBinding Light={StaticResource Gray100}, Dark={StaticResource Gray900}}" 
+                    FontFamily="{StaticResource MontserratRegular}"
+                    TextColor="{AppThemeBinding Light={StaticResource Gray900}, Dark={StaticResource Gray100}}" 
                     SelectedBackgroundColor="{DynamicResource PrimaryColor}" 
                     IsCloseButtonVisible="true" 
                     CornerRadius="15" DeleteButtonPlacement="{OnPlatform Android=Left, Default=Right}"
@@ -60,33 +61,24 @@
 
         <Style.Triggers>
             <Trigger Property="IsEnabled" Value="False" TargetType="combobox:SfComboBox">
-                <Setter Property="BackgroundColor" Value="{DynamicResource Gray-600}" />
+                <Setter Property="BackgroundColor" Value="{AppThemeBinding Light={StaticResource Gray600}, Dark={StaticResource Gray400}}" />
             </Trigger>
             <Trigger Property="MultiSelectMode" Value="Token" TargetType="combobox:SfComboBox">
                 <Setter Property="HeightRequest" Value="{OnPlatform Default=42, Android=60, iOS=45}"/>
             </Trigger>
-            <!--
-            <Trigger Property="IsMouseOver" Value="True">
-                <Setter Property="Background" Value="{DynamicResource GrayBrush10}" />
-            </Trigger>
-           
-            <Trigger Property="Button.IsPressed" Value="True" TargetType="combobox:SfComboBox">
-                <Setter Property="BackgroundColor" Value="{DynamicResource Gray-900}" />
-                <Setter Property="TextColor" Value="{DynamicResource Gray-Black}" />
-            </Trigger> -->
         </Style.Triggers>
     </Style>
 
     <Style TargetType="combobox:SfComboBox" BasedOn="{StaticResource DefaultComboBoxStyle}"/>
 
     <Style x:Key="DefaultMultiSelectComboBox" TargetType="controls:MultiSelectComboBox">
-        <Setter Property="BorderColor" Value="{OnPlatform Android={DynamicResource Gray-100}, Default={DynamicResource Gray-200}}" />
-        <Setter Property="BackgroundColor" Value="{OnPlatform Android={DynamicResource Gray-100}, Default={DynamicResource Gray-200}}" />
+        <Setter Property="BorderColor" Value="{OnPlatform Android={AppThemeBinding Light={StaticResource Gray100}, Dark={StaticResource Gray900}}, Default={AppThemeBinding Light={StaticResource Gray200}, Dark={StaticResource Gray800}}}" />
+        <Setter Property="BackgroundColor" Value="{OnPlatform Android={AppThemeBinding Light={StaticResource Gray100}, Dark={StaticResource Gray900}}, Default={AppThemeBinding Light={StaticResource Gray200}, Dark={StaticResource Gray800}}}" />
         <Setter Property="DropDownButtonSettings">
             <Setter.Value>
                 <combobox:DropDownButtonSettings
                     FontColor="{DynamicResource PrimaryColor}"
-                    BackgroundColor="{DynamicResource Transparent}"
+                    BackgroundColor="{StaticResource Transparent}"
                     HighlightFontColor="{DynamicResource PrimaryColor}"
                     HighlightedBackgroundColor="{DynamicResource PrimaryColor}"
                     />
@@ -96,17 +88,17 @@
         </Setter>
         <Setter Property="ClearButtonColor" Value="{DynamicResource PrimaryColor}" />
         <Setter Property="ShowClearButton" Value="True" />
-        <Setter Property="TextColor" Value="{DynamicResource Gray-900}" />
-        <Setter Property="FontFamily" Value="{StaticResource Montserrat-Regular}"/>
+        <Setter Property="TextColor" Value="{AppThemeBinding Light={StaticResource Gray900}, Dark={StaticResource Gray100}}" />
+        <Setter Property="FontFamily" Value="{StaticResource MontserratRegular}"/>
         <Setter Property="TextSize" Value="{OnIdiom Desktop=20, Tablet=20, Phone=14, Default=14}"/>
         <Setter Property="Margin" Value="4,2"/>
         <Setter Property="IsSelectedItemsVisibleInDropDown" Value="False"/>
-        <Setter Property="DropDownBackgroundColor" Value="{DynamicResource Gray-200}"/>
-        <Setter Property="DropDownBorderColor" Value="{DynamicResource Gray-400}"/>
-        <Setter Property="DropDownTextColor" Value="{DynamicResource Gray-900}"/>
-        <Setter Property="DropDownItemFontFamily" Value="{DynamicResource Montserrat-Regular}"/>
+        <Setter Property="DropDownBackgroundColor" Value="{AppThemeBinding Light={StaticResource Gray200}, Dark={StaticResource Gray800}}"/>
+        <Setter Property="DropDownBorderColor" Value="{AppThemeBinding Light={StaticResource Gray400}, Dark={StaticResource Gray500}}"/>
+        <Setter Property="DropDownTextColor" Value="{AppThemeBinding Light={StaticResource Gray900}, Dark={StaticResource Gray100}}"/>
+        <Setter Property="DropDownItemFontFamily" Value="{StaticResource MontserratRegular}"/>
         <Setter Property="DropDownTextSize" Value="{OnIdiom Desktop=20, Tablet=20, Phone=14, Default=14}"/>
-        <Setter Property="SelectedDropDownItemColor" Value="{DynamicResource Gray-100}"/>
+        <Setter Property="SelectedDropDownItemColor" Value="{AppThemeBinding Light={StaticResource Gray100}, Dark={StaticResource Gray900}}"/>
         <Setter Property="HeightRequest" Value="{OnPlatform Default=42, Android=50, iOS=40}"/>
 
         <Setter Property="MultiSelectMode" Value="None"/>
@@ -114,9 +106,9 @@
             <Setter.Value>
                 <combobox:TokenSettings 
                     FontSize="{OnIdiom Desktop=20, Tablet=20, Phone={OnPlatform Android=12, Default=14}, Default=14}" 
-                    BackgroundColor="{DynamicResource Gray-100}" 
-                    FontFamily="{StaticResource Montserrat-Regular}"
-                    TextColor="{DynamicResource Gray-900}" 
+                    BackgroundColor="{AppThemeBinding Light={StaticResource Gray100}, Dark={StaticResource Gray900}}" 
+                    FontFamily="{StaticResource MontserratRegular}"
+                    TextColor="{AppThemeBinding Light={StaticResource Gray900}, Dark={StaticResource Gray100}}" 
                     SelectedBackgroundColor="{DynamicResource PrimaryColor}" 
                     IsCloseButtonVisible="true" 
                     CornerRadius="15" DeleteButtonPlacement="{OnPlatform Android=Left, Default=Right}" 
@@ -126,20 +118,11 @@
 
         <Style.Triggers>
             <Trigger Property="IsEnabled" Value="False" TargetType="controls:MultiSelectComboBox">
-                <Setter Property="BackgroundColor" Value="{DynamicResource Gray-600}" />
+                <Setter Property="BackgroundColor" Value="{AppThemeBinding Light={StaticResource Gray600}, Dark={StaticResource Gray400}}" />
             </Trigger>
             <Trigger Property="MultiSelectMode" Value="Token" TargetType="controls:MultiSelectComboBox">
                 <Setter Property="HeightRequest" Value="{OnPlatform Default=42, Android=60, iOS=45}"/>
             </Trigger>
-            <!--
-            <Trigger Property="IsMouseOver" Value="True">
-                <Setter Property="Background" Value="{DynamicResource GrayBrush10}" />
-            </Trigger>
-           
-            <Trigger Property="Button.IsPressed" Value="True" TargetType="combobox:SfComboBox">
-                <Setter Property="BackgroundColor" Value="{DynamicResource Gray-900}" />
-                <Setter Property="TextColor" Value="{DynamicResource Gray-Black}" />
-            </Trigger> -->
         </Style.Triggers>
     </Style>
 
@@ -154,7 +137,7 @@
                         <!-- Icon -->
                         <Label 
                             Style="{StaticResource MaterialFontFamilyIconLabelStyle}" 
-                            Text="{StaticResource MaterialDesign_ServerNetwork}"
+                            Text="{x:Static icons:MaterialIcons.NetworkOutline}"
                             TextColor="{DynamicResource PrimaryColor}"
                             VerticalTextAlignment="Center"
                             HorizontalTextAlignment="Center"
@@ -180,7 +163,7 @@
                         <!-- Icon -->
                         <Label 
                             Style="{StaticResource MaterialFontFamilyIconLabelStyle}" 
-                            Text="{StaticResource MaterialDesign_Nozzle}"
+                            Text="{x:Static icons:MaterialIcons.Printer3dNozzle}"
                             TextColor="{DynamicResource PrimaryColor}"
                             FontSize="16"
                             VerticalTextAlignment="Center"

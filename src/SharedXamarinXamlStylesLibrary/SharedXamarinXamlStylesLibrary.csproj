@@ -60,6 +60,7 @@
     <PackageReference Include="Syncfusion.Xamarin.SfRotator" Version="23.1.43" />
     <PackageReference Include="Syncfusion.Xamarin.SfTabView" Version="23.1.43" />
     <PackageReference Include="Xamarin.Forms" Version="5.0.0.2612" />
+	<PackageReference Include="Xamarin.Essentials" Version="1.8.0" />
   </ItemGroup>
 	
   <ItemGroup>
@@ -88,6 +89,12 @@
     <EmbeddedResource Update="Themes\Controls\BoxView.xaml">
       <Generator>MSBuild:Compile</Generator>
     </EmbeddedResource>
+    <EmbeddedResource Update="Themes\Controls\Button.xaml">
+      <Generator>MSBuild:Compile</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Update="Themes\Controls\CheckBox.xaml">
+      <Generator>MSBuild:Compile</Generator>
+    </EmbeddedResource>
     <EmbeddedResource Update="Themes\Controls\Editor.xaml">
       <Generator>MSBuild:Compile</Generator>
     </EmbeddedResource>
@@ -103,7 +110,22 @@
     <EmbeddedResource Update="Themes\Controls\Label.xaml">
       <Generator>MSBuild:Compile</Generator>
     </EmbeddedResource>
+    <EmbeddedResource Update="Themes\Controls\Page.xaml">
+      <Generator>MSBuild:Compile</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Update="Themes\Controls\Picker.xaml">
+      <Generator>MSBuild:Compile</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Update="Themes\Controls\RefreshView.xaml">
+      <Generator>MSBuild:Compile</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Update="Themes\Controls\Shell.xaml">
+      <Generator>MSBuild:Compile</Generator>
+    </EmbeddedResource>
     <EmbeddedResource Update="Themes\Controls\StackLayout.xaml">
+      <Generator>MSBuild:Compile</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Update="Themes\Controls\Switch.xaml">
       <Generator>MSBuild:Compile</Generator>
     </EmbeddedResource>
     <EmbeddedResource Update="Themes\Controls\Syncfusion\SfAutoComplete.xaml">
@@ -171,12 +193,6 @@
     </EmbeddedResource>
     <EmbeddedResource Update="Themes\DefaultTheme.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
-    </EmbeddedResource>
-    <EmbeddedResource Update="Themes\Fonts.xaml">
-      <Generator>MSBuild:Compile</Generator>
-    </EmbeddedResource>
-    <EmbeddedResource Update="Themes\Icons.xaml">
-      <Generator>MSBuild:Compile</Generator>
     </EmbeddedResource>
   </ItemGroup>
 

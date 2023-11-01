@@ -7,12 +7,20 @@
     >
     <ResourceDictionary.MergedDictionaries>
         <ResourceDictionary Source="/Themes/Controls/BoxView.xaml" />
+        <ResourceDictionary Source="/Themes/Controls/Button.xaml" />
+        <ResourceDictionary Source="/Themes/Controls/CheckBox.xaml" />
         <ResourceDictionary Source="/Themes/Controls/Editor.xaml" />
         <ResourceDictionary Source="/Themes/Controls/Entry.xaml" />
-        <ResourceDictionary Source="/Themes/Controls/Label.xaml" />
-        <ResourceDictionary Source="/Themes/Controls/Grid.xaml" />
         <ResourceDictionary Source="/Themes/Controls/Frame.xaml" />
+        <ResourceDictionary Source="/Themes/Controls/Label.xaml" />
+        <ResourceDictionary Source="/Themes/Controls/Page.xaml" />
+        <ResourceDictionary Source="/Themes/Controls/Picker.xaml" />
+        <ResourceDictionary Source="/Themes/Controls/RefreshView.xaml" />
+        <ResourceDictionary Source="/Themes/Controls/Shell.xaml" />
+        <ResourceDictionary Source="/Themes/Controls/Grid.xaml" />
         <ResourceDictionary Source="/Themes/Controls/StackLayout.xaml" />
+        <ResourceDictionary Source="/Themes/Controls/Switch.xaml" />
+        
         <ResourceDictionary Source="/Themes/Controls/Syncfusion/SfAutoComplete.xaml" />
         <ResourceDictionary Source="/Themes/Controls/Syncfusion/SfBadgeView.xaml" />
         <ResourceDictionary Source="/Themes/Controls/Syncfusion/SfBorder.xaml" />

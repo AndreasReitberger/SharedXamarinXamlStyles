@@ -6,6 +6,9 @@
     
     xmlns:badge ="clr-namespace:Syncfusion.XForms.BadgeView;assembly=Syncfusion.SfBadgeView.XForms"     
     >
+    <ResourceDictionary.MergedDictionaries>
+        <ResourceDictionary Source="/Themes/SharedColors.xaml" />
+    </ResourceDictionary.MergedDictionaries>
     <!-- OPTIMIZED -->
     <Style x:Key="DefaultBadgedViewStyle" TargetType="badge:SfBadgeView">
         <Setter Property="BadgeSettings">
@@ -16,7 +19,7 @@
                     Offset="12,-20"
                     BadgeType="None"
                     BackgroundColor="{DynamicResource PrimaryColor}"
-                    TextColor="{DynamicResource White}"
+                    TextColor="{StaticResource White}"
                     />
             </Setter.Value>
         </Setter>
@@ -31,8 +34,8 @@
                     BadgePosition="BottomRight"
                     Offset="12,-20"
                     BadgeType="None"
-                    BackgroundColor="{DynamicResource HyperLink}"
-                    TextColor="{DynamicResource White}"
+                    BackgroundColor="{StaticResource Blue}"
+                    TextColor="{StaticResource White}"
                     />
             </Setter.Value>
         </Setter>

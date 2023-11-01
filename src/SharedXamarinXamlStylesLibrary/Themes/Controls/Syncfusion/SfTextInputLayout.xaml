@@ -8,21 +8,21 @@
     >
     <ResourceDictionary.MergedDictionaries>
         <!--<ResourceDictionary Source="/Themes/Icons.xaml" />-->
-        <ResourceDictionary Source="/Themes/Fonts.xaml" />
+        <ResourceDictionary Source="/Themes/SharedColors.xaml" />
+        <ResourceDictionary Source="/Themes/SharedFonts.xaml" />
     </ResourceDictionary.MergedDictionaries>
     <!-- OPTIMIZED -->
     <Style x:Key="DefaultTextInputLayoutStyle" TargetType="inputLayout:SfTextInputLayout">
-        <Setter Property="UnfocusedColor" Value="{DynamicResource Gray-900}" />
+        <Setter Property="UnfocusedColor" Value="{AppThemeBinding Light={StaticResource Gray900}, Dark={StaticResource Gray100}}" />
         <Setter Property="FocusedColor" Value="{DynamicResource PrimaryColor}" />
-        <!--<Setter Property="BackgroundColor" Value="{DynamicResource Transparent}" />-->
-        <Setter Property="ErrorColor" Value="{DynamicResource Red}" />
+        <Setter Property="ErrorColor" Value="{StaticResource Red}" />
 
         <Setter Property="HintLabelStyle">
             <Setter.Value>
                 <inputLayout:LabelStyle 
                     FontAttributes="None" 
                     FontSize="{OnIdiom Desktop=20, Tablet=20, Phone=14, Default=14}" 
-                    FontFamily="{StaticResource Montserrat-Bold}"/>
+                    FontFamily="{StaticResource MontserratBold}"/>
             </Setter.Value>
         </Setter>
         <Setter Property="ErrorLabelStyle">
@@ -30,7 +30,7 @@
                 <inputLayout:LabelStyle 
                     FontAttributes="None" 
                     FontSize="{OnIdiom Desktop=20, Tablet=20, Phone=14, Default=14}" 
-                    FontFamily="{StaticResource Montserrat-Bold}"/>
+                    FontFamily="{StaticResource MontserratBold}"/>
             </Setter.Value>
         </Setter>
         <Setter Property="HelperLabelStyle">
@@ -38,14 +38,14 @@
                 <inputLayout:LabelStyle 
                     FontAttributes="None" 
                     FontSize="{OnIdiom Desktop=18, Tablet=18, Phone=12, Default=12}" 
-                    FontFamily="{StaticResource Montserrat-SemiBold}"
+                    FontFamily="{StaticResource MontserratSemiBold}"
                     
                     />
             </Setter.Value>
         </Setter>
         <Style.Triggers>
             <Trigger Property="IsEnabled" Value="False" TargetType="inputLayout:SfTextInputLayout">
-                <Setter Property="BackgroundColor" Value="{DynamicResource Gray-600}" />
+                <Setter Property="BackgroundColor" Value="{AppThemeBinding Light={StaticResource Gray600}, Dark={StaticResource Gray400}}" />
             </Trigger>
         </Style.Triggers>
     </Style>

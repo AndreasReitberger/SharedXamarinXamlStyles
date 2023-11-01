@@ -6,13 +6,16 @@
 
     xmlns:control="clr-namespace:AndreasReitberger.Shared.XForm.Controls"
     >
+    <ResourceDictionary.MergedDictionaries>
+        <ResourceDictionary Source="/Themes/SharedColors.xaml" />
+    </ResourceDictionary.MergedDictionaries>
   <!-- OPTIMIZED -->
   <!--  Common style for editor  -->
   <Style TargetType="control:BorderlessEditor">
-    <Setter Property="BackgroundColor" Value="{DynamicResource Gray-100}" />
-    <Setter Property="TextColor" Value="{DynamicResource Gray-900}" />
+    <Setter Property="BackgroundColor" Value="{AppThemeBinding Light={StaticResource Gray100}, Dark={StaticResource Gray900}}" />
+    <Setter Property="TextColor" Value="{AppThemeBinding Light={StaticResource Gray900}, Dark={StaticResource Gray100}}" />
     <Setter Property="FontSize" Value="14" />
     <Setter Property="Margin" Value="5,0" />
-    <Setter Property="PlaceholderColor" Value="{DynamicResource Gray-700}" />
+        <Setter Property="PlaceholderColor" Value="{AppThemeBinding Light={StaticResource Gray700}, Dark={StaticResource Gray300}}" />
   </Style>
 </ResourceDictionary>

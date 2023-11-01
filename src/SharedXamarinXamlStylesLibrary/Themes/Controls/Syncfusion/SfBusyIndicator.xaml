@@ -7,8 +7,8 @@
     xmlns:busyindicator="clr-namespace:Syncfusion.SfBusyIndicator.XForms;assembly=Syncfusion.SfBusyIndicator.XForms"   
     >
     <ResourceDictionary.MergedDictionaries>
-        <!--<ResourceDictionary Source="/Themes/Icons.xaml" />-->
-        <ResourceDictionary Source="/Themes/Fonts.xaml" />
+        <ResourceDictionary Source="/Themes/SharedColors.xaml" />
+        <ResourceDictionary Source="/Themes/SharedFonts.xaml" />
     </ResourceDictionary.MergedDictionaries>
 
     <!-- OPTIMIZED -->
@@ -23,7 +23,7 @@
         <Setter Property="Title" Value="Loading..."/>
         <Setter Property="TitlePlacement" Value="Bottom"/>
         <Setter Property="TextSize" Value="{OnIdiom Tablet=12, Default=10}"/>
-        <Setter Property="FontFamily" Value="{StaticResource Montserrat-SemiBold}"/>
+        <Setter Property="FontFamily" Value="{StaticResource MontserratSemiBold}"/>
     </Style>
 
     <Style x:Key="ConnectingBusyIndicatorStyle" TargetType="busyindicator:SfBusyIndicator" BasedOn="{StaticResource LoadingBusyIndicatorStyle}">

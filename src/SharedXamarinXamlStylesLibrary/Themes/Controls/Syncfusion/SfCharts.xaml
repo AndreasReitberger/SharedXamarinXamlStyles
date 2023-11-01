@@ -6,11 +6,8 @@
     
     xmlns:charts="clr-namespace:Syncfusion.SfChart.XForms;assembly=Syncfusion.SfChart.XForms"
     >
-    <!--
     <ResourceDictionary.MergedDictionaries>
-        <ResourceDictionary Source="/Themes/Icons.xaml" />
-        <ResourceDictionary Source="/Themes/Fonts.xaml" />
+        <ResourceDictionary Source="/Themes/SharedColors.xaml" />
     </ResourceDictionary.MergedDictionaries>
-    -->
 
 </ResourceDictionary>

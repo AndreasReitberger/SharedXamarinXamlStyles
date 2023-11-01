@@ -7,33 +7,63 @@
     
     xmlns:ios="clr-namespace:Xamarin.Forms.PlatformConfiguration.iOSSpecific;assembly=Xamarin.Forms.Core"
     >
-    <Color x:Key="Transparent">Transparent</Color>
-    <Color x:Key="TappedBackgroundColor">#eaeaea</Color>
+    <!-- Allows binding as StaticResource in the Main Project
+    <x:String x:Key="FontAwesome5Brands">FontAwesome5Brands</x:String>
+    <x:String x:Key="FontAwesome5Regular">FontAwesome5Regular</x:String>
+    <x:String x:Key="FontAwesome5Solid">FontAwesome5Solid</x:String>
+    <x:String x:Key="MaterialDesignIcons">MaterialDesignIcons</x:String>
+    <x:String x:Key="MontserratBold">MontserratBold</x:String>
+    <x:String x:Key="MontserratMedium">MontserratMedium</x:String>
+    <x:String x:Key="MontserratRegular">MontserratRegular</x:String>
+    <x:String x:Key="MontserratSemiBold">MontserratSemiBold</x:String>
+    <x:String x:Key="FontIcons">UIFontIcons</x:String>
+     -->
 
-    <Color x:Key="Green">#33AD79</Color>
-    <Color x:Key="LightGreen">#38ef7d</Color>
-    <Color x:Key="DarkGreen">#11998e</Color>
-    <Color x:Key="Red">#ff4a4a</Color>
-    <Color x:Key="DarkRed">#93291e</Color>
-    <Color x:Key="Orange">#F78836</Color>
-    <Color x:Key="DarkOrange">#F83017</Color>
-    <Color x:Key="Blue">#3C8CF1</Color>
-    <Color x:Key="LightBlue">#6dd5ed</Color>
-    <Color x:Key="DarkBlue">#2193b0</Color>
-    <Color x:Key="HyperLink">#567cd7</Color>
-    <Color x:Key="White">#ffffff</Color>
-    <Color x:Key="Black">#000000</Color>
-    <Color x:Key="primary-lighter">#edcacd</Color>
-    <Color x:Key="Liliac">#d483fc</Color>
-    <Color x:Key="Purpleish-Blue">#5d4cf7</Color>
-    <Color x:Key="Link">#567cd7</Color>
-    <Color x:Key="Bright-Cyan">#3cdeff</Color>
-    <Color x:Key="Lemon-Lime">#bdff27</Color>
-    <Color x:Key="Yellow">#E9B31A</Color>
-    <Color x:Key="Pink">#C6275C</Color>
+    <OnPlatform x:Key="FontIcons" x:TypeArguments="x:String">
+        <OnPlatform.Platforms>
+            <On Platform="Android" Value="UIFontIcons.ttf#UIFontIcons" />
+            <On Platform="iOS" Value="UIFontIcons" />
+            <On Platform="UWP" Value="Assets/UIFontIcons.ttf#UIFontIcons" />
+        </OnPlatform.Platforms>
+    </OnPlatform>
 
-    <!-- Circular Gauge Temprange Colors -->
-    <Color x:Key="TempLow">#DD4E38</Color>
-    <Color x:Key="TempMiddle">#B72316</Color>
-    <Color x:Key="TempHigh">#93291e</Color>
+    <OnPlatform x:Key="MaterialDesignIcons" x:TypeArguments="x:String">
+        <OnPlatform.Platforms>
+            <On Platform="Android" Value="materialdesignicons-webfont.ttf#Material Design Icons" />
+            <On Platform="iOS" Value="Material Design Icons" />
+            <On Platform="UWP" Value="/Assets/materialdesignicons-webfont.ttf#Material Design Icons" />
+        </OnPlatform.Platforms>
+    </OnPlatform>
+
+    <OnPlatform x:Key="MontserratSemiBold" x:TypeArguments="x:String">
+        <OnPlatform.Platforms>
+            <On Platform="Android" Value="Montserrat-SemiBold.ttf#Montserrat-SemiBold" />
+            <On Platform="iOS" Value="Montserrat-SemiBold" />
+            <On Platform="UWP" Value="Assets/Montserrat-SemiBold.ttf#Montserrat-SemiBold" />
+        </OnPlatform.Platforms>
+    </OnPlatform>
+
+    <OnPlatform x:Key="MontserratRegular" x:TypeArguments="x:String">
+        <OnPlatform.Platforms>
+            <On Platform="Android" Value="Montserrat-Regular.ttf#Montserrat-Regular" />
+            <On Platform="iOS" Value="Montserrat-Regular" />
+            <On Platform="UWP" Value="Assets/Montserrat-Regular.ttf#Montserrat-Regular" />
+        </OnPlatform.Platforms>
+    </OnPlatform>
+
+    <OnPlatform x:Key="MontserratMedium" x:TypeArguments="x:String">
+        <OnPlatform.Platforms>
+            <On Platform="Android" Value="Montserrat-Medium.ttf#Montserrat-Medium" />
+            <On Platform="iOS" Value="Montserrat-Medium" />
+            <On Platform="UWP" Value="Assets/Montserrat-Medium.ttf#Montserrat-Medium" />
+        </OnPlatform.Platforms>
+    </OnPlatform>
+
+    <OnPlatform x:Key="MontserratBold" x:TypeArguments="x:String">
+        <OnPlatform.Platforms>
+            <On Platform="Android" Value="Montserrat-Bold.ttf#Montserrat-Bold" />
+            <On Platform="iOS" Value="Montserrat-Bold" />
+            <On Platform="UWP" Value="Assets/Montserrat-Bold.ttf#Montserrat-Bold" />
+        </OnPlatform.Platforms>
+    </OnPlatform>
 </ResourceDictionary>

@@ -6,10 +6,13 @@
     
     xmlns:PullToRefresh="clr-namespace:Syncfusion.SfPullToRefresh.XForms;assembly=Syncfusion.SfPullToRefresh.XForms" 
     >
+    <ResourceDictionary.MergedDictionaries>
+        <ResourceDictionary Source="/Themes/SharedColors.xaml" />
+    </ResourceDictionary.MergedDictionaries>
     <!-- OPTIMIZED -->
     <Style x:Key="DefaultPullToRefreshStyle" TargetType="PullToRefresh:SfPullToRefresh">
         <Setter Property="ProgressStrokeColor" Value="{DynamicResource PrimaryColor}" />
-        <Setter Property="ProgressBackgroundColor" Value="{DynamicResource Gray-200}" />
+        <Setter Property="ProgressBackgroundColor" Value="{AppThemeBinding Light={StaticResource Gray200}, Dark={StaticResource Gray800}}" />
         <Setter Property="ProgressStrokeWidth" Value="2" />
         <Setter Property="TransitionMode" Value="Push" />
         <Setter Property="PullingThreshold" Value="100" />

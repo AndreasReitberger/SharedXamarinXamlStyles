@@ -8,24 +8,25 @@
     >
     <!-- Optimized -->
     <ResourceDictionary.MergedDictionaries>
-        <ResourceDictionary Source="/Themes/Fonts.xaml" />
+        <ResourceDictionary Source="/Themes/SharedColors.xaml" />
+        <ResourceDictionary Source="/Themes/SharedFonts.xaml" />
     </ResourceDictionary.MergedDictionaries>
 
     <Style TargetType="picker:SfDatePicker">
-        <Setter Property="UnselectedItemTextColor" Value="{DynamicResource Gray-900}" />
+        <Setter Property="UnselectedItemTextColor" Value="{AppThemeBinding Light={StaticResource Gray900}, Dark={StaticResource Gray100}}" />
         <Setter Property="SelectedItemTextColor" Value="{DynamicResource PrimaryColor}" />
         <Setter Property="HeaderTextColor" Value="{DynamicResource PrimaryColor}" />
-        <Setter Property="HeaderBackgroundColor" Value="{DynamicResource Gray-200}" />
-        <Setter Property="ColumnHeaderBackgroundColor" Value="{DynamicResource Gray-100}" />
-        <Setter Property="ColumnHeaderTextColor" Value="{DynamicResource Gray-900}" />
-        <Setter Property="HeaderFontFamily" Value="{StaticResource Montserrat-Bold}" />
-        <Setter Property="SelectedItemFontFamily" Value="{StaticResource Montserrat-Bold}" />
-        <Setter Property="UnselectedItemFontFamily" Value="{StaticResource Montserrat-SemiBold}" />
+        <Setter Property="HeaderBackgroundColor" Value="{AppThemeBinding Light={StaticResource Gray200}, Dark={StaticResource Gray800}}" />
+        <Setter Property="ColumnHeaderBackgroundColor" Value="{AppThemeBinding Light={StaticResource Gray100}, Dark={StaticResource Gray900}}" />
+        <Setter Property="ColumnHeaderTextColor" Value="{AppThemeBinding Light={StaticResource Gray900}, Dark={StaticResource Gray100}}" />
+        <Setter Property="HeaderFontFamily" Value="{StaticResource MontserratBold}" />
+        <Setter Property="SelectedItemFontFamily" Value="{StaticResource MontserratBold}" />
+        <Setter Property="UnselectedItemFontFamily" Value="{StaticResource MontserratSemiBold}" />
         <Setter Property="ShowHeader" Value="False" />
 
         <Style.Triggers>
             <Trigger Property="IsEnabled" Value="False" TargetType="picker:SfDatePicker">
-                <Setter Property="BackgroundColor" Value="{DynamicResource Gray-600}" />
+                <Setter Property="BackgroundColor" Value="{AppThemeBinding Light={StaticResource Gray600}, Dark={StaticResource Gray400}}" />
             </Trigger>
         </Style.Triggers>
     </Style>

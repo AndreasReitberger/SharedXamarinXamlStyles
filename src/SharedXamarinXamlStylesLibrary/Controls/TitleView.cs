@@ -80,7 +80,6 @@ namespace AndreasReitberger.Shared.XForm.Controls
                 new RowDefinition { Height = 1 }
             };
 
-            //var boxView = new BoxView { Color = (Color)Application.Current.Resources["Gray-200"] };
             var boxView = new BoxView { Color = Color.FromHex("#ebecef") };
 
             Children.Add(this.LeadingView, 1, 0);
@@ -225,7 +224,6 @@ namespace AndreasReitberger.Shared.XForm.Controls
                 {
                     Text = newText,
                     TextColor = Color.FromHex("#333942"),
-                    //TextColor = (Color)Application.Current.Resources["Gray-900"],
                     FontSize = 16,
                     Margin = new Thickness(0, 8),
                     FontFamily = Device.RuntimePlatform == Device.Android

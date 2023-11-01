@@ -6,6 +6,9 @@
 
     xmlns:gradient="clr-namespace:Syncfusion.XForms.Graphics;assembly=Syncfusion.Core.XForms"
     >
+    <ResourceDictionary.MergedDictionaries>
+        <ResourceDictionary Source="/Themes/SharedColors.xaml" />
+    </ResourceDictionary.MergedDictionaries>
     <!-- OPTIMIZED -->
     <Style x:Key="GradientViewStyle" TargetType="gradient:SfGradientView">
         <Setter Property="BackgroundBrush">

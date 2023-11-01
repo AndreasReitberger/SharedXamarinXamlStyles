@@ -6,21 +6,24 @@
 
     xmlns:range="clr-namespace:Syncfusion.SfRangeSlider.XForms;assembly=Syncfusion.SfRangeSlider.XForms"
     >
+    <ResourceDictionary.MergedDictionaries>
+        <ResourceDictionary Source="/Themes/SharedColors.xaml" />
+    </ResourceDictionary.MergedDictionaries>
     <!-- OPTIMIZED -->
     <Style x:Key="DefaultRangeSliderStyle" TargetType="range:SfRangeSlider">
-        <Setter Property="ToolTipBackgroundColor" Value="{DynamicResource Gray-200}" />
-        <Setter Property="ToolTipTextColor" Value="{DynamicResource Gray-Black}" />
-        <Setter Property="KnobColor" Value="{OnPlatform Android={DynamicResource Green}, Default={DynamicResource White}}" />
-        <Setter Property="TrackSelectionColor" Value="{DynamicResource Green}" />
-        <Setter Property="TrackColor" Value="{DynamicResource Gray-300}" />
-        <Setter Property="LabelColor" Value="{DynamicResource Gray-Black}" />
+        <Setter Property="ToolTipBackgroundColor" Value="{AppThemeBinding Light={StaticResource Gray200}, Dark={StaticResource Gray800}}" />
+        <Setter Property="ToolTipTextColor" Value="{AppThemeBinding Light={StaticResource Black}, Dark={StaticResource White}}" />
+        <Setter Property="KnobColor" Value="{OnPlatform Android={StaticResource Green}, Default={StaticResource White}}" />
+        <Setter Property="TrackSelectionColor" Value="{StaticResource Green}" />
+        <Setter Property="TrackColor" Value="{AppThemeBinding Light={StaticResource Gray300}, Dark={StaticResource Gray700}}" />
+        <Setter Property="LabelColor" Value="{AppThemeBinding Light={StaticResource Black}, Dark={StaticResource White}}" />
         <Setter Property="Visual" Value="Default" />
         <Setter Property="HeightRequest" Value="48" />
 
         <Style.Triggers>
             <Trigger Property="IsEnabled" Value="False" TargetType="range:SfRangeSlider">
-                <Setter Property="KnobColor" Value="{DynamicResource Gray-600}" />
-                <Setter Property="TrackColor" Value="{DynamicResource Gray-600}" />
+                <Setter Property="KnobColor" Value="{AppThemeBinding Light={StaticResource Gray600}, Dark={StaticResource Gray400}}" />
+                <Setter Property="TrackColor" Value="{AppThemeBinding Light={StaticResource Gray600}, Dark={StaticResource Gray400}}" />
             </Trigger>
         </Style.Triggers>
     </Style>
@@ -28,7 +31,7 @@
     <Style TargetType="range:SfRangeSlider" BasedOn="{StaticResource DefaultRangeSliderStyle}"/>
 
     <Style x:Key="PrimrayRangeSliderStyle" TargetType="range:SfRangeSlider" BasedOn="{StaticResource DefaultRangeSliderStyle}">
-        <Setter Property="KnobColor" Value="{OnPlatform Android={DynamicResource PrimaryColor}, Default={DynamicResource White}}" />
+        <Setter Property="KnobColor" Value="{OnPlatform Android={DynamicResource PrimaryColor}, Default={StaticResource White}}" />
         <Setter Property="TrackSelectionColor" Value="{DynamicResource PrimaryColor}" />
         <Setter Property="ShowRange" Value="False" />
         <Setter Property="ShowValueLabel" Value="False" />

@@ -6,17 +6,18 @@
     
     xmlns:control="clr-namespace:AndreasReitberger.Shared.XForm.Controls"        
     >
-    <!-- OPTIMIZED -->
-
+    <ResourceDictionary.MergedDictionaries>
+        <ResourceDictionary Source="/Themes/SharedColors.xaml" />
+    </ResourceDictionary.MergedDictionaries>
     <!--  Common style for TapNavigationGrid  -->
     <Style x:Key="DefaultTapAnimationGridStyle" TargetType="control:TapAnimationGrid">
         <Setter Property="RowSpacing" Value="0"/>
         <Setter Property="IsAnimated" Value="False"/>
         <Setter Property="ColumnSpacing" Value="0"/>
-        <Setter Property="BackgroundColor" Value="{DynamicResource Gray-100}" />
+        <Setter Property="BackgroundColor" Value="{AppThemeBinding Light={StaticResource Gray100}, Dark={StaticResource Gray900}}" />
         <Style.Triggers>
             <Trigger Property="IsEnabled" Value="False" TargetType="control:TapAnimationGrid">
-                <Setter Property="BackgroundColor" Value="{DynamicResource Gray-300}"/>
+                <Setter Property="BackgroundColor" Value="{AppThemeBinding Light={StaticResource Gray300}, Dark={StaticResource Gray700}}"/>
             </Trigger>
         </Style.Triggers>
     </Style>
@@ -26,25 +27,25 @@
         <Setter Property="ColumnSpacing" Value="0"/>
         <Style.Triggers>
             <Trigger Property="IsEnabled" Value="False" TargetType="Grid">
-                <Setter Property="BackgroundColor" Value="{DynamicResource Gray-300}"/>
+                <Setter Property="BackgroundColor" Value="{AppThemeBinding Light={StaticResource Gray300}, Dark={StaticResource Gray700}}"/>
             </Trigger>
         </Style.Triggers>
     </Style>
 
     <Style x:Key="DefaultSettingsGridStyle" TargetType="Grid" BasedOn="{StaticResource DefaultGridStyle}">
-        <Setter Property="BackgroundColor" Value="{DynamicResource Gray-100}" />
+        <Setter Property="BackgroundColor" Value="{AppThemeBinding Light={StaticResource Gray100}, Dark={StaticResource Gray900}}" />
     </Style>
     <!--  Common style for WarningGrid  -->
     <Style x:Key="WarningGridStyle" TargetType="Grid" BasedOn="{StaticResource DefaultGridStyle}">
-        <Setter Property="BackgroundColor" Value="{DynamicResource Yellow}" />
+        <Setter Property="BackgroundColor" Value="{StaticResource Yellow}" />
     </Style>
     <!--  Common style for ErrorGrid  -->
     <Style x:Key="CriticalErrorGridStyle" TargetType="Grid" BasedOn="{StaticResource DefaultGridStyle}">
-        <Setter Property="BackgroundColor" Value="{DynamicResource Red}" />
+        <Setter Property="BackgroundColor" Value="{StaticResource Red}" />
     </Style>
     <!--  Common style for SettingsGrid  -->
     <Style x:Key="DefaultPanelGridStyle" TargetType="Grid" BasedOn="{StaticResource DefaultGridStyle}">
-        <Setter Property="BackgroundColor" Value="{DynamicResource PanelBackground}" />
+        <Setter Property="BackgroundColor" Value="{AppThemeBinding Light={StaticResource Light_PanelBackground}, Dark={StaticResource Dark_PanelBackground}}" />
     </Style>
 
     <!--  Common style for Shell.TitleView  -->
