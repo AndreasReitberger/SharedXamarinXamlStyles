@@ -16,12 +16,12 @@
         <Setter Property="CornerRadius" Value="25" />
     </Style>
 
-    <Style x:Key="ProfileBorderStyle" TargetType="border:SfBorder">
+    <Style x:Key="ProfileSfBorderStyle" TargetType="border:SfBorder">
         <Setter Property="BorderWidth" Value="1" />
         <Setter Property="CornerRadius" Value="20" />
     </Style>
 
-    <Style x:Key="MenuSeparatorBorderStyle" TargetType="border:SfBorder" BasedOn="{StaticResource ProfileBorderStyle}">
+    <Style x:Key="MenuSeparatorSfBorderStyle" TargetType="border:SfBorder" BasedOn="{StaticResource ProfileSfBorderStyle}">
         <Setter Property="BorderWidth" Value="0" />
         <Setter Property="CornerRadius" Value="0" />
         <Setter Property="Margin" Value="1,2" />

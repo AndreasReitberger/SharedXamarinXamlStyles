@@ -68,6 +68,12 @@
   </ItemGroup>
 	
   <ItemGroup>
+    <Compile Update="Themes\ItemTemplates\ListViewItemTemplates.xaml.cs">
+      <DependentUpon>ListViewItemTemplates.xaml</DependentUpon>
+    </Compile>
+    <Compile Update="Themes\ItemTemplates\ListViewGroupHeaderTemplates.xaml.cs">
+      <DependentUpon>ListViewGroupHeaderTemplates.xaml</DependentUpon>
+    </Compile>
     <Compile Update="Themes\ItemTemplates\ShellItemTemplates.xaml.cs">
       <DependentUpon>ShellItemTemplates.xaml</DependentUpon>
     </Compile>
