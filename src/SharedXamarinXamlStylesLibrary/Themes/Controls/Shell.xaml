@@ -29,7 +29,7 @@
     -->
 
     <Style x:Key="DefaultShellStyle" TargetType="Shell" ApplyToDerivedTypes="True">
-        <Setter Property="Background" Value="{AppThemeBinding Light={StaticResource White}, Dark={StaticResource Gray950}}"/>
+        <!--<Setter Property="BackgroundColor" Value="{AppThemeBinding Light={StaticResource White}, Dark={StaticResource Gray950}}"/>-->
         <Setter Property="BackgroundColor" Value="{AppThemeBinding Light={StaticResource White}, Dark={StaticResource Gray950}}"/>
         <Setter Property="ForegroundColor" Value="{DynamicResource PrimaryColor}"/>
         <Setter Property="TitleColor" Value="{DynamicResource PrimaryColor}"/>
@@ -59,7 +59,7 @@
     
     <!--
     <Style x:Key="DefaultShellStyle" TargetType="Shell">
-        <Setter Property="Background" Value="{AppThemeBinding Light={StaticResource White}, Dark={StaticResource Gray950}}"/>
+        <Setter Property="BackgroundColor" Value="{AppThemeBinding Light={StaticResource White}, Dark={StaticResource Gray950}}"/>
         <Setter Property="ForegroundColor" Value="{DynamicResource PrimaryColor}"/>
         <Setter Property="TitleColor" Value="{DynamicResource PrimaryColor}"/>
         <Setter Property="UnselectedColor" Value="{AppThemeBinding Light={StaticResource Gray900}, Dark={StaticResource Gray100}}"/>

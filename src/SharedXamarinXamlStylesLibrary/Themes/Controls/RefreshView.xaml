@@ -10,7 +10,7 @@
     
     <Style x:Key="DefaultRefreshViewStyle" TargetType="RefreshView">
         <Setter Property="RefreshColor" Value="{AppThemeBinding Light={StaticResource DarkGray}, Dark={StaticResource LightGray}}" />
-        <Setter Property="Background" Value="{AppThemeBinding Light={OnPlatform UWP={StaticResource White}, Default={StaticResource Gray100}}, Dark={OnPlatform UWP={StaticResource Black}, Default={StaticResource Gray900}}}" />
+        <Setter Property="BackgroundColor" Value="{AppThemeBinding Light={OnPlatform UWP={StaticResource White}, Default={StaticResource Gray100}}, Dark={OnPlatform UWP={StaticResource Black}, Default={StaticResource Gray900}}}" />
     </Style>
 
     <Style TargetType="RefreshView" BasedOn="{StaticResource DefaultRefreshViewStyle}" />
