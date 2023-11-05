@@ -42,7 +42,7 @@
                 <Label 
                     Grid.Column="1"
                     Text="{Binding Feature}"
-                    Style="{StaticResource LabelStyle}"
+                    Style="{StaticResource DefaultLabelStyle}"
                     VerticalTextAlignment="Center"
                     HorizontalTextAlignment="Start"
                     />
@@ -102,7 +102,7 @@
                     >
                     <Label 
                         LineBreakMode="WordWrap" 
-                        Style="{StaticResource LabelStyle}" 
+                        Style="{StaticResource SmallLabelStyle}" 
                         Text="{Binding Message}"
                         FontAttributes="Bold"
                         VerticalTextAlignment="Center"
@@ -161,7 +161,7 @@
                         />
                     <!-- Translator -->
                     <Label 
-                        Style="{StaticResource LabelStyle}" 
+                        Style="{StaticResource DefaultLabelStyle}" 
                         LineBreakMode="WordWrap" 
                         Text="{Binding Translator}"
                         FontSize="12"
@@ -205,7 +205,7 @@
                         />
                     <!-- Translator -->
                     <Label 
-                        Style="{StaticResource LabelStyle}" 
+                        Style="{StaticResource DefaultLabelStyle}" 
                         LineBreakMode="WordWrap" 
                         Text="{Binding Translator}"
                         TextColor="{StaticResource White}"
@@ -227,7 +227,7 @@
                 ColumnDefinitions="*,Auto"
                 >
                 <Label
-                    Style="{StaticResource LabelStyle}"
+                    Style="{StaticResource DefaultLabelStyle}"
                     LineBreakMode="WordWrap"
                     Text="{Binding Changelog}"
                     />

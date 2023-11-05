@@ -174,7 +174,7 @@
                         <Label 
                             Text="{Binding Name}" 
                             VerticalTextAlignment="Center"
-                            Style="{StaticResource LabelStyle}"
+                            Style="{StaticResource DefaultLabelStyle}"
                             />
                     </StackLayout>
                 </DataTemplate>

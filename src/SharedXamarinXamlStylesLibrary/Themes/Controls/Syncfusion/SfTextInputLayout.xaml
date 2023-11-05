@@ -16,36 +16,40 @@
         <Setter Property="UnfocusedColor" Value="{AppThemeBinding Light={StaticResource Gray900}, Dark={StaticResource Gray100}}" />
         <Setter Property="FocusedColor" Value="{DynamicResource PrimaryColor}" />
         <Setter Property="ErrorColor" Value="{StaticResource Red}" />
-
+        <Setter Property="ContainerBackgroundColor" Value="{AppThemeBinding Light={StaticResource Gray100},Dark={StaticResource Gray950}}"/>
         <Setter Property="HintLabelStyle">
             <Setter.Value>
                 <inputLayout:LabelStyle 
                     FontAttributes="None" 
-                    FontSize="{OnIdiom Desktop=20, Tablet=20, Phone=14, Default=14}" 
-                    FontFamily="{StaticResource MontserratBold}"/>
+                    FontSize="{OnPlatform iOS=Micro, Default=Small}" 
+                    FontFamily="{StaticResource MontserratRegular}"
+                    Color="{AppThemeBinding Light={StaticResource Black},Dark={StaticResource White}}"
+                    />
             </Setter.Value>
         </Setter>
         <Setter Property="ErrorLabelStyle">
             <Setter.Value>
                 <inputLayout:LabelStyle 
                     FontAttributes="None" 
-                    FontSize="{OnIdiom Desktop=20, Tablet=20, Phone=14, Default=14}" 
-                    FontFamily="{StaticResource MontserratBold}"/>
+                    FontSize="{OnPlatform iOS=Micro, Default=Small}" 
+                    FontFamily="{StaticResource MontserratRegular}"
+                    Color="{AppThemeBinding Light={StaticResource Black},Dark={StaticResource White}}"
+                    />
             </Setter.Value>
         </Setter>
         <Setter Property="HelperLabelStyle">
             <Setter.Value>
                 <inputLayout:LabelStyle 
                     FontAttributes="None" 
-                    FontSize="{OnIdiom Desktop=18, Tablet=18, Phone=12, Default=12}" 
-                    FontFamily="{StaticResource MontserratSemiBold}"
+                    FontSize="{OnPlatform iOS=Micro, Default=Small}" 
+                    FontFamily="{StaticResource MontserratRegular}"
                     
                     />
             </Setter.Value>
         </Setter>
         <Style.Triggers>
             <Trigger Property="IsEnabled" Value="False" TargetType="inputLayout:SfTextInputLayout">
-                <Setter Property="BackgroundColor" Value="{AppThemeBinding Light={StaticResource Gray600}, Dark={StaticResource Gray400}}" />
+                <Setter Property="BackgroundColor" Value="{AppThemeBinding Light={StaticResource Gray400}, Dark={StaticResource Gray600}}" />
             </Trigger>
         </Style.Triggers>
     </Style>

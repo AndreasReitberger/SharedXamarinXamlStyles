@@ -68,6 +68,9 @@
   </ItemGroup>
 	
   <ItemGroup>
+    <Compile Update="Themes\ItemTemplates\ListViewSwipeTemplates.xaml.cs">
+      <DependentUpon>ListViewSwipeTemplates.xaml</DependentUpon>
+    </Compile>
     <Compile Update="Themes\ItemTemplates\ListViewItemTemplates.xaml.cs">
       <DependentUpon>ListViewItemTemplates.xaml</DependentUpon>
     </Compile>
