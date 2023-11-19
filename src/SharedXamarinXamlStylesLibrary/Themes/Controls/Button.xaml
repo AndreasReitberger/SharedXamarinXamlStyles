@@ -27,12 +27,6 @@
         <Setter Property="TextColor" Value="{Binding Source={RelativeSource Self}, Path=Background, Converter={StaticResource ColorToBlackWhiteConverter}}" />
         <!--<Setter Property="TextColor" Value="{Binding Source={RelativeSource Self}, Path=BackgroundColor, Converter={StaticResource ColorToBlackWhiteConverter}}" /> -->
         <Setter Property="FontFamily" Value="{StaticResource MontserratSemiBold}" />
-        <!--
-        <Setter Property="FontSize" Value="{OnPlatform 
-            Android={OnIdiom Phone=14, Default=18}, 
-            Default={OnIdiom Phone=16, Default=20}}"
-            />
-        -->
         <Setter Property="FontSize" Value="Small" />
         <Setter Property="VisualStateManager.VisualStateGroups">
             <VisualStateGroupList>
@@ -208,12 +202,6 @@
     <Style x:Key="RoundedLongButtonStyle" TargetType="Button" BasedOn="{StaticResource DefaultButtonStyle}">
         <Setter Property="Margin" Value="20" />
         <Setter Property="FontFamily" Value="{StaticResource MontserratSemiBold}" />
-        <!--
-        <Setter Property="FontSize" Value="{OnPlatform 
-            Android={OnIdiom Phone=12, Default=16}, 
-            Default={OnIdiom Desktop=14, Phone=16, Default=20}}"
-                />
-        -->
         <Setter Property="FontSize" Value="Small" />
         <Setter Property="FontAttributes" Value="Bold" />
         <Setter Property="HeightRequest" Value="{OnIdiom Desktop=60, Tablet=60, Default=50}" />
