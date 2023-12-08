@@ -1,12 +1,16 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <!--<?xaml-comp compile="true" ?>-->
 <ResourceDictionary
-    x:Class="AndreasReitberger.Shared.XForm.Themes.DefaultTheme"
+    x:Class="AndreasReitberger.Shared.XForm.Syncfusion.Themes.DefaultTheme"
     xmlns="http://xamarin.com/schemas/2014/forms"
     xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    
+    xmlns:shared="clr-namespace:AndreasReitberger.Shared.XForm.Themes;assembly=SharedXamarinXamlStylesLibrary"
     >
     <ResourceDictionary.MergedDictionaries>
-        <ResourceDictionary Source="/Themes/SharedColors.xaml" />
+        <shared:SharedColors />
+        <shared:SharedFonts />
+
         <ResourceDictionary Source="/Themes/SharedFonts.xaml" />
         <!-- Templates must come for styles! -->
         <ResourceDictionary Source="/Themes/SharedTemplates.xaml" />

@@ -1,0 +1,35 @@
+﻿<?xml version="1.0" encoding="UTF-8" ?>
+<?xaml-comp compile="true" ?>
+<ResourceDictionary
+    xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+
+    xmlns:shared="clr-namespace:AndreasReitberger.Shared.XForm.Themes;assembly=SharedXamarinXamlStylesLibrary"
+    xmlns:picker="clr-namespace:Syncfusion.XForms.Pickers;assembly=Syncfusion.SfPicker.XForms"
+    >
+    <!-- Optimized -->
+    <ResourceDictionary.MergedDictionaries>
+        <shared:SharedColors />
+        <shared:SharedFonts />
+        <ResourceDictionary Source="/Themes/SharedFonts.xaml" />
+    </ResourceDictionary.MergedDictionaries>
+
+    <Style TargetType="picker:SfDatePicker">
+        <Setter Property="UnselectedItemTextColor" Value="{AppThemeBinding Light={StaticResource Gray900}, Dark={StaticResource Gray100}}" />
+        <Setter Property="SelectedItemTextColor" Value="{DynamicResource PrimaryColor}" />
+        <Setter Property="HeaderTextColor" Value="{DynamicResource PrimaryColor}" />
+        <Setter Property="HeaderBackgroundColor" Value="{AppThemeBinding Light={StaticResource Gray200}, Dark={StaticResource Gray800}}" />
+        <Setter Property="ColumnHeaderBackgroundColor" Value="{AppThemeBinding Light={StaticResource Gray100}, Dark={StaticResource Gray900}}" />
+        <Setter Property="ColumnHeaderTextColor" Value="{AppThemeBinding Light={StaticResource Gray900}, Dark={StaticResource Gray100}}" />
+        <Setter Property="HeaderFontFamily" Value="{StaticResource MontserratBold}" />
+        <Setter Property="SelectedItemFontFamily" Value="{StaticResource MontserratBold}" />
+        <Setter Property="UnselectedItemFontFamily" Value="{StaticResource MontserratSemiBold}" />
+        <Setter Property="ShowHeader" Value="False" />
+
+        <Style.Triggers>
+            <Trigger Property="IsEnabled" Value="False" TargetType="picker:SfDatePicker">
+                <Setter Property="BackgroundColor" Value="{AppThemeBinding Light={StaticResource Gray600}, Dark={StaticResource Gray400}}" />
+            </Trigger>
+        </Style.Triggers>
+    </Style>
+</ResourceDictionary>

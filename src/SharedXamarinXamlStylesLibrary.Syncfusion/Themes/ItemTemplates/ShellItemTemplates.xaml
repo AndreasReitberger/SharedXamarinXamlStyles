@@ -1,0 +1,97 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<!--<?xaml-comp compile="true" ?>-->
+<ResourceDictionary
+    x:Class="AndreasReitberger.Shared.XForm.Themes.ItemTemplates.ShellItemTemplates"
+    xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    
+    xmlns:shared="clr-namespace:AndreasReitberger.Shared.XForm.Themes;assembly=SharedXamarinXamlStylesLibrary"
+    xmlns:ios="clr-namespace:Xamarin.Forms.PlatformConfiguration.iOSSpecific;assembly=Xamarin.Forms.Core"
+    >
+    <ResourceDictionary.MergedDictionaries>
+        <shared:SharedColors />
+        <shared:SharedFonts />
+        <ResourceDictionary Source="/Themes/SharedFonts.xaml" />
+    </ResourceDictionary.MergedDictionaries>
+
+    <Style x:Key="DefaultShellStyle" TargetType="Shell">
+        <Setter Property="BackgroundColor" Value="{AppThemeBinding Light={StaticResource White}, Dark={StaticResource Black}}"/>
+        <Setter Property="ForegroundColor" Value="{DynamicResource PrimaryColor}"/>
+        <Setter Property="TitleColor" Value="{DynamicResource PrimaryColor}"/>
+        <Setter Property="UnselectedColor" Value="{AppThemeBinding Light={StaticResource Gray900}, Dark={StaticResource Gray100}}"/>
+        <Setter Property="DisabledColor" Value="{AppThemeBinding Light={StaticResource Gray400}, Dark={StaticResource Gray500}}"/>
+        <Setter Property="FlyoutBackgroundColor" Value="{AppThemeBinding Light={StaticResource White}, Dark={StaticResource Black}}"/>
+    </Style>
+
+    <DataTemplate x:Key="DefaultFlyoutTemplate">
+        <Grid
+            x:Name="FlyoutItemLayout"
+            HeightRequest="{OnPlatform 44, Android=50}"
+            ColumnSpacing="{OnPlatform UWP=0}"
+            RowSpacing="{OnPlatform UWP=0}"
+            >
+            <VisualStateManager.VisualStateGroups>
+                <VisualStateGroupList>
+                    <VisualStateGroup x:Name="CommonStates">
+                        <VisualState x:Name="Normal">
+                            <VisualState.Setters>
+                                <Setter Property="BackgroundColor" Value="Transparent" />
+                            </VisualState.Setters>
+                        </VisualState>
+                        <VisualState x:Name="Selected">
+                            <VisualState.Setters>
+                                <Setter
+                                    Property="BackgroundColor"
+                                    Value="{OnPlatform UWP=Transparent, Default={AppThemeBinding Light={StaticResource Gray100}, Dark={StaticResource Gray900}}}"
+                                    />
+                            </VisualState.Setters>
+                        </VisualState>
+                        <VisualState x:Name="Disabled">
+                            <VisualState.Setters>
+                                <Setter
+                                    Property="BackgroundColor"
+                                    Value="{OnPlatform UWP=Transparent, Default={AppThemeBinding Light={StaticResource Gray500}, Dark={StaticResource Gray500}}}"
+                                    />
+                            </VisualState.Setters>
+                        </VisualState>
+                    </VisualStateGroup>
+                </VisualStateGroupList>
+            </VisualStateManager.VisualStateGroups>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="{OnPlatform Android=54, iOS=50, UWP=Auto}" />
+                <ColumnDefinition />
+            </Grid.ColumnDefinitions>
+            <Image
+                x:Name="FlyoutItemImage"
+                Source="{Binding FlyoutIcon}"
+                VerticalOptions="Center"
+                HorizontalOptions="{OnPlatform Default=Center, UWP=Start}"
+                HeightRequest="{OnPlatform Android=20, iOS=18, UWP=16}"
+                WidthRequest="{OnPlatform Android=204, iOS=18, UWP=16}"
+                >
+                <Image.Margin>
+                    <OnPlatform x:TypeArguments="Thickness">
+                        <OnPlatform.Platforms>
+                            <On Platform="WinUI"
+                            Value="12,0,12,0" />
+                        </OnPlatform.Platforms>
+                    </OnPlatform>
+                </Image.Margin>
+            </Image>
+            <Label
+                x:Name="FlyoutItemLabel"
+                Grid.Column="1"
+                Text="{Binding Title}"
+                FontSize="{OnPlatform Android=14, iOS=14}"
+                FontAttributes="{OnPlatform iOS=Bold}"
+                FontFamily="{StaticResource MontserratMedium}"
+                HorizontalOptions="{OnPlatform UWP=Start}"
+                HorizontalTextAlignment="{OnPlatform UWP=Start}"
+                VerticalTextAlignment="Center"
+                TextColor="{AppThemeBinding Light={StaticResource Black}, Dark={StaticResource White}}"
+                Margin="{OnPlatform Android='20,0,0,0'}"
+                >
+            </Label>
+        </Grid>
+    </DataTemplate>
+</ResourceDictionary>

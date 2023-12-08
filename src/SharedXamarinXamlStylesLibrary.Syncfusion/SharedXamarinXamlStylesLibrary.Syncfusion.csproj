@@ -1,0 +1,152 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+  <Import Project="..\..\common.props" />
+  <PropertyGroup>
+    <TargetFramework>netstandard2.1</TargetFramework>
+	  
+    <Description>A shared styles &amp; control library for Xamarin.Forms applications.</Description>
+    <PackageTags>Xamarin, Forms, Styles, Common, Shared, Library, Controls, Syncfusion</PackageTags>
+    <RootNamespace>AndreasReitberger.Shared.XForm.Syncfusion</RootNamespace>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Compile Remove="Resources\Styles\**" />
+    <EmbeddedResource Remove="Resources\Styles\**" />
+    <None Remove="Resources\Styles\**" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Remove="Resources\Fonts\UIFontIcons.ttf" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <EmbeddedResource Include="Resources\Fonts\UIFontIcons.ttf" />
+  </ItemGroup>
+
+	<ItemGroup>
+		<None Include="..\..\README.md" Pack="true" PackagePath="\" />
+	</ItemGroup>
+	
+  <ItemGroup>
+    <PackageReference Include="Syncfusion.Xamarin.Buttons" Version="23.2.6" />
+    <PackageReference Include="Syncfusion.Xamarin.Cards" Version="23.2.6" />
+    <PackageReference Include="Syncfusion.Xamarin.Expander" Version="23.2.6" />
+    <PackageReference Include="Syncfusion.Xamarin.SfAutoComplete" Version="23.2.6" />
+    <PackageReference Include="Syncfusion.Xamarin.SfBadgeView" Version="23.2.6" />
+    <PackageReference Include="Syncfusion.Xamarin.SfBusyIndicator" Version="23.2.6" />
+    <PackageReference Include="Syncfusion.Xamarin.SfCalendar" Version="23.2.6" />
+    <PackageReference Include="Syncfusion.Xamarin.SfChart" Version="23.2.6" />
+    <PackageReference Include="Syncfusion.Xamarin.SfComboBox" Version="23.2.6" />
+    <PackageReference Include="Syncfusion.Xamarin.SfGauge" Version="23.2.6" />
+    <PackageReference Include="Syncfusion.Xamarin.SfListView" Version="23.2.6" />
+    <PackageReference Include="Syncfusion.Xamarin.SfMaskedEdit" Version="23.2.6" />
+    <PackageReference Include="Syncfusion.Xamarin.SfNumericTextBox" Version="23.2.6" />
+    <PackageReference Include="Syncfusion.Xamarin.SfNumericUpDown" Version="23.2.6" />
+    <PackageReference Include="Syncfusion.Xamarin.SfPicker" Version="23.2.6" />
+    <PackageReference Include="Syncfusion.Xamarin.SfProgressBar" Version="23.2.6" />
+    <PackageReference Include="Syncfusion.Xamarin.SfPullToRefresh" Version="23.2.6" />
+    <PackageReference Include="Syncfusion.Xamarin.SfRangeSlider" Version="23.2.6" />
+    <PackageReference Include="Syncfusion.Xamarin.SfRotator" Version="23.2.6" />
+    <PackageReference Include="Syncfusion.Xamarin.SfTabView" Version="23.2.6" />
+    <PackageReference Include="Xamarin.Forms" Version="5.0.0.2622" />
+	<PackageReference Include="Xamarin.Essentials" Version="1.8.0" />
+  </ItemGroup>
+	
+  <ItemGroup>
+    <ProjectReference Include="..\..\..\SharedXFormCoreLibrary\src\SharedXFormCoreLibrary\SharedXFormCoreLibrary.csproj" />
+    <ProjectReference Include="..\SharedXamarinXamlStylesLibrary\SharedXamarinXamlStylesLibrary.csproj" />
+  </ItemGroup>
+	
+  <ItemGroup>
+    <Compile Update="Themes\ItemTemplates\ListViewSwipeTemplates.xaml.cs">
+      <DependentUpon>ListViewSwipeTemplates.xaml</DependentUpon>
+    </Compile>
+    <Compile Update="Themes\ItemTemplates\ListViewItemTemplates.xaml.cs">
+      <DependentUpon>ListViewItemTemplates.xaml</DependentUpon>
+    </Compile>
+    <Compile Update="Themes\ItemTemplates\ListViewGroupHeaderTemplates.xaml.cs">
+      <DependentUpon>ListViewGroupHeaderTemplates.xaml</DependentUpon>
+    </Compile>
+    <Compile Update="Themes\ItemTemplates\ShellItemTemplates.xaml.cs">
+      <DependentUpon>ShellItemTemplates.xaml</DependentUpon>
+    </Compile>
+    <Compile Update="Themes\SharedTemplates.xaml.cs">
+      <DependentUpon>SharedTemplates.xaml</DependentUpon>
+    </Compile>
+    <Compile Update="Themes\SharedStyles.xaml.cs">
+      <DependentUpon>SharedStyles.xaml</DependentUpon>
+    </Compile>
+    <Compile Update="Themes\SharedFonts.xaml.cs">
+      <DependentUpon>SharedFonts.xaml</DependentUpon>
+    </Compile>
+  </ItemGroup>
+
+  <ItemGroup>
+    <EmbeddedResource Update="Themes\Controls\SfAutoComplete.xaml">
+      <Generator>MSBuild:Compile</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Update="Themes\Controls\SfBadgeView.xaml">
+      <Generator>MSBuild:Compile</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Update="Themes\Controls\SfBorder.xaml">
+      <Generator>MSBuild:Compile</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Update="Themes\Controls\SfBusyIndicator.xaml">
+      <Generator>MSBuild:Compile</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Update="Themes\Controls\SfButtons.xaml">
+      <Generator>MSBuild:Compile</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Update="Themes\Controls\SfCardView.xaml">
+      <Generator>MSBuild:Compile</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Update="Themes\Controls\SfCharts.xaml">
+      <Generator>MSBuild:Compile</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Update="Themes\Controls\SfCircularGauge.xaml">
+      <Generator>MSBuild:Compile</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Update="Themes\Controls\SfCircularProgressBar.xaml">
+      <Generator>MSBuild:Compile</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Update="Themes\Controls\SfComboBoxes.xaml">
+      <Generator>MSBuild:Compile</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Update="Themes\Controls\SfGradientView.xaml">
+      <Generator>MSBuild:Compile</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Update="Themes\Controls\SfListView.xaml">
+      <Generator>MSBuild:Compile</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Update="Themes\Controls\SfMaskedEdit.xaml">
+      <Generator>MSBuild:Compile</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Update="Themes\Controls\SfNumericTextInputs.xaml">
+      <Generator>MSBuild:Compile</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Update="Themes\Controls\SfNumericUpDowns.xaml">
+      <Generator>MSBuild:Compile</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Update="Themes\Controls\SfPicker.xaml">
+      <Generator>MSBuild:Compile</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Update="Themes\Controls\SfPullToRefresh.xaml">
+      <Generator>MSBuild:Compile</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Update="Themes\Controls\SfRangeSlider.xaml">
+      <Generator>MSBuild:Compile</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Update="Themes\Controls\SfRotator.xaml">
+      <Generator>MSBuild:Compile</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Update="Themes\Controls\SfTabView.xaml">
+      <Generator>MSBuild:Compile</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Update="Themes\Controls\SfTextInputLayout.xaml">
+      <Generator>MSBuild:Compile</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Update="Themes\DefaultTheme.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+  </ItemGroup>
+
+</Project>

@@ -1,0 +1,48 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<!--<?xaml-comp compile="true" ?>-->
+<ResourceDictionary
+    x:Class="AndreasReitberger.Shared.XForm.Themes.ItemTemplates.ListViewGroupHeaderTemplates"
+    xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    
+    xmlns:shared="clr-namespace:AndreasReitberger.Shared.XForm.Themes;assembly=SharedXamarinXamlStylesLibrary"
+    xmlns:iconsSyncfusion="clr-namespace:AndreasReitberger.Shared.XForm.Syncfusion.FontIcons"
+    >
+    <ResourceDictionary.MergedDictionaries>
+        <shared:SharedColors />
+        <shared:SharedFonts />
+        <ResourceDictionary Source="/Themes/SharedFonts.xaml" />
+    </ResourceDictionary.MergedDictionaries>
+
+    <DataTemplate x:Key="GroupHeaderSyncfusionTemplate">
+        <ViewCell>
+            <StackLayout 
+                Style="{StaticResource StackLayoutHeaderStyle}" 
+                Orientation="Horizontal"
+                >
+                <!-- Icon -->
+                <Label Margin="10,4">
+                    <Label.Style>
+                        <Style TargetType="Label" BasedOn="{StaticResource IconLabelStyle}">
+                            <Setter Property="Text" Value="{x:Static iconsSyncfusion:SyncfusionIcons.Dropdown}"/>
+                            <Style.Triggers>
+                                <DataTrigger TargetType="Label" Binding="{Binding IsExpand}" Value="True">
+                                    <Setter Property="Text" Value="{x:Static iconsSyncfusion:SyncfusionIcons.UpArrow}"/>
+                                </DataTrigger>
+                            </Style.Triggers>
+                        </Style>
+                    </Label.Style>
+                </Label>
+
+                <Label 
+                    Text="{Binding Key}" 
+                    Style="{StaticResource GroupingHeaderLabelStyle}"
+                    FontAttributes="Bold"
+                    VerticalTextAlignment="Center"
+                    HorizontalTextAlignment="Start"
+                    Margin="0,4"
+                    />
+            </StackLayout>
+        </ViewCell>
+    </DataTemplate>
+</ResourceDictionary>

@@ -1,0 +1,32 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<?xaml-comp compile="true" ?>
+<ResourceDictionary
+    xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    
+    xmlns:shared="clr-namespace:AndreasReitberger.Shared.XForm.Themes;assembly=SharedXamarinXamlStylesLibrary"
+    xmlns:border="clr-namespace:Syncfusion.XForms.Border;assembly=Syncfusion.Core.XForms"
+    >
+    <ResourceDictionary.MergedDictionaries>
+        <shared:SharedColors />
+    </ResourceDictionary.MergedDictionaries>
+    <!-- OPTIMIZED -->
+    <Style TargetType="border:SfBorder">
+        <Setter Property="BackgroundColor" Value="{AppThemeBinding Light={StaticResource White}, Dark={StaticResource Black}}" />
+        <Setter Property="BorderColor" Value="{AppThemeBinding Light={StaticResource White}, Dark={StaticResource Black}}" />
+        <Setter Property="CornerRadius" Value="25" />
+    </Style>
+
+    <Style x:Key="ProfileSfBorderStyle" TargetType="border:SfBorder">
+        <Setter Property="BorderWidth" Value="1" />
+        <Setter Property="CornerRadius" Value="20" />
+    </Style>
+
+    <Style x:Key="MenuSeparatorSfBorderStyle" TargetType="border:SfBorder" BasedOn="{StaticResource ProfileSfBorderStyle}">
+        <Setter Property="BorderWidth" Value="0" />
+        <Setter Property="CornerRadius" Value="0" />
+        <Setter Property="Margin" Value="1,2" />
+        <Setter Property="BackgroundColor" Value="{AppThemeBinding Light={StaticResource Gray400}, Dark={StaticResource Gray500}}" />
+        <Setter Property="BorderColor" Value="{AppThemeBinding Light={StaticResource Gray400}, Dark={StaticResource Gray500}}" />
+    </Style>
+</ResourceDictionary>

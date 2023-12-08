@@ -1,0 +1,30 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<?xaml-comp compile="true" ?>
+<ResourceDictionary
+    xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+
+    xmlns:shared="clr-namespace:AndreasReitberger.Shared.XForm.Themes;assembly=SharedXamarinXamlStylesLibrary"
+    xmlns:progressBar="clr-namespace:Syncfusion.XForms.ProgressBar;assembly=Syncfusion.SfProgressBar.XForms"
+    >
+    <ResourceDictionary.MergedDictionaries>
+        <shared:SharedColors />
+    </ResourceDictionary.MergedDictionaries>
+    <!-- OPTIMIZED -->
+    <!-- Common style for cicular progress bars -->
+    <Style x:Key="CircularProgressBarStyle" TargetType="progressBar:SfCircularProgressBar">
+        <Setter Property="ProgressColor" Value="{DynamicResource PrimaryColor}" />
+        <Setter Property="TrackColor" Value="{StaticResource White}" />
+    </Style>
+
+    <Style TargetType="progressBar:SfCircularProgressBar" BasedOn="{StaticResource CircularProgressBarStyle}"/>
+
+    <Style x:Key="HalfCircularProgressBarStyle" TargetType="progressBar:SfCircularProgressBar" BasedOn="{StaticResource CircularProgressBarStyle}">
+        <Setter Property="IndicatorOuterRadius" Value="0.9" />
+        <Setter Property="IndicatorInnerRadius" Value="0.8" />
+        <Setter Property="TrackOuterRadius" Value="1.0" />
+        <Setter Property="TrackInnerRadius" Value="0.95" />
+        <Setter Property="StartAngle" Value="160" />
+        <Setter Property="EndAngle" Value="380" />
+    </Style>
+</ResourceDictionary>
