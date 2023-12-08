@@ -11,6 +11,7 @@
     xmlns:shared="clr-namespace:AndreasReitberger.Shared.XForm.Themes;assembly=SharedXamarinXamlStylesLibrary"
     xmlns:converters="clr-namespace:AndreasReitberger.Shared.XForm.Core.Converters;assembly=SharedXFormCoreLibrary"
     xmlns:icons="clr-namespace:AndreasReitberger.Shared.XForm.FontIcons;assembly=SharedXamarinXamlStylesLibrary"
+    xmlns:iconsSyncfusion="clr-namespace:AndreasReitberger.Shared.XForm.Syncfusion.FontIcons"
     xmlns:documentation="clr-namespace:AndreasReitberger.Shared.XForm.Core.Documentation;assembly=SharedXFormCoreLibrary"
     xmlns:eventLogger="clr-namespace:AndreasReitberger.Shared.XForm.Core.EventLogger;assembly=SharedXFormCoreLibrary"
     xmlns:language="clr-namespace:AndreasReitberger.Shared.XForm.Core.Localization;assembly=SharedXFormCoreLibrary"
@@ -36,7 +37,7 @@
                     >
                     <Label 
                         Style="{StaticResource IconLabelStyle}"
-                        Text="{x:Static icons:SyncfusionIcons.Sent}"
+                        Text="{x:Static iconsSyncfusion:SyncfusionIcons.Sent}"
                         TextColor="{StaticResource White}"
                         />
                 </border:SfBorder>

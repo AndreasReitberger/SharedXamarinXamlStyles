@@ -8,6 +8,7 @@
     xmlns:shared="clr-namespace:AndreasReitberger.Shared.XForm.Themes;assembly=SharedXamarinXamlStylesLibrary"
     xmlns:listView="clr-namespace:Syncfusion.ListView.XForms;assembly=Syncfusion.SfListView.XForms"
     xmlns:icons="clr-namespace:AndreasReitberger.Shared.XForm.FontIcons;assembly=SharedXamarinXamlStylesLibrary"
+    xmlns:iconsSyncfusion="clr-namespace:AndreasReitberger.Shared.XForm.Syncfusion.FontIcons"
     >
     <ResourceDictionary.MergedDictionaries>
         <shared:SharedColors />
@@ -15,7 +16,7 @@
     <DataTemplate x:Key="DeleteGestureSwipeTemplate">
         <Label
             Style="{StaticResource IconLabelStyle}"
-            Text="{x:Static icons:SyncfusionIcons.Delete}"
+            Text="{x:Static iconsSyncfusion:SyncfusionIcons.Delete}"
             TextColor="{StaticResource White}"
             VerticalTextAlignment="Center"
             HorizontalTextAlignment="Center"
@@ -38,7 +39,7 @@
             >
             <Label
                 Style="{StaticResource IconLabelStyle}"
-                Text="{x:Static icons:SyncfusionIcons.Edit}"
+                Text="{x:Static iconsSyncfusion:SyncfusionIcons.Edit}"
                 TextColor="{StaticResource White}"
                 Background="{StaticResource Green}"
                 VerticalTextAlignment="Center"

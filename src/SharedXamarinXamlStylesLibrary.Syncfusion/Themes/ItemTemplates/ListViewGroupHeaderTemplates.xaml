@@ -6,8 +6,7 @@
     xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
     
     xmlns:shared="clr-namespace:AndreasReitberger.Shared.XForm.Themes;assembly=SharedXamarinXamlStylesLibrary"
-    xmlns:converters="clr-namespace:AndreasReitberger.Shared.XForm.Core.Converters;assembly=SharedXFormCoreLibrary"
-    xmlns:icons="clr-namespace:AndreasReitberger.Shared.XForm.FontIcons;assembly=SharedXamarinXamlStylesLibrary"
+    xmlns:iconsSyncfusion="clr-namespace:AndreasReitberger.Shared.XForm.Syncfusion.FontIcons"
     >
     <ResourceDictionary.MergedDictionaries>
         <shared:SharedColors />
@@ -25,10 +24,10 @@
                 <Label Margin="10,4">
                     <Label.Style>
                         <Style TargetType="Label" BasedOn="{StaticResource IconLabelStyle}">
-                            <Setter Property="Text" Value="{x:Static icons:SyncfusionIcons.Dropdown}"/>
+                            <Setter Property="Text" Value="{x:Static iconsSyncfusion:SyncfusionIcons.Dropdown}"/>
                             <Style.Triggers>
                                 <DataTrigger TargetType="Label" Binding="{Binding IsExpand}" Value="True">
-                                    <Setter Property="Text" Value="{x:Static icons:SyncfusionIcons.UpArrow}"/>
+                                    <Setter Property="Text" Value="{x:Static iconsSyncfusion:SyncfusionIcons.UpArrow}"/>
                                 </DataTrigger>
                             </Style.Triggers>
                         </Style>
