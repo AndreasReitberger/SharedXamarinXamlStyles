@@ -1,0 +1,22 @@
+﻿<?xml version="1.0" encoding="UTF-8" ?>
+<?xaml-comp compile="true" ?>
+<ResourceDictionary
+    xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    
+    xmlns:shared="clr-namespace:AndreasReitberger.Shared.XForm.Themes;assembly=SharedXamarinXamlStylesLibrary"
+    xmlns:rotator="clr-namespace:Syncfusion.SfRotator.XForms;assembly=Syncfusion.SfRotator.XForms"
+    >
+    <ResourceDictionary.MergedDictionaries>
+        <shared:SharedColors />
+    </ResourceDictionary.MergedDictionaries>
+    <!-- OPTIMIZED -->
+    <Style TargetType="rotator:SfRotator">
+        <!--<Setter Property="BackgroundColor" Value="{StaticResource Transparent}"/>-->
+        <Setter Property="DotsBorderColor" Value="{AppThemeBinding Light={StaticResource Gray200}, Dark={StaticResource Gray800}}"/>
+        <Setter Property="UnselectedDotColor" Value="{StaticResource White}"/>
+        <Setter Property="SelectedDotColor" Value="{StaticResource Pink}"/>
+        <Setter Property="DotPlacement" Value="Default"/>
+        <Setter Property="NavigationStripPosition" Value="Bottom"/>
+    </Style>
+</ResourceDictionary>

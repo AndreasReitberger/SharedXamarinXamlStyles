@@ -1,0 +1,82 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<?xaml-comp compile="true" ?>
+<ResourceDictionary
+    xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    
+    xmlns:shared="clr-namespace:AndreasReitberger.Shared.XForm.Themes;assembly=SharedXamarinXamlStylesLibrary"
+    xmlns:autocomplete="clr-namespace:Syncfusion.SfAutoComplete.XForms;assembly=Syncfusion.SfAutoComplete.XForms"
+    xmlns:controls="clr-namespace:AndreasReitberger.Shared.XForm.Syncfusion.Controls"  
+    >
+    <!-- OPTIMIZED -->
+    <ResourceDictionary.MergedDictionaries>
+        <shared:SharedColors />
+        <shared:SharedFonts />
+        <ResourceDictionary Source="/Themes/SharedFonts.xaml" />
+    </ResourceDictionary.MergedDictionaries>
+
+    <!--  Common style for combobox  -->
+    <Style TargetType="autocomplete:SfAutoComplete">
+        <Setter Property="BorderColor" Value="{AppThemeBinding Light={StaticResource Gray100}, Dark={StaticResource Gray900}}" />
+        <Setter Property="BackgroundColor" Value="{OnPlatform Android={AppThemeBinding Light={StaticResource Gray100}, Dark={StaticResource Gray900}}, Default={AppThemeBinding Light={StaticResource Gray200}, Dark={StaticResource Gray800}}}" />
+        <Setter Property="ClearButtonColor" Value="{DynamicResource PrimaryColor}" />
+        <Setter Property="ShowClearButton" Value="True" />
+        <Setter Property="TextColor" Value="{AppThemeBinding Light={StaticResource Gray900}, Dark={StaticResource Gray100}}" />
+        <!--
+        <Setter Property="FontFamily" Value="{StaticResource MontserratRegular}"/>
+        -->
+        <Setter Property="TextSize" Value="{OnIdiom Desktop=20, Tablet=20, Phone=14, Default=14}"/>
+        <Setter Property="FontAttributes" Value="Bold"/>
+        <Setter Property="Margin" Value="4,2"/>
+        <Setter Property="IsSelectedItemsVisibleInDropDown" Value="False"/>
+        <Setter Property="DropDownBackgroundColor" Value="{AppThemeBinding Light={StaticResource Gray100}, Dark={StaticResource Gray900}}"/>
+        <Setter Property="DropDownBorderColor" Value="{AppThemeBinding Light={StaticResource Gray300}, Dark={StaticResource Gray700}}"/>
+        <Setter Property="DropDownTextColor" Value="{AppThemeBinding Light={StaticResource Gray900}, Dark={StaticResource Gray100}}"/>
+        <Setter Property="DropDownItemFontFamily" Value="{StaticResource MontserratRegular}"/>
+        <Setter Property="HeightRequest" Value="{OnPlatform Default=42, Android=50, iOS=40}"/>
+        <Style.Triggers>
+            <Trigger Property="IsEnabled" Value="False" TargetType="autocomplete:SfAutoComplete">
+                <Setter Property="BackgroundColor" Value="{AppThemeBinding Light={StaticResource Gray600}, Dark={StaticResource Gray400}}" />
+            </Trigger>
+            <Trigger Property="MultiSelectMode" Value="Token" TargetType="autocomplete:SfAutoComplete">
+                <Setter Property="HeightRequest" Value="{OnPlatform Default=42, Android=50, iOS=45}"/>
+            </Trigger>
+            <Trigger Property="Button.IsPressed" Value="True" TargetType="autocomplete:SfAutoComplete">
+                <Setter Property="BackgroundColor" Value="{AppThemeBinding Light={StaticResource Gray900}, Dark={StaticResource Gray100}}" />
+                <Setter Property="TextColor" Value="{AppThemeBinding Light={StaticResource Black}, Dark={StaticResource White}}" />
+            </Trigger>
+        </Style.Triggers>
+    </Style>
+
+    <Style TargetType="controls:MultiSelectAutoComplete">
+        <Setter Property="BorderColor" Value="{AppThemeBinding Light={StaticResource Gray100}, Dark={StaticResource Gray900}}" />
+        <Setter Property="BackgroundColor" Value="{OnPlatform Android={AppThemeBinding Light={StaticResource Gray100}, Dark={StaticResource Gray900}}, Default={AppThemeBinding Light={StaticResource Gray200}, Dark={StaticResource Gray800}}}" />
+        <Setter Property="ClearButtonColor" Value="{DynamicResource PrimaryColor}" />
+        <Setter Property="ShowClearButton" Value="True" />
+        <Setter Property="TextColor" Value="{AppThemeBinding Light={StaticResource Gray900}, Dark={StaticResource Gray100}}" />
+        <!--
+        <Setter Property="FontFamily" Value="{StaticResource MontserratRegular}"/>
+        -->
+        <Setter Property="TextSize" Value="{OnIdiom Desktop=20, Tablet=20, Phone=14, Default=14}"/>
+        <Setter Property="FontAttributes" Value="Bold"/>
+        <Setter Property="Margin" Value="4,2"/>
+        <Setter Property="IsSelectedItemsVisibleInDropDown" Value="False"/>
+        <Setter Property="DropDownBackgroundColor" Value="{AppThemeBinding Light={StaticResource Gray100}, Dark={StaticResource Gray900}}"/>
+        <Setter Property="DropDownBorderColor" Value="{AppThemeBinding Light={StaticResource Gray300}, Dark={StaticResource Gray700}}"/>
+        <Setter Property="DropDownTextColor" Value="{AppThemeBinding Light={StaticResource Gray900}, Dark={StaticResource Gray100}}"/>
+        <Setter Property="DropDownItemFontFamily" Value="{StaticResource MontserratRegular}"/>
+        <Setter Property="HeightRequest" Value="{OnPlatform Default=42, Android=50, iOS=40}"/>
+        <Style.Triggers>
+            <Trigger Property="IsEnabled" Value="False" TargetType="controls:MultiSelectAutoComplete">
+                <Setter Property="BackgroundColor" Value="{AppThemeBinding Light={StaticResource Gray600}, Dark={StaticResource Gray400}}" />
+            </Trigger>
+            <Trigger Property="MultiSelectMode" Value="Token" TargetType="controls:MultiSelectAutoComplete">
+                <Setter Property="HeightRequest" Value="{OnPlatform Default=42, Android=50, iOS=45}"/>
+            </Trigger>
+            <Trigger Property="Button.IsPressed" Value="True" TargetType="controls:MultiSelectAutoComplete">
+                <Setter Property="BackgroundColor" Value="{AppThemeBinding Light={StaticResource Gray900}, Dark={StaticResource Gray100}}" />
+                <Setter Property="TextColor" Value="{AppThemeBinding Light={StaticResource Black}, Dark={StaticResource White}}" />
+            </Trigger>
+        </Style.Triggers>
+    </Style>
+</ResourceDictionary>

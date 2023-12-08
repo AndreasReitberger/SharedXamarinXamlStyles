@@ -1,0 +1,31 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<!--<?xaml-comp compile="true" ?>-->
+<ResourceDictionary
+    x:Class="AndreasReitberger.Shared.XForm.Syncfusion.Themes.SharedStyles"
+    xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    >
+    <ResourceDictionary.MergedDictionaries>
+        <ResourceDictionary Source="/Themes/Controls/SfAutoComplete.xaml" />
+        <ResourceDictionary Source="/Themes/Controls/SfBadgeView.xaml" />
+        <ResourceDictionary Source="/Themes/Controls/SfBorder.xaml" />
+        <ResourceDictionary Source="/Themes/Controls/SfBusyIndicator.xaml" />
+        <ResourceDictionary Source="/Themes/Controls/SfButtons.xaml" />
+        <ResourceDictionary Source="/Themes/Controls/SfCardView.xaml" />
+        <ResourceDictionary Source="/Themes/Controls/SfCharts.xaml" />
+        <ResourceDictionary Source="/Themes/Controls/SfCircularProgressBar.xaml" />
+        <ResourceDictionary Source="/Themes/Controls/SfCircularGauge.xaml" />
+        <ResourceDictionary Source="/Themes/Controls/SfComboBoxes.xaml" />
+        <ResourceDictionary Source="/Themes/Controls/SfGradientView.xaml" />
+        <ResourceDictionary Source="/Themes/Controls/SfListView.xaml" />
+        <ResourceDictionary Source="/Themes/Controls/SfMaskedEdit.xaml" />
+        <ResourceDictionary Source="/Themes/Controls/SfNumericTextInputs.xaml" />
+        <ResourceDictionary Source="/Themes/Controls/SfNumericUpDowns.xaml" />
+        <ResourceDictionary Source="/Themes/Controls/SfPicker.xaml" />
+        <ResourceDictionary Source="/Themes/Controls/SfPullToRefresh.xaml" />
+        <ResourceDictionary Source="/Themes/Controls/SfRotator.xaml" />
+        <ResourceDictionary Source="/Themes/Controls/SfRangeSlider.xaml" />
+        <ResourceDictionary Source="/Themes/Controls/SfTabView.xaml" />
+        <ResourceDictionary Source="/Themes/Controls/SfTextInputLayout.xaml" />
+    </ResourceDictionary.MergedDictionaries>
+</ResourceDictionary>
