@@ -4,8 +4,6 @@
     x:Class="AndreasReitberger.Shared.XForm.Themes.SharedColors"
     xmlns="http://xamarin.com/schemas/2014/forms"
     xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-    
-    xmlns:ios="clr-namespace:Xamarin.Forms.PlatformConfiguration.iOSSpecific;assembly=Xamarin.Forms.Core"
     >
     <!-- Allows binding as StaticResource in the Main Project
     <x:String x:Key="FontAwesome5Brands">FontAwesome5Brands</x:String>
@@ -18,14 +16,6 @@
     <x:String x:Key="MontserratSemiBold">MontserratSemiBold</x:String>
     <x:String x:Key="FontIcons">UIFontIcons</x:String>
      -->
-
-    <OnPlatform x:Key="FontIcons" x:TypeArguments="x:String">
-        <OnPlatform.Platforms>
-            <On Platform="Android" Value="UIFontIcons.ttf#UIFontIcons" />
-            <On Platform="iOS" Value="UIFontIcons" />
-            <On Platform="UWP" Value="Assets/UIFontIcons.ttf#UIFontIcons" />
-        </OnPlatform.Platforms>
-    </OnPlatform>
 
     <OnPlatform x:Key="MaterialDesignIcons" x:TypeArguments="x:String">
         <OnPlatform.Platforms>

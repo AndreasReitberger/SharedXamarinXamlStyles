@@ -1,4 +1,4 @@
-﻿using AndreasReitberger.Shared.XForm.Models.Events;
+﻿using AndreasReitberger.Shared.XForm.Syncfusion.Events;
 using Syncfusion.DataSource;
 using Syncfusion.ListView.XForms;
 using System.Collections;

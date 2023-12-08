@@ -4,8 +4,8 @@
     <TargetFramework>netstandard2.1</TargetFramework>
 	  
     <Description>A shared styles &amp; control library for Xamarin.Forms applications.</Description>
-    <PackageTags>Xamarin, Forms, Styles, Common, Shared, Library, Controls, Syncfusion</PackageTags>
-    <RootNamespace>AndreasReitberger.Shared.XForm.Syncfusion</RootNamespace>
+    <PackageTags>Xamarin, Forms, Styles, Common, Shared, Library, Controls</PackageTags>
+    <RootNamespace>AndreasReitberger.Shared.XForm</RootNamespace>
   </PropertyGroup>
 
   <ItemGroup>
@@ -15,6 +15,10 @@
   </ItemGroup>
 
   <ItemGroup>
+    <None Remove="Resources\Fonts\FontAwesome5Brands.otf" />
+    <None Remove="Resources\Fonts\FontAwesome5Regular.otf" />
+    <None Remove="Resources\Fonts\FontAwesome5Solid.otf" />
+    <None Remove="Resources\Fonts\materialdesignicons-webfont.ttf" />
     <None Remove="Resources\Fonts\Montserrat-Bold.ttf" />
     <None Remove="Resources\Fonts\Montserrat-Medium.ttf" />
     <None Remove="Resources\Fonts\Montserrat-Regular.ttf" />
@@ -22,6 +26,10 @@
   </ItemGroup>
 
   <ItemGroup>
+    <EmbeddedResource Include="Resources\Fonts\FontAwesome5Brands.otf" />
+    <EmbeddedResource Include="Resources\Fonts\FontAwesome5Regular.otf" />
+    <EmbeddedResource Include="Resources\Fonts\FontAwesome5Solid.otf" />
+    <EmbeddedResource Include="Resources\Fonts\materialdesignicons-webfont.ttf" />
     <EmbeddedResource Include="Resources\Fonts\Montserrat-Bold.ttf" />
     <EmbeddedResource Include="Resources\Fonts\Montserrat-Medium.ttf" />
     <EmbeddedResource Include="Resources\Fonts\Montserrat-Regular.ttf" />
@@ -33,26 +41,6 @@
 	</ItemGroup>
 	
   <ItemGroup>
-    <PackageReference Include="Syncfusion.Xamarin.Buttons" Version="23.2.6" />
-    <PackageReference Include="Syncfusion.Xamarin.Cards" Version="23.2.6" />
-    <PackageReference Include="Syncfusion.Xamarin.Expander" Version="23.2.6" />
-    <PackageReference Include="Syncfusion.Xamarin.SfAutoComplete" Version="23.2.6" />
-    <PackageReference Include="Syncfusion.Xamarin.SfBadgeView" Version="23.2.6" />
-    <PackageReference Include="Syncfusion.Xamarin.SfBusyIndicator" Version="23.2.6" />
-    <PackageReference Include="Syncfusion.Xamarin.SfCalendar" Version="23.2.6" />
-    <PackageReference Include="Syncfusion.Xamarin.SfChart" Version="23.2.6" />
-    <PackageReference Include="Syncfusion.Xamarin.SfComboBox" Version="23.2.6" />
-    <PackageReference Include="Syncfusion.Xamarin.SfGauge" Version="23.2.6" />
-    <PackageReference Include="Syncfusion.Xamarin.SfListView" Version="23.2.6" />
-    <PackageReference Include="Syncfusion.Xamarin.SfMaskedEdit" Version="23.2.6" />
-    <PackageReference Include="Syncfusion.Xamarin.SfNumericTextBox" Version="23.2.6" />
-    <PackageReference Include="Syncfusion.Xamarin.SfNumericUpDown" Version="23.2.6" />
-    <PackageReference Include="Syncfusion.Xamarin.SfPicker" Version="23.2.6" />
-    <PackageReference Include="Syncfusion.Xamarin.SfProgressBar" Version="23.2.6" />
-    <PackageReference Include="Syncfusion.Xamarin.SfPullToRefresh" Version="23.2.6" />
-    <PackageReference Include="Syncfusion.Xamarin.SfRangeSlider" Version="23.2.6" />
-    <PackageReference Include="Syncfusion.Xamarin.SfRotator" Version="23.2.6" />
-    <PackageReference Include="Syncfusion.Xamarin.SfTabView" Version="23.2.6" />
     <PackageReference Include="Xamarin.Forms" Version="5.0.0.2622" />
 	<PackageReference Include="Xamarin.Essentials" Version="1.8.0" />
   </ItemGroup>
@@ -62,20 +50,8 @@
   </ItemGroup>
 	
   <ItemGroup>
-    <Compile Update="Themes\ItemTemplates\ListViewSwipeTemplates.xaml.cs">
-      <DependentUpon>ListViewSwipeTemplates.xaml</DependentUpon>
-    </Compile>
-    <Compile Update="Themes\ItemTemplates\ListViewItemTemplates.xaml.cs">
-      <DependentUpon>ListViewItemTemplates.xaml</DependentUpon>
-    </Compile>
-    <Compile Update="Themes\ItemTemplates\ListViewGroupHeaderTemplates.xaml.cs">
-      <DependentUpon>ListViewGroupHeaderTemplates.xaml</DependentUpon>
-    </Compile>
     <Compile Update="Themes\ItemTemplates\GeneralItemTemplates.xaml.cs">
       <DependentUpon>GeneralItemTemplates.xaml</DependentUpon>
-    </Compile>
-    <Compile Update="Themes\ItemTemplates\ShellItemTemplates.xaml.cs">
-      <DependentUpon>ShellItemTemplates.xaml</DependentUpon>
     </Compile>
     <Compile Update="Themes\SharedTemplates.xaml.cs">
       <DependentUpon>SharedTemplates.xaml</DependentUpon>
@@ -132,69 +108,6 @@
       <Generator>MSBuild:Compile</Generator>
     </EmbeddedResource>
     <EmbeddedResource Update="Themes\Controls\Switch.xaml">
-      <Generator>MSBuild:Compile</Generator>
-    </EmbeddedResource>
-    <EmbeddedResource Update="Themes\Controls\Syncfusion\SfAutoComplete.xaml">
-      <Generator>MSBuild:Compile</Generator>
-    </EmbeddedResource>
-    <EmbeddedResource Update="Themes\Controls\Syncfusion\SfBadgeView.xaml">
-      <Generator>MSBuild:Compile</Generator>
-    </EmbeddedResource>
-    <EmbeddedResource Update="Themes\Controls\Syncfusion\SfBorder.xaml">
-      <Generator>MSBuild:Compile</Generator>
-    </EmbeddedResource>
-    <EmbeddedResource Update="Themes\Controls\Syncfusion\SfBusyIndicator.xaml">
-      <Generator>MSBuild:Compile</Generator>
-    </EmbeddedResource>
-    <EmbeddedResource Update="Themes\Controls\Syncfusion\SfButtons.xaml">
-      <Generator>MSBuild:Compile</Generator>
-    </EmbeddedResource>
-    <EmbeddedResource Update="Themes\Controls\Syncfusion\SfCardView.xaml">
-      <Generator>MSBuild:Compile</Generator>
-    </EmbeddedResource>
-    <EmbeddedResource Update="Themes\Controls\Syncfusion\SfCharts.xaml">
-      <Generator>MSBuild:Compile</Generator>
-    </EmbeddedResource>
-    <EmbeddedResource Update="Themes\Controls\Syncfusion\SfCircularGauge.xaml">
-      <Generator>MSBuild:Compile</Generator>
-    </EmbeddedResource>
-    <EmbeddedResource Update="Themes\Controls\Syncfusion\SfCircularProgressBar.xaml">
-      <Generator>MSBuild:Compile</Generator>
-    </EmbeddedResource>
-    <EmbeddedResource Update="Themes\Controls\Syncfusion\SfComboBoxes.xaml">
-      <Generator>MSBuild:Compile</Generator>
-    </EmbeddedResource>
-    <EmbeddedResource Update="Themes\Controls\Syncfusion\SfGradientView.xaml">
-      <Generator>MSBuild:Compile</Generator>
-    </EmbeddedResource>
-    <EmbeddedResource Update="Themes\Controls\Syncfusion\SfListView.xaml">
-      <Generator>MSBuild:Compile</Generator>
-    </EmbeddedResource>
-    <EmbeddedResource Update="Themes\Controls\Syncfusion\SfMaskedEdit.xaml">
-      <Generator>MSBuild:Compile</Generator>
-    </EmbeddedResource>
-    <EmbeddedResource Update="Themes\Controls\Syncfusion\SfNumericTextInputs.xaml">
-      <Generator>MSBuild:Compile</Generator>
-    </EmbeddedResource>
-    <EmbeddedResource Update="Themes\Controls\Syncfusion\SfNumericUpDowns.xaml">
-      <Generator>MSBuild:Compile</Generator>
-    </EmbeddedResource>
-    <EmbeddedResource Update="Themes\Controls\Syncfusion\SfPicker.xaml">
-      <Generator>MSBuild:Compile</Generator>
-    </EmbeddedResource>
-    <EmbeddedResource Update="Themes\Controls\Syncfusion\SfPullToRefresh.xaml">
-      <Generator>MSBuild:Compile</Generator>
-    </EmbeddedResource>
-    <EmbeddedResource Update="Themes\Controls\Syncfusion\SfRangeSlider.xaml">
-      <Generator>MSBuild:Compile</Generator>
-    </EmbeddedResource>
-    <EmbeddedResource Update="Themes\Controls\Syncfusion\SfRotator.xaml">
-      <Generator>MSBuild:Compile</Generator>
-    </EmbeddedResource>
-    <EmbeddedResource Update="Themes\Controls\Syncfusion\SfTabView.xaml">
-      <Generator>MSBuild:Compile</Generator>
-    </EmbeddedResource>
-    <EmbeddedResource Update="Themes\Controls\Syncfusion\SfTextInputLayout.xaml">
       <Generator>MSBuild:Compile</Generator>
     </EmbeddedResource>
     <EmbeddedResource Update="Themes\DefaultTheme.xaml">

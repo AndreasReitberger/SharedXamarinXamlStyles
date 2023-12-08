@@ -1,12 +1,9 @@
-﻿using AndreasReitberger.Shared.XForm.Interfaces;
+﻿using AndreasReitberger.Shared.XForm.Syncfusion.Interfaces;
 using Syncfusion.DataSource;
 using Syncfusion.ListView.XForms;
-using System;
 using System.Collections;
 using System.Collections.ObjectModel;
-using System.Text.RegularExpressions;
 using System.Windows.Input;
-using Xamarin.Forms;
 using Xamarin.Forms.Internals;
 
 namespace AndreasReitberger.Shared.XForm.Syncfusion.Controls
@@ -72,24 +69,24 @@ namespace AndreasReitberger.Shared.XForm.Syncfusion.Controls
         public string SearchText
         {
             get { return (string)GetValue(SearchTextProperty); }
-            set { this.SetValue(SearchTextProperty, value); }
+            set { SetValue(SearchTextProperty, value); }
         }
         public IListViewFilterBase Filter
         {
             get { return (IListViewFilterBase)GetValue(FilterProperty); }
-            set { this.SetValue(FilterProperty, value); }
+            set { SetValue(FilterProperty, value); }
         }
         //bool _isFiltered = false;
         public bool IsFiltered
         {
             get { return (bool)GetValue(IsFilterProperty); }
-            set { this.SetValue(IsFilterProperty, value); }
+            set { SetValue(IsFilterProperty, value); }
         }
 
         public SortDescriptor DefaultSortDescriptor
         {
             get { return (SortDescriptor)GetValue(DefaultSortDescriptorProperty); }
-            set { this.SetValue(DefaultSortDescriptorProperty, value); }
+            set { SetValue(DefaultSortDescriptorProperty, value); }
         }
 
         public ICommand OnFilterCommand

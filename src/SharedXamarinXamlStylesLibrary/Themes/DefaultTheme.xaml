@@ -12,41 +12,4 @@
         <ResourceDictionary Source="/Themes/SharedTemplates.xaml" />
         <ResourceDictionary Source="/Themes/SharedStyles.xaml" />
     </ResourceDictionary.MergedDictionaries>
-
-    <!-- Moved to its on file 
-    <Style x:Key="DefaultShellStyle" TargetType="Shell">
-        <Setter Property="BackgroundColor" Value="{AppThemeBinding Light={StaticResource White}, Dark={StaticResource Black}}"/>
-        <Setter Property="ForegroundColor" Value="{DynamicResource PrimaryColor}"/>
-        <Setter Property="TitleColor" Value="{DynamicResource PrimaryColor}"/>
-        <Setter Property="UnselectedColor" Value="{AppThemeBinding Light={StaticResource Gray900}, Dark={StaticResource Gray100}}"/>
-        <Setter Property="DisabledColor" Value="{AppThemeBinding Light={StaticResource Gray400}, Dark={StaticResource Gray500}}"/>
-        <Setter Property="FlyoutBackgroundColor" Value="{AppThemeBinding Light={StaticResource White}, Dark={StaticResource Black}}"/>
-    </Style>
-
-    <Style x:Key="DefaultFlyoutItemStyle" TargetType="FlyoutItem">
-        <Style.Triggers>
-            <Trigger TargetType="FlyoutItem" Property="IsEnabled" Value="False">
-                <Setter Property="Icon">
-                    <Setter.Value>
-                        <FontImageSource
-                            FontFamily="{StaticResource MaterialDesignIcons}"
-                            Glyph="{x:Static icons:MaterialIcons.LockOutline}"
-                            Size="{OnIdiom Desktop=64, Tablet=64, Phone=48, Default=48}"
-                            Color="{AppThemeBinding Light={StaticResource Gray800}, Dark={StaticResource Gray200}}"
-                            />
-                    </Setter.Value>
-                </Setter>
-            </Trigger>
-        </Style.Triggers>
-    </Style>
-    <Style TargetType="FlyoutItem" BasedOn="{StaticResource DefaultFlyoutItemStyle}"/>
-
-    <Style x:Key="DefaultPageStyle" TargetType="ContentPage">
-        <Setter Property="BackgroundColor" Value="{AppThemeBinding Light={StaticResource White}, Dark={StaticResource Black}}" />
-    </Style>
-    <Style x:Key="ModalPageStyle" TargetType="ContentPage" BasedOn="{StaticResource DefaultPageStyle}">
-        <Setter Property="Shell.PresentationMode" Value="ModalAnimated" />
-        <Setter Property="ios:Page.ModalPresentationStyle" Value="{OnIdiom Tablet=Automatic, Default=FormSheet}" />
-    </Style>
-    -->
 </ResourceDictionary>

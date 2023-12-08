@@ -4,14 +4,22 @@
     <TargetFramework>netstandard2.1</TargetFramework>
 	  
     <Description>A shared styles &amp; control library for Xamarin.Forms applications.</Description>
-    <PackageTags>Xamarin, Forms, Styles, Common, Shared, Library, Controls</PackageTags>
-    <RootNamespace>AndreasReitberger.Shared.XForm</RootNamespace>
+    <PackageTags>Xamarin, Forms, Styles, Common, Shared, Library, Controls, Syncfusion</PackageTags>
+    <RootNamespace>AndreasReitberger.Shared.XForm.Syncfusion</RootNamespace>
   </PropertyGroup>
 
   <ItemGroup>
     <Compile Remove="Resources\Styles\**" />
     <EmbeddedResource Remove="Resources\Styles\**" />
     <None Remove="Resources\Styles\**" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Remove="Resources\Fonts\UIFontIcons.ttf" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <EmbeddedResource Include="Resources\Fonts\UIFontIcons.ttf" />
   </ItemGroup>
 
 	<ItemGroup>
