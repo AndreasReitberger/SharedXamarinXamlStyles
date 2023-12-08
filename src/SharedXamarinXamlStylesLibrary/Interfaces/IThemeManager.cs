@@ -1,4 +1,5 @@
 ﻿using AndreasReitberger.Shared.XForm.Core.Theme;
+using Xamarin.Forms;
 using Xamarin.Essentials;
 
 //[assembly: InternalsVisibleTo("AndreasReitberger.Shared.Syncfusion")]

@@ -1,6 +1,8 @@
-﻿namespace AndreasReitberger.Shared.XForm.Models.Filtering
+﻿using AndreasReitberger.Shared.XForm.Interfaces;
+
+namespace AndreasReitberger.Shared.XForm.Models.Filtering
 {
-    public class ListViewFilterProperty
+    public class ListViewFilterProperty : IListViewFilterProperty
     {
         #region Properties
         public string LocalisedName { get; set; } = "";

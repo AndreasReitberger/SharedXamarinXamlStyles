@@ -17,10 +17,11 @@
     <Style x:Key="DefaultBorderlessEntry" TargetType="control:BorderlessEntry">
         <Setter Property="PlaceholderColor" Value="{AppThemeBinding Light={StaticResource Gray700}, Dark={StaticResource Gray300}}" />
         <Setter Property="Placeholder" Value="..." />
-        <Setter Property="HeightRequest" Value="{OnPlatform Default=42, Android=50, iOS=40}"/>
+        <!--<Setter Property="HeightRequest" Value="{OnPlatform Default=42, Android=50, iOS=40}"/>-->
         <Setter Property="BackgroundColor" Value="{OnPlatform Android={AppThemeBinding Light={StaticResource Gray100}, Dark={StaticResource Gray900}}, Default={AppThemeBinding Light={StaticResource Gray200}, Dark={StaticResource Gray800}}}" />
         <Setter Property="TextColor" Value="{AppThemeBinding Light={StaticResource Gray900}, Dark={StaticResource Gray100}}" />
-        <Setter Property="FontSize" Value="{OnIdiom Desktop=20, Tablet=20, Phone=14, Default=14}"/>
+        <!--<Setter Property="FontSize" Value="{OnIdiom Desktop=20, Tablet=20, Phone=14, Default=14}"/>-->
+        <Setter Property="FontSize" Value="{OnPlatform iOS=Small, Default=Default}"/>
         <Setter Property="FontFamily" Value="{StaticResource MontserratRegular}"/>
         <Style.Triggers>
             <Trigger Property="IsEnabled" Value="False" TargetType="control:BorderlessEntry">
@@ -37,7 +38,8 @@
         <Setter Property="BackgroundColor" Value="{StaticResource Transparent}" />
         <Setter Property="TextColor" Value="{AppThemeBinding Light={StaticResource Gray900}, Dark={StaticResource Gray100}}" />
         <Setter Property="FontFamily" Value="{StaticResource MontserratRegular}"/>
-        <Setter Property="FontSize" Value="{OnIdiom Desktop=20, Tablet=20, Phone=14, Default=14}"/>
+        <!--<Setter Property="FontSize" Value="{OnIdiom Desktop=20, Tablet=20, Phone=14, Default=14}"/>-->
+        <Setter Property="FontSize" Value="{OnPlatform iOS=Small, Default=Default}"/>
         <Setter Property="FontAttributes" Value="Bold"/>
         <Setter Property="Margin" Value="4,2"/>
 
