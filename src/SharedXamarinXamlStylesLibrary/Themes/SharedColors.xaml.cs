@@ -5,9 +5,9 @@ namespace AndreasReitberger.Shared.XForm.Themes
 {
     [Preserve(AllMembers = true)]
     [XamlCompilation(XamlCompilationOptions.Compile)]
-	public partial class SharedFonts
+	public partial class SharedColors
     {
-		public SharedFonts()
+		public SharedColors()
 		{
 			InitializeComponent ();
 		}

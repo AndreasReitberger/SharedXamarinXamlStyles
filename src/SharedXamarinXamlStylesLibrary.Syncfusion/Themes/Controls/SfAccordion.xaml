@@ -1,0 +1,32 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<?xaml-comp compile="true" ?>
+<ResourceDictionary
+    xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    
+    xmlns:shared="clr-namespace:AndreasReitberger.Shared.XForm.Themes;assembly=SharedXamarinXamlStylesLibrary"
+    xmlns:expander="clr-namespace:Syncfusion.XForms.Accordion;assembly=Syncfusion.Expander.XForms"
+    >
+    <!-- OPTIMIZED -->
+    <ResourceDictionary.MergedDictionaries>
+        <shared:SharedColors />
+        <shared:SharedFonts />
+        <ResourceDictionary Source="/Themes/SharedFonts.xaml" />
+    </ResourceDictionary.MergedDictionaries>
+
+    <Style x:Key="DefaultSfAccordionItemStyle" TargetType="expander:AccordionItem">
+        <Setter Property="BackgroundColor" Value="{OnPlatform Android={AppThemeBinding Light={StaticResource Gray100}, Dark={StaticResource Gray900}}, Default={AppThemeBinding Light={StaticResource Gray200}, Dark={StaticResource Gray800}}}" />
+        <Setter Property="HeaderBackgroundColor" Value="{AppThemeBinding Light={StaticResource Gray100}, Dark={StaticResource Gray900}}" />
+        <Setter Property="IconColor" Value="{DynamicResource PrimaryColor}" />
+    </Style>
+    
+    <!--  Common style for combobox  -->
+    <Style x:Key="DefaultSfAccordionStyle" TargetType="expander:SfAccordion">
+        <Setter Property="BackgroundColor" Value="{OnPlatform Android={AppThemeBinding Light={StaticResource White}, Dark={StaticResource Black}}, Default={AppThemeBinding Light={StaticResource White}, Dark={StaticResource Black}}}" />
+        <Style.Triggers>
+            <Trigger Property="IsEnabled" Value="False" TargetType="expander:SfAccordion">
+                <Setter Property="BackgroundColor" Value="{AppThemeBinding Light={StaticResource Gray600}, Dark={StaticResource Gray400}}" />
+            </Trigger>
+        </Style.Triggers>
+    </Style>
+</ResourceDictionary>
