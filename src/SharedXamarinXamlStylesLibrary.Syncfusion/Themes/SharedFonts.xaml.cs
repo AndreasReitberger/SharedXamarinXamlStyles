@@ -5,9 +5,9 @@ namespace AndreasReitberger.Shared.XForm.Syncfusion.Themes
 {
     [Preserve(AllMembers = true)]
     [XamlCompilation(XamlCompilationOptions.Compile)]
-	public partial class SharedColors
+	public partial class SharedFonts
     {
-		public SharedColors()
+		public SharedFonts()
 		{
 			InitializeComponent ();
 		}

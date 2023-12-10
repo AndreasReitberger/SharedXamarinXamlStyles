@@ -1,0 +1,36 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<?xaml-comp compile="true" ?>
+<ResourceDictionary
+    xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    
+    xmlns:shared="clr-namespace:AndreasReitberger.Shared.XForm.Themes;assembly=SharedXamarinXamlStylesLibrary"
+    >
+    <ResourceDictionary.MergedDictionaries>
+        <shared:SharedColors />
+        <shared:SharedStyles />
+        <ResourceDictionary Source="/Themes/SharedFonts.xaml" />
+    </ResourceDictionary.MergedDictionaries>
+    
+    <Style x:Key="IconLabelStyle" TargetType="Label">
+        <Setter Property="Margin" Value="16,8" />
+        <Setter Property="TextColor" Value="{AppThemeBinding Light={StaticResource Gray600}, Dark={StaticResource Gray400}}" />
+        <Setter Property="FontSize" Value="Medium" />
+        <Setter Property="HorizontalTextAlignment" Value="Center" />
+        <Setter Property="VerticalTextAlignment" Value="Center" />
+        <Setter Property="FontFamily" Value="{StaticResource FontIcons}" />
+    </Style>
+
+    <Style x:Key="SwipeTemplateLabelStyle" TargetType="Label">
+        <Setter Property="TextColor" Value="{DynamicResource PrimaryColor}" />
+        <Setter Property="HorizontalTextAlignment" Value="Center" />
+        <Setter Property="VerticalTextAlignment" Value="Center" />
+        <Setter Property="FontSize" Value="18" />
+        <Setter Property="FontFamily" Value="{StaticResource FontIcons}" />
+    </Style>
+
+    <Style x:Key="FontIconSpanStyle" TargetType="Span" BasedOn="{StaticResource MaterialFontIconSpanStyle}">
+        <Setter Property="FontFamily" Value="{StaticResource FontIcons}" />
+    </Style>
+    
+</ResourceDictionary>

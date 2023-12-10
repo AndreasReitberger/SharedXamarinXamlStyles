@@ -6,6 +6,7 @@
     xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
     >
     <ResourceDictionary.MergedDictionaries>
+        <ResourceDictionary Source="/Themes/Controls/SfAccordion.xaml" />
         <ResourceDictionary Source="/Themes/Controls/SfAutoComplete.xaml" />
         <ResourceDictionary Source="/Themes/Controls/SfBadgeView.xaml" />
         <ResourceDictionary Source="/Themes/Controls/SfBorder.xaml" />
@@ -27,5 +28,9 @@
         <ResourceDictionary Source="/Themes/Controls/SfRangeSlider.xaml" />
         <ResourceDictionary Source="/Themes/Controls/SfTabView.xaml" />
         <ResourceDictionary Source="/Themes/Controls/SfTextInputLayout.xaml" />
+        
+        <!-- Core conrols with syncfusion resources -->
+        <ResourceDictionary Source="/Themes/Controls/Core/Button.xaml" />
+        <ResourceDictionary Source="/Themes/Controls/Core/Label.xaml" />
     </ResourceDictionary.MergedDictionaries>
 </ResourceDictionary>

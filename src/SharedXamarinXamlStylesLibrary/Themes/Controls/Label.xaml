@@ -26,19 +26,24 @@
     </Style>
 
     <!-- ICON ONLY LABELS -->
-    <!--  Common style for icon label  -->
+    <!--  Moved to Syncfusion
     <Style x:Key="IconLabelStyle" TargetType="Label">
         <Setter Property="Margin" Value="16,8" />
         <Setter Property="TextColor" Value="{AppThemeBinding Light={StaticResource Gray600}, Dark={StaticResource Gray400}}" />
-        <!--<Setter Property="FontSize" Value="{OnIdiom Desktop=22, Tablet=20, Default=18}" />-->
         <Setter Property="FontSize" Value="Medium" />
         <Setter Property="HorizontalTextAlignment" Value="Center" />
         <Setter Property="VerticalTextAlignment" Value="Center" />
         <Setter Property="FontFamily" Value="{StaticResource FontIcons}" />
     </Style>
+    -->
 
     <!--  Common style for icon label  -->
-    <Style x:Key="MaterialSettingsIconLabelStyle" TargetType="Label" BasedOn="{StaticResource IconLabelStyle}">
+    <Style x:Key="MaterialSettingsIconLabelStyle" TargetType="Label">
+        <Setter Property="Margin" Value="16,8" />
+        <Setter Property="TextColor" Value="{AppThemeBinding Light={StaticResource Gray600}, Dark={StaticResource Gray400}}" />
+        <Setter Property="FontSize" Value="Medium" />
+        <Setter Property="HorizontalTextAlignment" Value="Center" />
+        <Setter Property="VerticalTextAlignment" Value="Center" />
         <Setter Property="FontFamily" Value="{StaticResource MaterialDesignIcons}" />
     </Style>
 
@@ -174,17 +179,15 @@
         <Setter Property="TextColor" Value="{DynamicResource PrimaryDarkColor}"/>
     </Style>
 
-    <!--  Common style for swipe template content button control  -->
+    <!--  Moved to Syncfusion
     <Style x:Key="SwipeTemplateButtonStyle" TargetType="Label">
-        <!-- Check if needed 
-        <Setter Property="BackgroundColor" Value="Transparent" />-->
         <Setter Property="TextColor" Value="{DynamicResource PrimaryColor}" />
         <Setter Property="HorizontalTextAlignment" Value="Center" />
         <Setter Property="VerticalTextAlignment" Value="Center" />
         <Setter Property="FontSize" Value="18" />
         <Setter Property="FontFamily" Value="{StaticResource FontIcons}" />
     </Style>
-
+    -->
     <!--  Common style for option labels  -->
     <Style
         x:Key="OptionButtonLabelStyle"
@@ -203,11 +206,6 @@
         <Setter Property="LineHeight" Value="{OnPlatform Default=1.5, iOS=-1}" />
     </Style>
 
-    <!--  Common style for swipe template content button control  -->
-    <Style x:Key="SwipeTemplateMaterialButtonStyle" TargetType="Label" BasedOn="{StaticResource SwipeTemplateButtonStyle}">
-        <Setter Property="FontFamily" Value="{StaticResource MaterialDesignIcons}" />
-    </Style>
-
     <Style x:Key="MaterialFontIconSpanStyle" TargetType="Span">
         <Setter Property="FontFamily" Value="{StaticResource MaterialDesignIcons}" />
         <Setter Property="FontSize" Value="{OnIdiom Desktop=28, Tablet=26, Phone=24, Default=24}"/>
@@ -215,15 +213,25 @@
         <Setter Property="LineHeight" Value="{OnPlatform Default=1.25, iOS=-1}"/>
     </Style>
 
+    <!-- Moved to Syncfusion 
     <Style x:Key="FontIconSpanStyle" TargetType="Span" BasedOn="{StaticResource MaterialFontIconSpanStyle}">
         <Setter Property="FontFamily" Value="{StaticResource FontIcons}" />
     </Style>
+    -->
 
     <Style x:Key="MaterialFontFamilyIconSmallLabelStyle" TargetType="Label" BasedOn="{StaticResource MaterialFontFamilyIconLabelStyle}">
         <Setter Property="FontSize" Value="{OnIdiom Desktop=20, Tablet=20, Phone=16, Default=16}"/>
     </Style>
 
-    <Style x:Key="MaterialSwipeTemplateButtonStyle" TargetType="Label" BasedOn="{StaticResource SwipeTemplateButtonStyle}">
+    <Style x:Key="MaterialSwipeTemplateButtonStyle" TargetType="Label">
+        <Setter Property="TextColor" Value="{DynamicResource PrimaryColor}" />
+        <Setter Property="HorizontalTextAlignment" Value="Center" />
+        <Setter Property="VerticalTextAlignment" Value="Center" />
+        <Setter Property="FontSize" Value="18" />
         <Setter Property="FontFamily" Value="{StaticResource MaterialDesignIcons}" />
+    </Style>
+    
+    <Style x:Key="SwipeTemplateMaterialButtonStyle" TargetType="Label" BasedOn="{StaticResource MaterialSwipeTemplateButtonStyle}">
+
     </Style>
 </ResourceDictionary>
