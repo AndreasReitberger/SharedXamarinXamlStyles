@@ -14,7 +14,7 @@
         <ResourceDictionary Source="/Themes/SharedFonts.xaml" />
     </ResourceDictionary.MergedDictionaries>
 
-    <Style TargetType="picker:SfDatePicker">
+    <Style x:Key="DefaultSfDatePickerStyle" TargetType="picker:SfDatePicker">
         <Setter Property="UnselectedItemTextColor" Value="{AppThemeBinding Light={StaticResource Gray900}, Dark={StaticResource Gray100}}" />
         <Setter Property="SelectedItemTextColor" Value="{DynamicResource PrimaryColor}" />
         <Setter Property="HeaderTextColor" Value="{DynamicResource PrimaryColor}" />
@@ -32,4 +32,6 @@
             </Trigger>
         </Style.Triggers>
     </Style>
+
+    <Style TargetType="picker:SfDatePicker" BasedOn="{StaticResource DefaultSfDatePickerStyle}" />
 </ResourceDictionary>
