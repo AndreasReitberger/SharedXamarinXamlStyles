@@ -1,0 +1,43 @@
+﻿<?xml version="1.0" encoding="UTF-8" ?>
+<?xaml-comp compile="true" ?>
+<ResourceDictionary
+    xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    
+    xmlns:buttons="clr-namespace:Syncfusion.XForms.Buttons;assembly=Syncfusion.Buttons.XForms"     
+    xmlns:gradient="clr-namespace:Syncfusion.XForms.Graphics;assembly=Syncfusion.Core.XForms"
+    xmlns:graphics="clr-namespace:Syncfusion.XForms.Graphics;assembly=Syncfusion.Core.XForms"
+    
+    xmlns:shared="clr-namespace:AndreasReitberger.Shared.XForm.Themes;assembly=SharedXamarinXamlStylesLibrary"
+    xmlns:icons="clr-namespace:AndreasReitberger.Shared.XForm.FontIcons;assembly=SharedXamarinXamlStylesLibrary"
+    >
+    <!-- OPTIMIZED -->
+    <ResourceDictionary.MergedDictionaries>
+        <shared:SharedColors />
+        <shared:SharedFonts />
+        <ResourceDictionary Source="/Themes/SharedFonts.xaml" />
+    </ResourceDictionary.MergedDictionaries>
+
+    <!-- Default ChipGroup style -->
+    <Style x:Key="DefaultSfChipGroupStyle" TargetType="buttons:SfChipGroup">
+        <Setter Property="SelectedChipBackgroundColor" Value="{DynamicResource PrimaryColor}"/>
+        <Setter Property="SelectedChipTextColor" Value="{StaticResource White}" />
+        <Setter Property="ChipBackgroundColor" Value="{AppThemeBinding Light={StaticResource Gray900}, Dark={StaticResource Gray100}}" />
+        <Setter Property="ChipTextColor" Value="{AppThemeBinding Light={StaticResource White}, Dark={StaticResource Black}}" />
+        <Setter Property="ChipTextSize" Value="12" />
+        <Setter Property="BackgroundColor" Value="{StaticResource Transparent}" />
+
+        <Setter Property="SelectionIndicatorColor" Value="{StaticResource Pink}" />
+    </Style>
+
+    <Style x:Key="ColorSelectionSfChipStyle" TargetType="buttons:SfChip">
+        <Setter Property="FontSize" Value="{OnIdiom Tablet=14, Default=12}" />
+        <Setter Property="FontFamily" Value="{StaticResource MontserratBold}" />
+        <Setter Property="ShowSelectionIndicator" Value="False"/>
+        <Setter Property="SelectionIndicatorColor" Value="{StaticResource Transparent}"/>
+        <Setter Property="BorderWidth" Value="0"/>
+        <Setter Property="Padding" Value="2"/>
+        <Setter Property="WidthRequest" Value="140"/>
+        <Setter Property="HeightRequest" Value="30"/>
+    </Style>
+</ResourceDictionary>

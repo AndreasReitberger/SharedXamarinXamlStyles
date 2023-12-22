@@ -38,14 +38,22 @@
     <!-- Default Item Style-->
     <Style TargetType="tabView:SfTabItem" BasedOn="{StaticResource DefaultSfTabViewItemStyle}"/>
 
-    <Style x:Key="ChildTabViewItemDefaultStyle" TargetType="tabView:SfTabItem" BasedOn="{StaticResource DefaultSfTabViewItemStyle}">
+    <Style x:Key="ChildSfTabViewItemDefaultStyle" TargetType="tabView:SfTabItem" BasedOn="{StaticResource DefaultSfTabViewItemStyle}">
         <Setter Property="TitleFontColor" Value="{AppThemeBinding Light={StaticResource Gray800}, Dark={StaticResource Gray200}}"/>
         <Setter Property="TitleFontSize" Value="{OnIdiom Desktop=24, Tablet=12, Default=10}"/>
         <Setter Property="FontIconFontSize" Value="{OnIdiom Desktop=24, Tablet=18, Default=14}"/>
     </Style>
 
-    <Style x:Key="SmallTabViewItemDefaultStyle" TargetType="tabView:SfTabItem" BasedOn="{StaticResource DefaultSfTabViewItemStyle}">
-        <Setter Property="TitleFontSize" Value="{OnIdiom Desktop=24, Tablet=12, Default=10}"/>
-        <Setter Property="FontIconFontSize" Value="{OnIdiom Desktop=24, Tablet=18, Default=14}"/>
+    <Style x:Key="SmallSfTabViewItemDefaultStyle" TargetType="tabView:SfTabItem" BasedOn="{StaticResource DefaultSfTabViewItemStyle}">
+        <Setter Property="TitleFontSize" Value="{OnPlatform Android=Small, Default=Micro}"/>
+        <Setter Property="FontIconFontSize" Value="{OnPlatform Android=Small, Default=Micro}"/>
     </Style>
+
+    <Style x:Key="MaterialIconSfTabViewItemStyle" TargetType="tabView:SfTabItem" BasedOn="{StaticResource DefaultSfTabViewItemStyle}">
+        <Setter Property="TitleFontFamily" Value="{StaticResource MaterialDesignIcons}"/>
+        <Setter Property="TitleFontSize" Value="{OnPlatform Android=Default, Default=Small}"/>
+        <Setter Property="FontIconFontSize" Value="{OnPlatform Android=Default, Default=Small}"/>
+        <!--<Setter Property="TextColor" Value="{DynamicResource PrimaryColor}"/>-->
+    </Style>
+
 </ResourceDictionary>

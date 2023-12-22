@@ -18,7 +18,6 @@
         <ResourceDictionary Source="/Themes/SharedFonts.xaml" />
     </ResourceDictionary.MergedDictionaries>
 
-    <!-- DEFAULT BUTTON STYLE -->
     <Style x:Key="DefaultSfButtonStyle" TargetType="buttons:SfButton">
         <Setter Property="FontFamily" Value="{StaticResource MontserratSemiBold}" />
         <Setter Property="TextColor" Value="{AppThemeBinding Light={StaticResource Gray700}, Dark={StaticResource Gray300}}" />
@@ -34,43 +33,6 @@
 
     <Style TargetType="buttons:SfButton" BasedOn="{StaticResource DefaultSfButtonStyle}"/>
 
-    <!-- CHECKBOX -->
-    <!-- DEFAULT CEHCKBOX STYLE -->
-    <Style x:Key="DefaultSfCheckBoxStyle" TargetType="buttons:SfCheckBox">
-        <Setter Property="CheckedColor" Value="{DynamicResource PrimaryColor}"/>
-        <Setter Property="BackgroundColor" Value="{StaticResource Transparent}"/>
-        <Setter Property="UncheckedColor" Value="{AppThemeBinding Light={StaticResource Gray600}, Dark={StaticResource Gray400}}"/>
-        <Setter Property="Visual" Value="Default"/>
-        <Setter Property="VisualStateManager.VisualStateGroups">
-            <VisualStateGroupList>
-                <VisualStateGroup x:Name="CommonStates">
-                    <VisualState x:Name="Checked">
-                        <VisualState.Setters>
-                            <Setter Property="CheckedColor" Value="{DynamicResource PrimaryColor}"/>
-                        </VisualState.Setters>
-                    </VisualState>
-                    <VisualState x:Name="Unchecked">
-                        <VisualState.Setters>
-                            <Setter Property="UncheckedColor" Value="{AppThemeBinding Light={StaticResource Gray600}, Dark={StaticResource Gray400}}"/>
-                        </VisualState.Setters>
-                    </VisualState>
-                    <VisualState x:Name="Disabled">
-                        <VisualState.Setters>
-                            <Setter Property="CheckedColor" Value="{DynamicResource PrimaryColor}" />
-                            <Setter Property="UncheckedColor" Value="{DynamicResource PrimaryColor}"/>
-                        </VisualState.Setters>
-                    </VisualState>
-                </VisualStateGroup>
-            </VisualStateGroupList>
-        </Setter>
-        <Style.Triggers>
-            <Trigger Property="IsEnabled" Value="False" TargetType="buttons:SfCheckBox">
-                <Setter Property="CheckedColor" Value="{DynamicResource PrimaryDarkColor}" />
-            </Trigger>
-        </Style.Triggers>
-    </Style>
-
-    <!--  Common style for icon buttons  -->
     <Style x:Key="IconSfButtonStyle" TargetType="buttons:SfButton" BasedOn="{StaticResource DefaultSfButtonStyle}">
         <Setter Property="TextColor" Value="{AppThemeBinding Light={StaticResource Gray600}, Dark={StaticResource Gray400}}" />
         <Setter Property="BackgroundColor" Value="{StaticResource Transparent}" />
@@ -92,7 +54,6 @@
         <Setter Property="BackgroundColor" Value="Transparent" />
     </Style>
 
-    <!--  Common style for completely round buttons  -->
     <Style
         x:Key="RoundIconGradientSfButtonStyle"
         BasedOn="{StaticResource IconSfButtonStyle}"
@@ -116,7 +77,6 @@
         </Setter>
     </Style>
 
-    <!--  Common style for long buttons with rounded corners  -->
     <Style x:Key="RoundedLongSfButtonStyle" TargetType="buttons:SfButton">
         <Setter Property="Margin" Value="20" />
         <Setter Property="TextColor" Value="{StaticResource White}" />
@@ -152,51 +112,6 @@
         </Style.Triggers>
     </Style>
 
-    <!-- unused in project -->
-    <Style TargetType="buttons:SfSwitch">
-        <Setter Property="AllowIndeterminateState" Value="False"/>
-        <Setter Property="HeightRequest" Value="28"/>
-        <!--
-        <Setter Property="VisualType" Value="Cupertino"/>
-        <Setter Property="VisualStateManager.VisualStateGroups">
-            <VisualStateGroupList>
-                <VisualStateGroup x:Name="CommonStates">
-                    <VisualState x:Name="On">
-                            <VisualState.Setters>
-                                <Setter Property="SwitchSettings">
-                                    <Setter.Value>
-                                        <buttons:CupertinoSwitchSettings
-                                            x:TypeArguments="buttons:OnState"
-                                            ThumbBorderColor="{AppThemeBinding Light={StaticResource Gray200}, Dark={StaticResource Gray800}}"
-                                            ThumbColor="{AppThemeBinding Light={StaticResource White}, Dark={StaticResource Black}}"
-                                            TrackBorderColor="{AppThemeBinding Light={StaticResource Gray200}, Dark={StaticResource Gray800}}"
-                                            TrackColor="{DynamicResource PrimaryColor}" />
-                                    </Setter.Value>
-                                </Setter>
-                            </VisualState.Setters>
-                        </VisualState>
-                    <VisualState x:Name="Off">
-                        <VisualState.Setters>
-                            <Setter Property="SwitchSettings">
-                                <Setter.Value>
-                                    <buttons:CupertinoSwitchSettings
-                                        x:TypeArguments="buttons:OffState"
-                                        ThumbBorderColor="{AppThemeBinding Light={StaticResource Gray200}, Dark={StaticResource Gray800}}"
-                                        ThumbColor="{AppThemeBinding Light={StaticResource White}, Dark={StaticResource Black}}"
-                                        TrackBorderColor="{AppThemeBinding Light={StaticResource Gray200}, Dark={StaticResource Gray800}}"
-                                        TrackColor="{AppThemeBinding Light={StaticResource Gray200}, Dark={StaticResource Gray800}}" />
-                                </Setter.Value>
-                            </Setter>
-                        </VisualState.Setters>
-                    </VisualState>
-                </VisualStateGroup>
-            </VisualStateGroupList>
-        </Setter>
-        -->
-    </Style>
-
-
-    <!--Common button style-->
     <Style x:Key="SetupSfButtonStyle" TargetType="buttons:SfButton" BasedOn="{StaticResource RoundedLongSfButtonStyle}">
         <!--<Setter Property="HeightRequest" Value="40"/> -->
         <Setter Property="BackgroundColor" Value="{AppThemeBinding Light={StaticResource White}, Dark={StaticResource Black}}"/>
@@ -204,7 +119,6 @@
         <Setter Property="TextColor" Value="{DynamicResource PrimaryColor}"/>
     </Style>
 
-    <!--  Common style for swipe template content border control  -->
     <Style x:Key="SwipeTemplateSfButtonStyle" TargetType="buttons:SfButton">
         <Setter Property="HeightRequest" Value="32" />
         <Setter Property="WidthRequest" Value="32" />
@@ -212,90 +126,6 @@
         <Setter Property="BorderWidth" Value="0" />
         <Setter Property="CornerRadius" Value="16" />
         <Setter Property="BackgroundColor" Value="{AppThemeBinding Light={StaticResource White}, Dark={StaticResource Black}}" />
-    </Style>
-
-    <Style x:Key="SfSegmentedControlMaterialFontStyle" TargetType="buttons:SfSegmentedControl">
-        <Setter Property="DisplayMode" Value="ImageWithText"/>
-        <Setter Property="FontSize" Value="14" />
-        <Setter Property="FontFamily" Value="{StaticResource MontserratBold}" />
-        <Setter Property="FontColor" Value="{AppThemeBinding Light={StaticResource Gray900}, Dark={StaticResource Gray100}}" />
-        <Setter Property="SelectionTextColor" Value="{AppThemeBinding Light={StaticResource White}, Dark={StaticResource Black}}" />
-        <Setter Property="BackgroundColor" Value="{DynamicResource Transparent}" />
-        <Setter Property="BorderThickness" Value="0" />
-        <Setter Property="SegmentBackgroundColor" Value="{AppThemeBinding Light={StaticResource White}, Dark={StaticResource Black}}" />
-        <Setter Property="SegmentBorderColor" Value="{AppThemeBinding Light={StaticResource White}, Dark={StaticResource Black}}" />
-        <Setter Property="SegmentBorderThickness" Value="0" />
-        <Setter Property="SegmentCornerRadius" Value="8" />
-
-        <Setter Property="SegmentPadding" Value="16" />
-        <Setter Property="SelectionAnimationDuration" Value="0" />
-        <Setter Property="HorizontalOptions" Value="CenterAndExpand" />
-        <Setter Property="SelectionIndicatorSettings">
-            <Setter.Value>
-                <buttons:SelectionIndicatorSettings
-                    CornerRadius="8"
-                    StrokeThickness="0"
-                    Color="{DynamicResource PrimaryColor}" >
-                </buttons:SelectionIndicatorSettings>
-
-            </Setter.Value>
-        </Setter>
-
-    </Style>
-
-    <Style x:Key="DefaultSfSegmentControlStyle" TargetType="buttons:SfSegmentedControl">
-        <Setter Property="DisplayMode" Value="ImageWithText"/>
-        <Setter Property="FontSize" Value="{OnIdiom Tablet=18, Default=14}" />
-        <Setter Property="FontFamily" Value="{StaticResource MontserratBold}" />
-        <Setter Property="FontIconFontFamily" Value="{StaticResource MaterialDesignIcons}" />
-        <Setter Property="FontColor" Value="{AppThemeBinding Light={StaticResource Gray900}, Dark={StaticResource Gray100}}" />
-        <Setter Property="FontIconFontColor" Value="{AppThemeBinding Light={StaticResource Gray900}, Dark={StaticResource Gray100}}" />
-        <Setter Property="SelectionTextColor" Value="{AppThemeBinding Light={StaticResource White}, Dark={StaticResource Black}}" />
-        <Setter Property="BorderThickness" Value="0" />
-        <Setter Property="SegmentBackgroundColor" Value="{AppThemeBinding Light={StaticResource Gray300}, Dark={StaticResource Gray700}}" />
-        <Setter Property="SegmentBorderColor" Value="{AppThemeBinding Light={StaticResource Gray300}, Dark={StaticResource Gray700}}" />
-        <Setter Property="SegmentBorderThickness" Value="0" />
-        <Setter Property="SegmentCornerRadius" Value="0" />
-        <Setter Property="CornerRadius" Value="8" />
-        <Setter Property="HorizontalOptions" Value="Center" />
-        <Setter Property="SegmentPadding" Value="0" />
-        <Setter Property="SelectionAnimationDuration" Value="1" />
-        <Setter Property="SelectionIndicatorSettings">
-            <Setter.Value>
-                <buttons:SelectionIndicatorSettings
-                    CornerRadius="0"
-                    StrokeThickness="0"
-                    Color="{DynamicResource PrimaryColor}" 
-                    >
-                </buttons:SelectionIndicatorSettings>
-
-            </Setter.Value>
-        </Setter>
-    </Style>
-
-    <Style x:Key="PrinterSfSegmentControlStyle" TargetType="buttons:SfSegmentedControl" BasedOn="{StaticResource DefaultSfSegmentControlStyle}">
-        <Setter Property="SegmentBackgroundColor" Value="{AppThemeBinding Light={StaticResource White}, Dark={StaticResource Black}}" />
-        <Setter Property="SegmentBorderColor" Value="{AppThemeBinding Light={StaticResource White}, Dark={StaticResource Black}}" />
-        <Setter Property="SegmentWidth" Value="48" />
-
-    </Style>
-
-    <Style x:Key="TemperatureProfilesSfSegmentControlStyle" TargetType="buttons:SfSegmentedControl" BasedOn="{StaticResource DefaultSfSegmentControlStyle}">
-        <Setter Property="FontSize" Value="{OnIdiom Tablet=14, Default=10}" />
-        <Setter Property="DisplayMode" Value="Text"/>
-        <Setter Property="SegmentWidth" Value="{OnIdiom Tablet=92, Default=64}" />
-    </Style>
-
-    <!-- Default ChipGroup style -->
-    <Style x:Key="DefaultSfChipGroupStyle" TargetType="buttons:SfChipGroup">
-        <Setter Property="SelectedChipBackgroundColor" Value="{DynamicResource PrimaryColor}"/>
-        <Setter Property="SelectedChipTextColor" Value="{StaticResource White}" />
-        <Setter Property="ChipBackgroundColor" Value="{AppThemeBinding Light={StaticResource Gray900}, Dark={StaticResource Gray100}}" />
-        <Setter Property="ChipTextColor" Value="{AppThemeBinding Light={StaticResource White}, Dark={StaticResource Black}}" />
-        <Setter Property="ChipTextSize" Value="12" />
-        <Setter Property="BackgroundColor" Value="{StaticResource Transparent}" />
-
-        <Setter Property="SelectionIndicatorColor" Value="{StaticResource Pink}" />
     </Style>
 
     <Style x:Key="RoundMaterialDesignIconSfButtonStyle" TargetType="buttons:SfButton">
@@ -321,14 +151,4 @@
         <Setter Property="CornerRadius" Value="{OnIdiom Tablet=35, Phone=25, Default=25}" />
     </Style>
 
-    <Style x:Key="ColorSelectionSfChipStyle" TargetType="buttons:SfChip">
-        <Setter Property="FontSize" Value="{OnIdiom Tablet=14, Default=12}" />
-        <Setter Property="FontFamily" Value="{StaticResource MontserratBold}" />
-        <Setter Property="ShowSelectionIndicator" Value="False"/>
-        <Setter Property="SelectionIndicatorColor" Value="{StaticResource Transparent}"/>
-        <Setter Property="BorderWidth" Value="0"/>
-        <Setter Property="Padding" Value="2"/>
-        <Setter Property="WidthRequest" Value="140"/>
-        <Setter Property="HeightRequest" Value="30"/>
-    </Style>
 </ResourceDictionary>

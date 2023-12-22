@@ -14,6 +14,8 @@
         <ResourceDictionary Source="/Themes/Controls/SfButtons.xaml" />
         <ResourceDictionary Source="/Themes/Controls/SfCardView.xaml" />
         <ResourceDictionary Source="/Themes/Controls/SfCharts.xaml" />
+        <ResourceDictionary Source="/Themes/Controls/SfCheckBox.xaml" />
+        <ResourceDictionary Source="/Themes/Controls/SfChips.xaml" />
         <ResourceDictionary Source="/Themes/Controls/SfCircularProgressBar.xaml" />
         <ResourceDictionary Source="/Themes/Controls/SfCircularGauge.xaml" />
         <ResourceDictionary Source="/Themes/Controls/SfComboBoxes.xaml" />
@@ -26,6 +28,8 @@
         <ResourceDictionary Source="/Themes/Controls/SfPullToRefresh.xaml" />
         <ResourceDictionary Source="/Themes/Controls/SfRotator.xaml" />
         <ResourceDictionary Source="/Themes/Controls/SfRangeSlider.xaml" />
+        <ResourceDictionary Source="/Themes/Controls/SfSegmentedControl.xaml" />
+        <ResourceDictionary Source="/Themes/Controls/SfSwitch.xaml" />
         <ResourceDictionary Source="/Themes/Controls/SfTabView.xaml" />
         <ResourceDictionary Source="/Themes/Controls/SfTextInputLayout.xaml" />
         

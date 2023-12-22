@@ -11,7 +11,7 @@
         <shared:SharedColors />
     </ResourceDictionary.MergedDictionaries>
     <!-- OPTIMIZED -->
-    <Style x:Key="DefaultListViewStyle" TargetType="listView:SfListView">
+    <Style x:Key="DefaultSfListViewStyle" TargetType="listView:SfListView">
         <Setter Property="SelectionBackgroundColor" Value="{AppThemeBinding Light={StaticResource Gray200}, Dark={StaticResource Gray800}}" />
         <!--<Setter Property="BackgroundColor" Value="{StaticResource Transparent}" />-->
         <Setter Property="AllowSwiping" Value="True" />
@@ -28,5 +28,5 @@
         </Style.Triggers>
     </Style>
 
-    <!--<Style TargetType="listView:SfListView" BasedOn="{StaticResource DefaultListViewStyle}"/>-->
+    <!--<Style TargetType="listView:SfListView" BasedOn="{StaticResource DefaultSfListViewStyle}"/>-->
 </ResourceDictionary>

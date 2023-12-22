@@ -11,7 +11,7 @@
         <shared:SharedColors />
     </ResourceDictionary.MergedDictionaries>
     <!-- OPTIMIZED -->
-    <Style x:Key="GradientViewStyle" TargetType="gradient:SfGradientView">
+    <Style x:Key="SfGradientViewStyle" TargetType="gradient:SfGradientView">
         <Setter Property="BackgroundBrush">
             <Setter.Value>
                 <gradient:SfLinearGradientBrush StartPoint="0, 0" EndPoint="1, 1">
