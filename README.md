@@ -1,8 +1,6 @@
 # About
-This project is a shared style library for .NET MAUI applications containing recurring styles for
-core controls and for the Syncfusion .NET MAUI controls (https://www.syncfusion.com/downloads/xamarin/fbadv).
-
-This project bases on the SharedXamarinXamlStyles (https://github.com/AndreasReitberger/SharedXamarinXamlStyles)
+This project is a shared style library for Xamarin.Forms applications containing recurring styles for
+core controls and for the Syncfusion Xamarin.Forms controls (https://www.syncfusion.com/downloads/xamarin/fbadv).
 
 # Nugets
 Get the latest version from nuget.org<br>
