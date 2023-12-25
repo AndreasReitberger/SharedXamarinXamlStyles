@@ -12,14 +12,15 @@
         <PackageReadmeFile>README.md</PackageReadmeFile>
         <Authors>Andreas Reitberger</Authors>
         <Copyright>Andreas Reitberger</Copyright>
-		<Company>Andreas Reitberger</Company>
-		<LangVersion>11</LangVersion>
+    	<Company>Andreas Reitberger</Company>
+    	<LangVersion>11</LangVersion>
         <PublishReadyToRun>false</PublishReadyToRun>
 
         <!--Source-Linking-->
         <PublishRepositoryUrl>true</PublishRepositoryUrl>
         <EmbedUntrackedSources>true</EmbedUntrackedSources>
         <IncludeSymbols>true</IncludeSymbols>
+		<GeneratePackageOnBuild>True</GeneratePackageOnBuild>
     </PropertyGroup>
 
 <!--
