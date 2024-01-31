@@ -67,32 +67,32 @@ https://github.com/AndreasReitberger/SharedMauiXamlStyles/issues/43
 
 | Key                                    | TargetType          | Library   |
 | ---------------------------------------|:-------------------:| ---------:|
-| SeparatorStyle                         | BoxView             | Core      |
+| Style.Core.BoxView.Separator                         | BoxView             | Core      |
 
 ## Button
 
 | Key                                    | TargetType          | Library   |
 | ---------------------------------------|:-------------------:| ---------:|
-| DefaultButtonStyle                     | Button              | Core      |
+| Style.Core.Button.Default                     | Button              | Core      |
 | ImageButton                            | Button              | Core      |
 | IconButtonStyle                        | Button              | Core      |
-| MaterialDesignIconButtonStyle          | Button              | Core      |
-| PrimaryMaterialDesignIconButtonStyle   | Button              | Core      |
-| LinkButtonStyle                        | Button              | Core      |
-| LinkRoundButtonStyle                   | Button              | Core      |
+| Style.Core.Button.Icon.MaterialDesign          | Button              | Core      |
+| Style.Core.Button.IconPrimary.MaterialDesign   | Button              | Core      |
+| Style.Core.Button.Link                        | Button              | Core      |
+| Style.Core.Button.LinkRound                   | Button              | Core      |
 | RoundIconButtonStyle                   | Button              | Core      |
-| RoundedLongButtonStyle                 | Button              | Core      |
+| Style.Core.Button.RoundedLong                 | Button              | Core      |
 | SwipeTemplateBorderStyle               | Button              | Core      |
 | SwipeTemplateButtonStyle               | Button              | Core      |
-| RoundMaterialDesignIconButtonStyle     | Button              | Core      |
-| RoundEmergencyStopIconButtonStyle      | Button              | Core      |
-| GoogleLoginButtonStyle                 | Button              | Core      |
+| Style.Core.Button.IconRound.MaterialDesign     | Button              | Core      |
+| "Style.Core.Button.IconRound.EmergencyStop      | Button              | Core      |
+| Style.Core.Button.LoginGoogle                 | Button              | Core      |
 
 ## CheckBox
 
 | Key                                    | TargetType          | Library   |
 | ---------------------------------------|:-------------------:| ---------:|
-| DefaultCheckBoxStyle                   | CheckBox            | Core      |
+| Style.Core.CheckBox.Default                   | CheckBox            | Core      |
 
 
 ## Editor / BorderlessEditor

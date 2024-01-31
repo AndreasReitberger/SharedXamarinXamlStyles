@@ -12,7 +12,7 @@
         <ResourceDictionary Source="/Themes/SharedFonts.xaml" />
     </ResourceDictionary.MergedDictionaries>
 
-    <Style x:Key="IconButtonStyle" TargetType="Button" BasedOn="{StaticResource DefaultButtonStyle}">
+    <Style x:Key="IconButtonStyle" TargetType="Button" BasedOn="{StaticResource Style.Core.Button.Default}">
         <Setter Property="FontFamily" Value="{StaticResource FontIcons}" />
         <Setter Property="FontSize" Value="Large" />
         <Setter Property="BackgroundColor" Value="{StaticResource Transparent}" />
