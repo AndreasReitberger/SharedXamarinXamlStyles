@@ -29,7 +29,6 @@
 
         <Setter Property="SelectionIndicatorColor" Value="{StaticResource Pink}" />
     </Style>
-    <Style TargetType="buttons:SfChip" BasedOn="{StaticResource Style.Syncfusion.SfChip.Default}"/>
 
     <Style x:Key="Style.Syncfusion.SfChip.Default" TargetType="buttons:SfChip">
         <Setter Property="FontSize" Value="{OnIdiom Tablet=14, Default=12}" />
@@ -41,4 +40,5 @@
         <Setter Property="WidthRequest" Value="140"/>
         <Setter Property="HeightRequest" Value="30"/>
     </Style>
+    <Style TargetType="buttons:SfChip" BasedOn="{StaticResource Style.Syncfusion.SfChip.Default}"/>
 </ResourceDictionary>
