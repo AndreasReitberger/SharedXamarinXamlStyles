@@ -16,7 +16,7 @@
     </ResourceDictionary.MergedDictionaries>
 
     <!--  Common style for combobox  -->
-    <Style TargetType="autocomplete:SfAutoComplete">
+    <Style x:Key="Style.Syncfusion.SfAutoComplete.Default" TargetType="autocomplete:SfAutoComplete">
         <Setter Property="BorderColor" Value="{AppThemeBinding Light={StaticResource Gray100}, Dark={StaticResource Gray900}}" />
         <Setter Property="BackgroundColor" Value="{OnPlatform Android={AppThemeBinding Light={StaticResource Gray100}, Dark={StaticResource Gray900}}, Default={AppThemeBinding Light={StaticResource Gray200}, Dark={StaticResource Gray800}}}" />
         <Setter Property="ClearButtonColor" Value="{DynamicResource PrimaryColor}" />
@@ -47,8 +47,9 @@
             </Trigger>
         </Style.Triggers>
     </Style>
+    <Style TargetType="autocomplete:SfAutoComplete" BasedOn="{StaticResource Style.Syncfusion.SfAutoComplete.Default}"/>
 
-    <Style TargetType="controls:MultiSelectAutoComplete">
+    <Style x:Key="Style.Syncfusion.MultiSelectAutoComplete.Default" TargetType="controls:MultiSelectAutoComplete">
         <Setter Property="BorderColor" Value="{AppThemeBinding Light={StaticResource Gray100}, Dark={StaticResource Gray900}}" />
         <Setter Property="BackgroundColor" Value="{OnPlatform Android={AppThemeBinding Light={StaticResource Gray100}, Dark={StaticResource Gray900}}, Default={AppThemeBinding Light={StaticResource Gray200}, Dark={StaticResource Gray800}}}" />
         <Setter Property="ClearButtonColor" Value="{DynamicResource PrimaryColor}" />
@@ -79,4 +80,5 @@
             </Trigger>
         </Style.Triggers>
     </Style>
+    <Style TargetType="controls:MultiSelectAutoComplete" BasedOn="{StaticResource Style.Syncfusion.MultiSelectAutoComplete.Default}"/>
 </ResourceDictionary>

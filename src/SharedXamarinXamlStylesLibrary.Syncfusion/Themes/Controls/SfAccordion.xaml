@@ -7,21 +7,19 @@
     xmlns:shared="clr-namespace:AndreasReitberger.Shared.XForm.Themes;assembly=SharedXamarinXamlStylesLibrary"
     xmlns:expander="clr-namespace:Syncfusion.XForms.Accordion;assembly=Syncfusion.Expander.XForms"
     >
-    <!-- OPTIMIZED -->
     <ResourceDictionary.MergedDictionaries>
         <shared:SharedColors />
         <shared:SharedFonts />
         <ResourceDictionary Source="/Themes/SharedFonts.xaml" />
     </ResourceDictionary.MergedDictionaries>
 
-    <Style x:Key="DefaultSfAccordionItemStyle" TargetType="expander:AccordionItem">
+    <Style x:Key="Style.Syncfusion.AccordionItem.Default" TargetType="expander:AccordionItem">
         <Setter Property="BackgroundColor" Value="{OnPlatform Android={AppThemeBinding Light={StaticResource Gray100}, Dark={StaticResource Gray900}}, Default={AppThemeBinding Light={StaticResource Gray200}, Dark={StaticResource Gray800}}}" />
         <Setter Property="HeaderBackgroundColor" Value="{AppThemeBinding Light={StaticResource Gray100}, Dark={StaticResource Gray900}}" />
         <Setter Property="IconColor" Value="{DynamicResource PrimaryColor}" />
     </Style>
     
-    <!--  Common style for combobox  -->
-    <Style x:Key="DefaultSfAccordionStyle" TargetType="expander:SfAccordion">
+    <Style x:Key="Style.Syncfusion.SfAccordion.Default" TargetType="expander:SfAccordion">
         <Setter Property="BackgroundColor" Value="{OnPlatform Android={AppThemeBinding Light={StaticResource White}, Dark={StaticResource Black}}, Default={AppThemeBinding Light={StaticResource White}, Dark={StaticResource Black}}}" />
         <Style.Triggers>
             <Trigger Property="IsEnabled" Value="False" TargetType="expander:SfAccordion">
@@ -29,4 +27,7 @@
             </Trigger>
         </Style.Triggers>
     </Style>
+    
+    <Style TargetType="expander:SfAccordion" BasedOn="{StaticResource Style.Syncfusion.SfAccordion.Default}"/>
+    <Style TargetType="expander:AccordionItem" BasedOn="{StaticResource Style.Syncfusion.AccordionItem.Default}"/>
 </ResourceDictionary>

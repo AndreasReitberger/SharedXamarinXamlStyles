@@ -9,7 +9,7 @@
     </ResourceDictionary.MergedDictionaries>
 
     <!-- Frames -->
-    <Style x:Key="ListViewItemFrameStyle" TargetType="Frame">
+    <Style x:Key="Style.Core.Frame.Default" TargetType="Frame">
         <Setter Property="BorderColor" Value="{StaticResource Transparent}"/>
         <Setter Property="BackgroundColor" Value="{StaticResource Transparent}" />
         <Setter Property="OutlineColor" Value="{AppThemeBinding Light={StaticResource Light_ItemTemplateBorder}, Dark={StaticResource Dark_ItemTemplateBorder}}" />

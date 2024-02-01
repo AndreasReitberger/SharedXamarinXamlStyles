@@ -12,7 +12,7 @@
         <ResourceDictionary Source="/Themes/SharedFonts.xaml" />
     </ResourceDictionary.MergedDictionaries>
 
-    <Style x:Key="IconButtonStyle" TargetType="Button" BasedOn="{StaticResource Style.Core.Button.Default}">
+    <Style x:Key="Style.Core.Button.Icon" TargetType="Button" BasedOn="{StaticResource Style.Core.Button.Default}">
         <Setter Property="FontFamily" Value="{StaticResource FontIcons}" />
         <Setter Property="FontSize" Value="Large" />
         <Setter Property="BackgroundColor" Value="{StaticResource Transparent}" />
@@ -41,7 +41,7 @@
         </Setter>
     </Style>
 
-    <Style x:Key="PrimaryIconButtonStyle" TargetType="Button" BasedOn="{StaticResource IconButtonStyle}">
+    <Style x:Key="Style.Core.Button.IconPrimary" TargetType="Button" BasedOn="{StaticResource Style.Core.Button.Icon}">
         <Setter Property="BackgroundColor" Value="{DynamicResource PrimaryColor}" />
         <Setter Property="TextColor" Value="{Binding Source={RelativeSource Self}, Path=Background, Converter={StaticResource ColorToBlackWhiteConverter}}" />
         <Setter Property="VisualStateManager.VisualStateGroups">
@@ -64,17 +64,7 @@
         </Setter>
     </Style>
 
-    <Style x:Key="SwipeTemplateButtonStyle" TargetType="Button">
-        <Setter Property="BackgroundColor" Value="{AppThemeBinding Light={StaticResource White}, Dark={StaticResource Black}}" />
-        <Setter Property="BorderColor" Value="{AppThemeBinding Light={StaticResource White}, Dark={StaticResource Black}}" />
-        <Setter Property="FontFamily" Value="{StaticResource FontIcons}" />
-        <Setter Property="HeightRequest" Value="32" />
-        <Setter Property="WidthRequest" Value="32" />
-        <Setter Property="BorderWidth" Value="0" />
-        <Setter Property="CornerRadius" Value="16" />
-    </Style>
-    
-    <Style x:Key="RoundIconButtonStyle" TargetType="Button" BasedOn="{StaticResource IconButtonStyle}" >
+    <Style x:Key="Style.Core.Button.IconRound" TargetType="Button" BasedOn="{StaticResource Style.Core.Button.Icon}" >
         <Setter Property="BorderColor" Value="{AppThemeBinding Light={StaticResource Gray300}, Dark={StaticResource Gray700}}" />
         <Setter Property="BorderWidth" Value="1" />
         <Setter Property="CornerRadius" Value="25" />

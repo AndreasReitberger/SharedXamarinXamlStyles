@@ -11,7 +11,7 @@
         <shared:SharedColors />
     </ResourceDictionary.MergedDictionaries>
     <!-- OPTIMIZED -->
-    <Style x:Key="DefaultBadgedViewStyle" TargetType="badge:SfBadgeView">
+    <Style x:Key="Style.Syncfusion.SfBadgeView.Default" TargetType="badge:SfBadgeView">
         <Setter Property="BadgeSettings">
             <Setter.Value>
                 <badge:BadgeSetting
@@ -25,9 +25,9 @@
             </Setter.Value>
         </Setter>
     </Style>
-    <Style TargetType="badge:SfBadgeView" BasedOn="{StaticResource DefaultBadgedViewStyle}"/>
+    <Style TargetType="badge:SfBadgeView" BasedOn="{StaticResource Style.Syncfusion.SfBadgeView.Default}"/>
     
-    <Style x:Key="HyperlinkBadgedViewStyle" TargetType="badge:SfBadgeView" BasedOn="{StaticResource DefaultBadgedViewStyle}">
+    <Style x:Key="Style.Syncfusion.SfBadgeView.Hyperlink" TargetType="badge:SfBadgeView" BasedOn="{StaticResource Style.Syncfusion.SfBadgeView.Default}">
         <Setter Property="BadgeSettings">
             <Setter.Value>
                 <badge:BadgeSetting

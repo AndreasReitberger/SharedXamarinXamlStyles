@@ -12,14 +12,14 @@
     </ResourceDictionary.MergedDictionaries>
     <!-- OPTIMIZED -->
     <!-- Common style for cicular progress bars -->
-    <Style x:Key="CircularProgressBarStyle" TargetType="progressBar:SfCircularProgressBar">
+    <Style x:Key="Style.Syncfusion.SfCircularProgressBar.Default" TargetType="progressBar:SfCircularProgressBar">
         <Setter Property="ProgressColor" Value="{DynamicResource PrimaryColor}" />
         <Setter Property="TrackColor" Value="{StaticResource White}" />
     </Style>
 
-    <Style TargetType="progressBar:SfCircularProgressBar" BasedOn="{StaticResource CircularProgressBarStyle}"/>
+    <Style TargetType="progressBar:SfCircularProgressBar" BasedOn="{StaticResource Style.Syncfusion.SfCircularProgressBar.Default}"/>
 
-    <Style x:Key="HalfCircularProgressBarStyle" TargetType="progressBar:SfCircularProgressBar" BasedOn="{StaticResource CircularProgressBarStyle}">
+    <Style x:Key="Style.Syncfusion.SfCircularProgressBar.Half" TargetType="progressBar:SfCircularProgressBar" BasedOn="{StaticResource Style.Syncfusion.SfCircularProgressBar.Default}">
         <Setter Property="IndicatorOuterRadius" Value="0.9" />
         <Setter Property="IndicatorInnerRadius" Value="0.8" />
         <Setter Property="TrackOuterRadius" Value="1.0" />

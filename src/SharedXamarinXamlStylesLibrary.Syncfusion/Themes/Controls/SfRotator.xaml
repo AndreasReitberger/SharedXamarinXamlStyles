@@ -11,8 +11,7 @@
         <shared:SharedColors />
     </ResourceDictionary.MergedDictionaries>
 
-    <Style x:Key="DefaultSfRotatorStyle" TargetType="rotator:SfRotator">
-        <!--<Setter Property="BackgroundColor" Value="{StaticResource Transparent}"/>-->
+    <Style x:Key="Style.Syncfusion.SfRotator.Default" TargetType="rotator:SfRotator">
         <Setter Property="DotsBorderColor" Value="{AppThemeBinding Light={StaticResource Gray200}, Dark={StaticResource Gray800}}"/>
         <Setter Property="UnselectedDotColor" Value="{StaticResource White}"/>
         <Setter Property="SelectedDotColor" Value="{StaticResource Pink}"/>
@@ -20,5 +19,5 @@
         <Setter Property="NavigationStripPosition" Value="Bottom"/>
     </Style>
 
-    <Style TargetType="rotator:SfRotator" BasedOn="{StaticResource DefaultSfRotatorStyle}" />
+    <Style TargetType="rotator:SfRotator" BasedOn="{StaticResource Style.Syncfusion.SfRotator.Default}" />
 </ResourceDictionary>

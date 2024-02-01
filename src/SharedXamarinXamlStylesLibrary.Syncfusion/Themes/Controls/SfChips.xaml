@@ -19,7 +19,7 @@
     </ResourceDictionary.MergedDictionaries>
 
     <!-- Default ChipGroup style -->
-    <Style x:Key="DefaultSfChipGroupStyle" TargetType="buttons:SfChipGroup">
+    <Style x:Key="Style.Syncfusion.SfChipGroup.Default" TargetType="buttons:SfChipGroup">
         <Setter Property="SelectedChipBackgroundColor" Value="{DynamicResource PrimaryColor}"/>
         <Setter Property="SelectedChipTextColor" Value="{StaticResource White}" />
         <Setter Property="ChipBackgroundColor" Value="{AppThemeBinding Light={StaticResource Gray900}, Dark={StaticResource Gray100}}" />
@@ -29,8 +29,9 @@
 
         <Setter Property="SelectionIndicatorColor" Value="{StaticResource Pink}" />
     </Style>
+    <Style TargetType="buttons:SfChip" BasedOn="{StaticResource Style.Syncfusion.SfChip.Default}"/>
 
-    <Style x:Key="ColorSelectionSfChipStyle" TargetType="buttons:SfChip">
+    <Style x:Key="Style.Syncfusion.SfChip.Default" TargetType="buttons:SfChip">
         <Setter Property="FontSize" Value="{OnIdiom Tablet=14, Default=12}" />
         <Setter Property="FontFamily" Value="{StaticResource MontserratBold}" />
         <Setter Property="ShowSelectionIndicator" Value="False"/>

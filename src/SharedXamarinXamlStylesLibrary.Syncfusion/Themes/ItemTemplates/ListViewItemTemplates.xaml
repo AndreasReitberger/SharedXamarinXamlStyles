@@ -5,11 +5,9 @@
     xmlns="http://xamarin.com/schemas/2014/forms"
     xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
     
-    xmlns:listView="clr-namespace:Syncfusion.ListView.XForms;assembly=Syncfusion.SfListView.XForms"
     xmlns:border="clr-namespace:Syncfusion.XForms.Border;assembly=Syncfusion.Core.XForms"
     
     xmlns:shared="clr-namespace:AndreasReitberger.Shared.XForm.Themes;assembly=SharedXamarinXamlStylesLibrary"
-    xmlns:converters="clr-namespace:AndreasReitberger.Shared.XForm.Core.Converters;assembly=SharedXFormCoreLibrary"
     xmlns:icons="clr-namespace:AndreasReitberger.Shared.XForm.FontIcons;assembly=SharedXamarinXamlStylesLibrary"
     xmlns:iconsSyncfusion="clr-namespace:AndreasReitberger.Shared.XForm.Syncfusion.FontIcons"
     xmlns:documentation="clr-namespace:AndreasReitberger.Shared.XForm.Core.Documentation;assembly=SharedXFormCoreLibrary"
@@ -21,7 +19,8 @@
         <shared:SharedFonts />
         <ResourceDictionary Source="/Themes/SharedFonts.xaml" />
     </ResourceDictionary.MergedDictionaries>
-    <DataTemplate x:Key="ProFeatureItemTemplate" x:DataType="documentation:ProVersionFeature">
+    
+    <DataTemplate x:Key="DataTemplate.Core.ProVersionFeature.Default" x:DataType="documentation:ProVersionFeature">
         <ViewCell>
             <Grid 
                 Padding="8,6"
@@ -31,12 +30,12 @@
                 >
                 <!-- Check icon -->
                 <border:SfBorder
-                    Style="{StaticResource ProfileSfBorderStyle}"
+                    Style="{StaticResource Style.Syncfusion.SfBorder.Profile}"
                     BackgroundColor="{StaticResource LightGreen}"
                     Margin="0"
                     >
                     <Label 
-                        Style="{StaticResource IconLabelStyle}"
+                        Style="{StaticResource Style.Core.Label.Icon}"
                         Text="{x:Static iconsSyncfusion:SyncfusionIcons.Sent}"
                         TextColor="{StaticResource White}"
                         />
@@ -45,7 +44,7 @@
                 <Label 
                     Grid.Column="1"
                     Text="{Binding Feature}"
-                    Style="{StaticResource DefaultLabelStyle}"
+                    Style="{StaticResource Style.Core.Label.Default}"
                     VerticalTextAlignment="Center"
                     HorizontalTextAlignment="Start"
                     />
@@ -53,7 +52,7 @@
         </ViewCell>
     </DataTemplate>
 
-    <DataTemplate x:Key="AppEventTemplate" x:DataType="eventLogger:AppEvent">
+    <DataTemplate x:Key="DataTemplate.Core.AppEvent.Default" x:DataType="eventLogger:AppEvent">
         <ViewCell>
             <Grid 
                 x:Name="Grid"
@@ -70,7 +69,7 @@
                     VerticalTextAlignment="Center"
                     >
                     <Label.Style>
-                        <Style TargetType="Label" BasedOn="{StaticResource MaterialSettingsIconLabelStyle}">
+                        <Style TargetType="Label" BasedOn="{StaticResource Style.Core.Label.IconSettings.MaterialDesign}">
                             <Setter Property="Text" Value="{x:Static icons:MaterialIcons.AlertCircleOutline}"/>
                             <Style.Triggers>
                                 <!-- Info -->
@@ -105,7 +104,7 @@
                     >
                     <Label 
                         LineBreakMode="WordWrap" 
-                        Style="{StaticResource SmallLabelStyle}" 
+                        Style="{StaticResource Style.Core.Label.Small}" 
                         Text="{Binding Message}"
                         FontAttributes="Bold"
                         VerticalTextAlignment="Center"
@@ -116,7 +115,7 @@
                         VerticalTextAlignment="Center"
                         >
                         <Label.Style>
-                            <Style TargetType="Label" BasedOn="{StaticResource SmallLabelStyle}">
+                            <Style TargetType="Label" BasedOn="{StaticResource Style.Core.Label.Small}">
                                 <Setter Property="IsVisible" Value="True"/>
                                 <Style.Triggers>
                                     <!-- Has no args -->
@@ -133,7 +132,7 @@
     </DataTemplate>
 
     <!-- Localization -->
-    <DataTemplate x:Key="LanguageItemTemplate" x:DataType="language:LocalizationInfo">
+    <DataTemplate x:Key="DataTemplate.Core.LocalizationInfo.Default" x:DataType="language:LocalizationInfo">
         <ViewCell>
             <Grid 
                 Padding="2" 
@@ -159,12 +158,12 @@
                     <!-- Language name -->
                     <Label 
                         LineBreakMode="NoWrap" 
-                        Style="{StaticResource PrimaryLabelStyle}" 
+                        Style="{StaticResource Style.Core.Label.Primary}" 
                         Text="{Binding Name}"
                         />
                     <!-- Translator -->
                     <Label 
-                        Style="{StaticResource DefaultLabelStyle}" 
+                        Style="{StaticResource Style.Core.Label.Default}" 
                         LineBreakMode="WordWrap" 
                         Text="{Binding Translator}"
                         FontSize="12"
@@ -174,7 +173,7 @@
         </ViewCell>
     </DataTemplate>
 
-    <DataTemplate x:Key="LanguageSelectedItemTemplate" x:DataType="language:LocalizationInfo">
+    <DataTemplate x:Key="DataTemplate.Core.LocalizationInfo.Selected" x:DataType="language:LocalizationInfo">
         <ViewCell>
             <Grid 
                 Padding="2"
@@ -202,13 +201,13 @@
                     <!-- Language name -->
                     <Label 
                         LineBreakMode="NoWrap" 
-                        Style="{StaticResource PrimaryLabelStyle}" 
+                        Style="{StaticResource Style.Core.Label.Primary}" 
                         TextColor="{StaticResource White}"
                         Text="{Binding Name}"
                         />
                     <!-- Translator -->
                     <Label 
-                        Style="{StaticResource DefaultLabelStyle}" 
+                        Style="{StaticResource Style.Core.Label.Default}" 
                         LineBreakMode="WordWrap" 
                         Text="{Binding Translator}"
                         TextColor="{StaticResource White}"
@@ -220,7 +219,7 @@
     </DataTemplate>
 
     <!-- Documentation -->
-    <DataTemplate x:Key="ChangelogItemTemplate" x:DataType="documentation:ChangelogInfo">
+    <DataTemplate x:Key="DataTemplate.Core.ChangelogInfo.Default" x:DataType="documentation:ChangelogInfo">
         <ViewCell>
             <Grid
                 x:Name="Grid"
@@ -230,7 +229,7 @@
                 ColumnDefinitions="*,Auto"
                 >
                 <Label
-                    Style="{StaticResource DefaultLabelStyle}"
+                    Style="{StaticResource Style.Core.Label.Default}"
                     LineBreakMode="WordWrap"
                     Text="{Binding Changelog}"
                     />
@@ -238,14 +237,14 @@
                     Background="{AppThemeBinding Light={StaticResource Gray200}, Dark={StaticResource Gray800}}" 
                 -->
                 <border:SfBorder 
-                    Style="{StaticResource ProfileSfBorderStyle}"
+                    Style="{StaticResource Style.Syncfusion.SfBorder.Profile}"
                     Grid.Column="1"
                     VerticalOptions="Center"
                     BorderColor="{DynamicResource PrimaryColor}" 
                     >
                     <Label
                         Padding="4"
-                        Style="{StaticResource MaterialFontFamilyIconLabelStyle}"
+                        Style="{StaticResource Style.Core.Label.Icon.MaterialDesign}"
                         Text="{Binding Type, Converter={StaticResource StringToChangelogIconConverter}}"
                         Background="{DynamicResource PrimaryColor}" 
                         VerticalTextAlignment="Center"
@@ -256,7 +255,7 @@
         </ViewCell>
     </DataTemplate>
 
-    <DataTemplate x:Key="ChangeInfoItemTemplate" x:DataType="documentation:ChangeInfo">
+    <DataTemplate x:Key="DataTemplate.Core.ChangeInfo.Default" x:DataType="documentation:ChangeInfo">
         <ViewCell>
             <Grid
                 x:Name="Grid"
@@ -266,7 +265,7 @@
                 ColumnDefinitions="*,Auto"
                 >
                 <Label
-                    Style="{StaticResource LabelStyle}"
+                    Style="{StaticResource Style.Core.Label.Default}"
                     LineBreakMode="WordWrap"
                     Text="{Binding Changelog}"
                     />
@@ -274,14 +273,14 @@
                     Background="{AppThemeBinding Light={StaticResource Gray200}, Dark={StaticResource Gray800}}" 
                 -->
                 <border:SfBorder  
-                    Style="{StaticResource ProfileSfBorderStyle}"
+                    Style="{StaticResource Style.Syncfusion.SfBorder.Profile}"
                     Grid.Column="1"
                     VerticalOptions="Center"
                     BorderColor="{DynamicResource PrimaryColor}" 
                     >
                     <Label
                         Padding="4"
-                        Style="{StaticResource MaterialFontFamilyIconLabelStyle}"
+                        Style="{StaticResource Style.Core.Label.Icon.MaterialDesign}"
                         Text="{Binding Type, Converter={StaticResource StringToChangelogIconConverter}}"
                         Background="{DynamicResource PrimaryColor}" 
                         VerticalTextAlignment="Center"

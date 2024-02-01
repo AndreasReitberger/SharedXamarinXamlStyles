@@ -15,7 +15,7 @@
     </ResourceDictionary.MergedDictionaries>
 
     <!-- Common style for numeric up down input -->
-    <Style x:Key="DefaultSfNumericUpDownStyle" TargetType="numeric:SfNumericUpDown">
+    <Style x:Key="Style.Syncfusion.SfNumericUpDown.Default" TargetType="numeric:SfNumericUpDown">
         <Setter Property="TextColor" Value="{AppThemeBinding Light={StaticResource Gray900}, Dark={StaticResource Gray100}}" />
         <Setter Property="FontFamily" Value="{StaticResource MontserratRegular}" />
         <Setter Property="FontSize" Value="{OnIdiom Desktop=20, Tablet=20, Phone=14, Default=14}"/>
@@ -45,5 +45,5 @@
         </Style.Triggers>
     </Style>
 
-    <Style TargetType="numeric:SfNumericUpDown" BasedOn="{StaticResource DefaultSfNumericUpDownStyle}"/>
+    <Style TargetType="numeric:SfNumericUpDown" BasedOn="{StaticResource Style.Syncfusion.SfNumericUpDown.Default}"/>
 </ResourceDictionary>
