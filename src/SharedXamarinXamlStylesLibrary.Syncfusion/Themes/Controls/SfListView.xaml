@@ -10,17 +10,10 @@
     <ResourceDictionary.MergedDictionaries>
         <shared:SharedColors />
     </ResourceDictionary.MergedDictionaries>
-    <!-- OPTIMIZED -->
-    <Style x:Key="DefaultSfListViewStyle" TargetType="listView:SfListView">
+    
+    <Style x:Key="Style.Syncfusion.SfListView.Default" TargetType="listView:SfListView">
         <Setter Property="SelectionBackgroundColor" Value="{AppThemeBinding Light={StaticResource Gray200}, Dark={StaticResource Gray800}}" />
-        <!--<Setter Property="BackgroundColor" Value="{StaticResource Transparent}" />-->
         <Setter Property="AllowSwiping" Value="True" />
-        <!--
-        <Setter Property="ListViewCachingStrategy" Value="{OnPlatform Android=RecycleTemplate, Default=CreateNewTemplate}" />
-        -->
-        <!--
-        <Setter Property="ItemsSourceChangeCachingStrategy" Value="RecycleItems" />
-        -->
         <Style.Triggers>
             <Trigger Property="IsEnabled" Value="False" TargetType="listView:SfListView">
                 <Setter Property="BackgroundColor" Value="{AppThemeBinding Light={StaticResource Gray600}, Dark={StaticResource Gray400}}" />
@@ -28,5 +21,4 @@
         </Style.Triggers>
     </Style>
 
-    <!--<Style TargetType="listView:SfListView" BasedOn="{StaticResource DefaultSfListViewStyle}"/>-->
 </ResourceDictionary>

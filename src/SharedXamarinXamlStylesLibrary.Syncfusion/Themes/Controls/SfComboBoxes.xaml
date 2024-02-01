@@ -18,7 +18,7 @@
     </ResourceDictionary.MergedDictionaries>
 
     <!--  Common style for combobox  -->
-    <Style x:Key="DefaultComboBoxStyle" TargetType="combobox:SfComboBox">
+    <Style x:Key="Style.Syncfusion.SfComboBox.Default" TargetType="combobox:SfComboBox">
         <Setter Property="BorderColor" Value="{OnPlatform Android={AppThemeBinding Light={StaticResource Gray100}, Dark={StaticResource Gray900}}, Default={AppThemeBinding Light={StaticResource Gray200}, Dark={StaticResource Gray800}}}" />
         <Setter Property="BackgroundColor" Value="{OnPlatform Android={AppThemeBinding Light={StaticResource Gray100}, Dark={StaticResource Gray900}}, Default={AppThemeBinding Light={StaticResource Gray200}, Dark={StaticResource Gray800}}}" />
         <Setter Property="DropDownButtonSettings">
@@ -45,8 +45,6 @@
         <Setter Property="DropDownTextSize" Value="{OnIdiom Desktop=20, Tablet=20, Phone=14, Default=14}"/>
         <Setter Property="SelectedDropDownItemColor" Value="{AppThemeBinding Light={StaticResource Gray100}, Dark={StaticResource Gray900}}"/>
         <Setter Property="HeightRequest" Value="{OnPlatform Default=42, Android=50, iOS=40}"/>
-
-
         <Setter Property="MultiSelectMode" Value="None"/>
         <Setter Property="TokenSettings">
             <Setter.Value>
@@ -61,7 +59,6 @@
                     />
             </Setter.Value>
         </Setter>
-
         <Style.Triggers>
             <Trigger Property="IsEnabled" Value="False" TargetType="combobox:SfComboBox">
                 <Setter Property="BackgroundColor" Value="{AppThemeBinding Light={StaticResource Gray600}, Dark={StaticResource Gray400}}" />
@@ -72,9 +69,9 @@
         </Style.Triggers>
     </Style>
 
-    <Style TargetType="combobox:SfComboBox" BasedOn="{StaticResource DefaultComboBoxStyle}"/>
+    <Style TargetType="combobox:SfComboBox" BasedOn="{StaticResource Style.Syncfusion.SfComboBox.Default}"/>
 
-    <Style x:Key="DefaultMultiSelectComboBox" TargetType="controls:MultiSelectComboBox">
+    <Style x:Key="Style.Syncfusion.MultiSelectComboBox.Default" TargetType="controls:MultiSelectComboBox">
         <Setter Property="BorderColor" Value="{OnPlatform Android={AppThemeBinding Light={StaticResource Gray100}, Dark={StaticResource Gray900}}, Default={AppThemeBinding Light={StaticResource Gray200}, Dark={StaticResource Gray800}}}" />
         <Setter Property="BackgroundColor" Value="{OnPlatform Android={AppThemeBinding Light={StaticResource Gray100}, Dark={StaticResource Gray900}}, Default={AppThemeBinding Light={StaticResource Gray200}, Dark={StaticResource Gray800}}}" />
         <Setter Property="DropDownButtonSettings">
@@ -85,8 +82,6 @@
                     HighlightFontColor="{DynamicResource PrimaryColor}"
                     HighlightedBackgroundColor="{DynamicResource PrimaryColor}"
                     />
-
-
             </Setter.Value>
         </Setter>
         <Setter Property="ClearButtonColor" Value="{DynamicResource PrimaryColor}" />
@@ -103,7 +98,6 @@
         <Setter Property="DropDownTextSize" Value="{OnIdiom Desktop=20, Tablet=20, Phone=14, Default=14}"/>
         <Setter Property="SelectedDropDownItemColor" Value="{AppThemeBinding Light={StaticResource Gray100}, Dark={StaticResource Gray900}}"/>
         <Setter Property="HeightRequest" Value="{OnPlatform Default=42, Android=50, iOS=40}"/>
-
         <Setter Property="MultiSelectMode" Value="None"/>
         <Setter Property="TokenSettings">
             <Setter.Value>
@@ -118,7 +112,6 @@
                     />
             </Setter.Value>
         </Setter>
-
         <Style.Triggers>
             <Trigger Property="IsEnabled" Value="False" TargetType="controls:MultiSelectComboBox">
                 <Setter Property="BackgroundColor" Value="{AppThemeBinding Light={StaticResource Gray600}, Dark={StaticResource Gray400}}" />
@@ -129,17 +122,17 @@
         </Style.Triggers>
     </Style>
 
-    <Style TargetType="controls:MultiSelectComboBox" BasedOn="{StaticResource DefaultMultiSelectComboBox}"/>
+    <Style TargetType="controls:MultiSelectComboBox" BasedOn="{StaticResource Style.Syncfusion.MultiSelectComboBox.Default}"/>
 
     <!-- Server selection template -->
-    <Style x:Key="ServerSelectionComboBoxStyle" TargetType="combobox:SfComboBox" BasedOn="{StaticResource DefaultComboBoxStyle}">
+    <Style x:Key="Style.Syncfusion.SfComboBox.Servers" TargetType="combobox:SfComboBox" BasedOn="{StaticResource Style.Syncfusion.SfComboBox.Default}">
         <Setter Property="ItemTemplate">
             <Setter.Value>
                 <DataTemplate>
                     <StackLayout Orientation="Horizontal" Margin="4">
                         <!-- Icon -->
                         <Label 
-                            Style="{StaticResource MaterialFontFamilyIconLabelStyle}" 
+                            Style="{StaticResource Style.Core.Label.Icon.MaterialDesign}" 
                             Text="{x:Static icons:MaterialIcons.NetworkOutline}"
                             TextColor="{DynamicResource PrimaryColor}"
                             VerticalTextAlignment="Center"
@@ -150,7 +143,7 @@
                         <Label 
                             Text="{Binding FullWebAddress}" 
                             VerticalTextAlignment="Center"
-                            Style="{StaticResource SmallLabelStyle}"
+                            Style="{StaticResource Style.Core.Label.Small}"
                             />
                     </StackLayout>
                 </DataTemplate>
@@ -158,14 +151,14 @@
         </Setter>
     </Style>
     <!-- Printer selection template -->
-    <Style x:Key="PrinterSelectionComboBoxStyle" TargetType="combobox:SfComboBox" BasedOn="{StaticResource DefaultComboBoxStyle}">
+    <Style x:Key="Style.Syncfusion.SfComboBox.Printers" TargetType="combobox:SfComboBox" BasedOn="{StaticResource Style.Syncfusion.SfComboBox.Default}">
         <Setter Property="ItemTemplate">
             <Setter.Value>
                 <DataTemplate>
                     <StackLayout Orientation="Horizontal" Margin="2,4">
                         <!-- Icon -->
                         <Label 
-                            Style="{StaticResource MaterialFontFamilyIconLabelStyle}" 
+                            Style="{StaticResource Style.Core.Label.Icon.MaterialDesign}" 
                             Text="{x:Static icons:MaterialIcons.Printer3dNozzle}"
                             TextColor="{DynamicResource PrimaryColor}"
                             FontSize="16"
@@ -177,7 +170,7 @@
                         <Label 
                             Text="{Binding Name}" 
                             VerticalTextAlignment="Center"
-                            Style="{StaticResource DefaultLabelStyle}"
+                            Style="{StaticResource Style.Core.Label.Default}"
                             />
                     </StackLayout>
                 </DataTemplate>

@@ -15,7 +15,7 @@
         <ResourceDictionary Source="/Themes/SharedFonts.xaml" />
     </ResourceDictionary.MergedDictionaries>
 
-    <Style x:Key="DefaultSfMaskedEntryStyle" TargetType="maskedEdit:SfMaskedEdit">
+    <Style x:Key="Style.Syncfusion.SfMaskedEdit.Default" TargetType="maskedEdit:SfMaskedEdit">
         <Setter Property="TextColor" Value="{AppThemeBinding Light={StaticResource Gray900}, Dark={StaticResource Gray100}}" />
         <Setter Property="BackgroundColor" Value="{AppThemeBinding Light={StaticResource Gray100}, Dark={StaticResource Gray900}}" />
         <Setter Property="FontFamily" Value="{StaticResource MontserratBold}" />
@@ -28,9 +28,9 @@
     </Style>
 
     <!-- Common style for masked edit input -->
-    <Style TargetType="maskedEdit:SfMaskedEdit" BasedOn="{StaticResource DefaultSfMaskedEntryStyle}"/>
+    <Style TargetType="maskedEdit:SfMaskedEdit" BasedOn="{StaticResource Style.Syncfusion.SfMaskedEdit.Default}"/>
 
-    <Style x:Key="BorderlessMaskedEntryStyle" TargetType="maskedEdit:SfMaskedEdit" BasedOn="{StaticResource DefaultSfMaskedEntryStyle}">
+    <Style x:Key="Style.Syncfusion.SfMaskedEdit.Borderless" TargetType="maskedEdit:SfMaskedEdit" BasedOn="{StaticResource Style.Syncfusion.SfMaskedEdit.Default}">
         <Setter Property="FontSize" Value="16" />
         <Setter Property="BorderColor" Value="{StaticResource Transparent}" />
     </Style>

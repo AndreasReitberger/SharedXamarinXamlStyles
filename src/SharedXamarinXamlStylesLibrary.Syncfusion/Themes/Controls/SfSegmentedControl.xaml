@@ -11,14 +11,13 @@
     xmlns:shared="clr-namespace:AndreasReitberger.Shared.XForm.Themes;assembly=SharedXamarinXamlStylesLibrary"
     xmlns:icons="clr-namespace:AndreasReitberger.Shared.XForm.FontIcons;assembly=SharedXamarinXamlStylesLibrary"
     >
-    <!-- OPTIMIZED -->
     <ResourceDictionary.MergedDictionaries>
         <shared:SharedColors />
         <shared:SharedFonts />
         <ResourceDictionary Source="/Themes/SharedFonts.xaml" />
     </ResourceDictionary.MergedDictionaries>
 
-    <Style x:Key="DefaultSfSegmentedControlStyle" TargetType="buttons:SfSegmentedControl">
+    <Style x:Key="Style.Syncfusion.SfSegmentedControl.Default" TargetType="buttons:SfSegmentedControl">
         <Setter Property="DisplayMode" Value="ImageWithText"/>
         <Setter Property="FontSize" Value="{OnIdiom Tablet=18, Default=14}" />
         <Setter Property="FontFamily" Value="{StaticResource MontserratBold}" />
@@ -43,19 +42,17 @@
                     Color="{DynamicResource PrimaryColor}" 
                     >
                 </buttons:SelectionIndicatorSettings>
-
             </Setter.Value>
         </Setter>
     </Style>
 
-    <Style x:Key="PrinterSfSegmentedControlStyle" TargetType="buttons:SfSegmentedControl" BasedOn="{StaticResource DefaultSfSegmentedControlStyle}">
+    <Style x:Key="Style.Syncfusion.SfSegmentedControl.Printers" TargetType="buttons:SfSegmentedControl" BasedOn="{StaticResource Style.Syncfusion.SfSegmentedControl.Default}">
         <Setter Property="SegmentBackgroundColor" Value="{AppThemeBinding Light={StaticResource White}, Dark={StaticResource Black}}" />
         <Setter Property="SegmentBorderColor" Value="{AppThemeBinding Light={StaticResource White}, Dark={StaticResource Black}}" />
         <Setter Property="SegmentWidth" Value="48" />
-
     </Style>
 
-    <Style x:Key="ProfileSfSegmentedControlStyle" TargetType="buttons:SfSegmentedControl" BasedOn="{StaticResource DefaultSfSegmentedControlStyle}">
+    <Style x:Key="Style.Syncfusion.SfSegmentedControl.Profiles" TargetType="buttons:SfSegmentedControl" BasedOn="{StaticResource Style.Syncfusion.SfSegmentedControl.Default}">
         <Setter Property="FontSize" Value="{OnIdiom Tablet=14, Default=10}" />
         <Setter Property="DisplayMode" Value="Text"/>
         <Setter Property="SegmentWidth" Value="{OnIdiom Tablet=92, Default=64}" />

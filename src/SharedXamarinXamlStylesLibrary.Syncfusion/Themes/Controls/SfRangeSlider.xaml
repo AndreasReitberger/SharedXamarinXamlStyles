@@ -11,7 +11,7 @@
         <shared:SharedColors />
     </ResourceDictionary.MergedDictionaries>
     <!-- OPTIMIZED -->
-    <Style x:Key="DefaultSfRangeSliderStyle" TargetType="range:SfRangeSlider">
+    <Style x:Key="Style.Syncfusion.SfRangeSlider.Default" TargetType="range:SfRangeSlider">
         <Setter Property="ToolTipBackgroundColor" Value="{AppThemeBinding Light={StaticResource Gray200}, Dark={StaticResource Gray800}}" />
         <Setter Property="ToolTipTextColor" Value="{AppThemeBinding Light={StaticResource Black}, Dark={StaticResource White}}" />
         <Setter Property="KnobColor" Value="{OnPlatform Android={StaticResource Green}, Default={StaticResource White}}" />
@@ -29,9 +29,9 @@
         </Style.Triggers>
     </Style>
 
-    <Style TargetType="range:SfRangeSlider" BasedOn="{StaticResource DefaultSfRangeSliderStyle}"/>
+    <Style TargetType="range:SfRangeSlider" BasedOn="{StaticResource Style.Syncfusion.SfRangeSlider.Default}"/>
 
-    <Style x:Key="PrimraySfRangeSliderStyle" TargetType="range:SfRangeSlider" BasedOn="{StaticResource DefaultSfRangeSliderStyle}">
+    <Style x:Key="Style.Syncfusion.SfRangeSlider.Primary" TargetType="range:SfRangeSlider" BasedOn="{StaticResource Style.Syncfusion.SfRangeSlider.Default}">
         <Setter Property="KnobColor" Value="{OnPlatform Android={DynamicResource PrimaryColor}, Default={StaticResource White}}" />
         <Setter Property="TrackSelectionColor" Value="{DynamicResource PrimaryColor}" />
         <Setter Property="ShowRange" Value="False" />

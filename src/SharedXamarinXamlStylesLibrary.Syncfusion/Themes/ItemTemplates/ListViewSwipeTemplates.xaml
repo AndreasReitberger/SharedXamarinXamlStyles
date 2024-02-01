@@ -13,9 +13,9 @@
     <ResourceDictionary.MergedDictionaries>
         <shared:SharedColors />
     </ResourceDictionary.MergedDictionaries>
-    <DataTemplate x:Key="DeleteGestureSwipeTemplate">
+    <DataTemplate x:Key="DataTemplate.Syncfusion.Swipe.Delete">
         <Label
-            Style="{StaticResource IconLabelStyle}"
+            Style="{StaticResource Style.Core.Label.Icon}"
             Text="{x:Static iconsSyncfusion:SyncfusionIcons.Delete}"
             TextColor="{StaticResource White}"
             VerticalTextAlignment="Center"
@@ -33,12 +33,12 @@
         </Label>
     </DataTemplate>
 
-    <DataTemplate x:Key="EditGestureSwipeTemplate">
+    <DataTemplate x:Key="DataTemplate.Syncfusion.Swipe.Edit">
         <Grid
             Background="{StaticResource Green}"
             >
             <Label
-                Style="{StaticResource IconLabelStyle}"
+                Style="{StaticResource Style.Core.Label.Icon}"
                 Text="{x:Static iconsSyncfusion:SyncfusionIcons.Edit}"
                 TextColor="{StaticResource White}"
                 Background="{StaticResource Green}"
@@ -57,12 +57,12 @@
         </Grid>
     </DataTemplate>
 
-    <DataTemplate x:Key="ViewGestureSwipeTemplate">
+    <DataTemplate x:Key="DataTemplate.Syncfusion.Swipe.View">
         <Grid
             Background="{StaticResource Blue}"
             >
             <Label
-                Style="{StaticResource IconLabelStyle}"
+                Style="{StaticResource Style.Core.Label.Icon}"
                 Text="{x:Static iconsSyncfusion:SyncfusionIcons.Show}"
                 TextColor="{StaticResource White}"
                 Background="{StaticResource Blue}"
@@ -81,9 +81,9 @@
         </Grid>
     </DataTemplate>
 
-    <DataTemplate x:Key="PrintGestureSwipeTemplate">
+    <DataTemplate x:Key="DataTemplate.Syncfusion.Swipe.Print3d">
         <Label
-            Style="{StaticResource MaterialFontFamilyIconLabelStyle}"
+            Style="{StaticResource Style.Core.Label.Icon.MaterialDesign}"
             Text="{x:Static icons:MaterialIcons.Printer3dNozzleOutline}"
             TextColor="{StaticResource White}"
             VerticalTextAlignment="Center"
@@ -101,9 +101,9 @@
         </Label>
     </DataTemplate>
 
-    <DataTemplate x:Key="ExecuteGestureSwipeTemplate">
+    <DataTemplate x:Key="DataTemplate.Syncfusion.Swipe.Execute">
         <Label
-            Style="{StaticResource MaterialFontFamilyIconLabelStyle}"
+            Style="{StaticResource Style.Core.Label.Icon.MaterialDesign}"
             Text="{x:Static icons:MaterialIcons.RunFast}"
             TextColor="{StaticResource White}"
             VerticalTextAlignment="Center"
@@ -122,12 +122,12 @@
     </DataTemplate>
 
     <!-- Double Swipe Templates -->
-    <DataTemplate x:Key="EditDeleteGestureSwipeTemplate">
+    <DataTemplate x:Key="DataTemplate.Syncfusion.Swipe.EditDelete">
         <Grid
-                ColumnDefinitions="*,*"
-                >
+            ColumnDefinitions="*,*"
+            >
             <Label
-                    Style="{StaticResource IconLabelStyle}"
+                    Style="{StaticResource Style.Core.Label.Icon}"
                     Text="{x:Static iconsSyncfusion:SyncfusionIcons.Delete}"
                     TextColor="{StaticResource White}"
                     Background="{StaticResource Red}"
@@ -145,7 +145,7 @@
             </Label>
             <Label
                     Grid.Column="1"
-                    Style="{StaticResource IconLabelStyle}"
+                    Style="{StaticResource Style.Core.Label.Icon}"
                     Text="{x:Static iconsSyncfusion:SyncfusionIcons.Edit}"
                     TextColor="{StaticResource White}"
                     Background="{StaticResource Green}"
@@ -164,12 +164,12 @@
         </Grid>
     </DataTemplate>
 
-    <DataTemplate x:Key="EditExportGestureSwipeTemplate">
+    <DataTemplate x:Key="DataTemplate.Syncfusion.Swipe.EditExport">
         <Grid
-                ColumnDefinitions="*,*"
-                >
+            ColumnDefinitions="*,*"
+            >
             <Label
-                    Style="{StaticResource IconLabelStyle}"
+                    Style="{StaticResource Style.Core.Label.Icon}"
                     Text="{x:Static iconsSyncfusion:SyncfusionIcons.FileExplorer}"
                     TextColor="{StaticResource White}"
                     VerticalTextAlignment="Center"
@@ -188,7 +188,7 @@
 
             <Label
                     Grid.Column="1"
-                    Style="{StaticResource IconLabelStyle}"
+                    Style="{StaticResource Style.Core.Label.Icon}"
                     Text="{x:Static iconsSyncfusion:SyncfusionIcons.Edit}"
                     TextColor="{StaticResource White}"
                     VerticalTextAlignment="Center"
@@ -207,12 +207,12 @@
         </Grid>
     </DataTemplate>
 
-    <DataTemplate x:Key="DuplicateEditDeleteGestureSwipeTemplate">
+    <DataTemplate x:Key="DataTemplate.Syncfusion.Swipe.DuplicateEditDelete">
         <Grid
                 ColumnDefinitions="*,*,*"
                 >
             <Label
-                    Style="{StaticResource IconLabelStyle}"
+                    Style="{StaticResource Style.Core.Label.Icon}"
                     Text="{x:Static iconsSyncfusion:SyncfusionIcons.Viewed}"
                     TextColor="{StaticResource White}"
                     VerticalTextAlignment="Center"
@@ -230,7 +230,7 @@
             </Label>
             <Label
                     Grid.Column="1"
-                    Style="{StaticResource IconLabelStyle}"
+                    Style="{StaticResource Style.Core.Label.Icon}"
                     Text="{x:Static iconsSyncfusion:SyncfusionIcons.Edit}"
                     TextColor="{StaticResource White}"
                     VerticalTextAlignment="Center"
@@ -248,7 +248,7 @@
             </Label>
             <Label
                     Grid.Column="2"
-                    Style="{StaticResource IconLabelStyle}"
+                    Style="{StaticResource Style.Core.Label.Icon}"
                     Text="{x:Static iconsSyncfusion:SyncfusionIcons.Delete}"
                     TextColor="{StaticResource White}"
                     VerticalTextAlignment="Center"
@@ -267,12 +267,12 @@
         </Grid>
     </DataTemplate>
 
-    <DataTemplate x:Key="ViewDeleteGestureSwipeTemplate">
+    <DataTemplate x:Key="DataTemplate.Syncfusion.Swipe.ViewDelete">
         <Grid
                 ColumnDefinitions="*,*"
                 >
             <Label
-                    Style="{StaticResource IconLabelStyle}"
+                    Style="{StaticResource Style.Core.Label.Icon}"
                     Text="{x:Static iconsSyncfusion:SyncfusionIcons.Delete}"
                     TextColor="{StaticResource White}"
                     VerticalTextAlignment="Center"
@@ -290,7 +290,7 @@
             </Label>
             <Label
                     Grid.Column="1"
-                    Style="{StaticResource IconLabelStyle}"
+                    Style="{StaticResource Style.Core.Label.Icon}"
                     Text="{x:Static iconsSyncfusion:SyncfusionIcons.Show}"
                     TextColor="{StaticResource White}"
                     VerticalTextAlignment="Center"
@@ -309,12 +309,12 @@
         </Grid>
     </DataTemplate>
 
-    <DataTemplate x:Key="PrintViewGestureSwipeTemplate">
+    <DataTemplate x:Key="DataTemplate.Syncfusion.Swipe.Print3dView">
         <Grid
                 ColumnDefinitions="*,*"
                 >
             <Label
-                    Style="{StaticResource MaterialFontFamilyIconLabelStyle}"
+                    Style="{StaticResource Style.Core.Label.Icon.MaterialDesign}"
                     Text="{x:Static icons:MaterialIcons.Printer3dNozzleOutline}"
                     TextColor="{StaticResource White}"
                     VerticalTextAlignment="Center"
@@ -332,7 +332,7 @@
             </Label>
             <Label
                     Grid.Column="1"
-                    Style="{StaticResource MaterialFontFamilyIconLabelStyle}"
+                    Style="{StaticResource Style.Core.Label.Icon.MaterialDesign}"
                     Text="{x:Static icons:MaterialIcons.EyeOutline}"
                     TextColor="{StaticResource White}"
                     VerticalTextAlignment="Center"
@@ -351,12 +351,12 @@
         </Grid>
     </DataTemplate>
 
-    <DataTemplate x:Key="ExecuteEditGestureSwipeTemplate">
+    <DataTemplate x:Key="DataTemplate.Syncfusion.Swipe.ExecuteEdit">
         <Grid
                 ColumnDefinitions="*,*"
                 >
             <Label
-                    Style="{StaticResource MaterialFontFamilyIconLabelStyle}"
+                    Style="{StaticResource Style.Core.Label.Icon.MaterialDesign}"
                     Text="{x:Static icons:MaterialIcons.RunFast}"
                     TextColor="{StaticResource White}"
                     VerticalTextAlignment="Center"
@@ -374,7 +374,7 @@
             </Label>
             <Label
                     Grid.Column="1"
-                    Style="{StaticResource MaterialFontFamilyIconLabelStyle}"
+                    Style="{StaticResource Style.Core.Label.Icon.MaterialDesign}"
                     Text="{x:Static icons:MaterialIcons.PencilOutline}"
                     TextColor="{StaticResource White}"
                     VerticalTextAlignment="Center"

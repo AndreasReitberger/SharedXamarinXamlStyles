@@ -14,13 +14,13 @@
     </ResourceDictionary.MergedDictionaries>
     <converters:UriToStringConverter x:Key="UriToStringConverter" />
 
-    <DataTemplate x:Key="TutorialStepItemTemplate" x:DataType="documentation:TutorialStep">
+    <DataTemplate x:Key="DataTemplate.Core.TutorialStep.Default" x:DataType="documentation:TutorialStep">
         <Grid 
-        Padding="8,6"
-        ColumnSpacing="4"
-        RowSpacing="4"
-        RowDefinitions="*,64,Auto"
-        >
+            Padding="8,6"
+            ColumnSpacing="4"
+            RowSpacing="4"
+            RowDefinitions="*,64,Auto"
+            >
             <!-- Background="{AppThemeBinding Light={StaticResource Gray200}, Dark={StaticResource Gray900}}" -->
             <Frame
                 Margin="20,16"
@@ -36,14 +36,14 @@
             <Label 
                 Grid.Row="1"
                 Text="{Binding Heading}"
-                Style="{StaticResource PrimaryHeadlineLabelStyle}"
+                Style="{StaticResource Style.Core.Label.HeadlinePrimary}"
                 VerticalTextAlignment="End"
                 HorizontalTextAlignment="Center"
                 />
 
             <Label
                 Grid.Row="2"
-                Style="{StaticResource LabelStyle}"
+                Style="{StaticResource Style.Core.Label.Default}"
                 Text="{Binding Content}"
                 VerticalTextAlignment="Center"
                 HorizontalTextAlignment="Center"

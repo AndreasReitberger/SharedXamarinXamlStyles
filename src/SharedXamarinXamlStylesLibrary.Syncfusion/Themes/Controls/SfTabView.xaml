@@ -14,7 +14,7 @@
     </ResourceDictionary.MergedDictionaries>
 
     <!-- OPTIMIZED -->
-    <Style x:Key="DefaultSfTabViewStyle" TargetType="tabView:SfTabView">
+    <Style x:Key="Style.Syncfusion.SfTabView.Default" TargetType="tabView:SfTabView">
         <Setter Property="SelectionIndicatorSettings">
             <Setter.Value>
                 <tabView:SelectionIndicatorSettings
@@ -26,7 +26,7 @@
         </Setter>
     </Style>
 
-    <Style x:Key="DefaultSfTabViewItemStyle" TargetType="tabView:SfTabItem">
+    <Style x:Key="Style.Syncfusion.SfTabItem.Default" TargetType="tabView:SfTabItem">
         <Setter Property="TitleFontColor" Value="{AppThemeBinding Light={StaticResource Black}, Dark={StaticResource White}}"/>
         <Setter Property="SelectionColor" Value="{DynamicResource PrimaryColor}"/>
         <Setter Property="TitleFontSize" Value="{OnIdiom Desktop=36, Tablet=14, Default=12}"/>
@@ -35,21 +35,20 @@
         <Setter Property="FontIconFontColor" Value="{AppThemeBinding Light={StaticResource Gray800}, Dark={StaticResource Gray200}}"/>
         <Setter Property="FontIconFontFamily" Value="{StaticResource MaterialDesignIcons}"/>
     </Style>
-    <!-- Default Item Style-->
-    <Style TargetType="tabView:SfTabItem" BasedOn="{StaticResource DefaultSfTabViewItemStyle}"/>
+    <Style TargetType="tabView:SfTabItem" BasedOn="{StaticResource Style.Syncfusion.SfTabItem.Default}"/>
 
-    <Style x:Key="ChildSfTabViewItemDefaultStyle" TargetType="tabView:SfTabItem" BasedOn="{StaticResource DefaultSfTabViewItemStyle}">
+    <Style x:Key="Style.Syncfusion.SfTabItem.Child" TargetType="tabView:SfTabItem" BasedOn="{StaticResource Style.Syncfusion.SfTabItem.Default}">
         <Setter Property="TitleFontColor" Value="{AppThemeBinding Light={StaticResource Gray800}, Dark={StaticResource Gray200}}"/>
         <Setter Property="TitleFontSize" Value="{OnIdiom Desktop=24, Tablet=12, Default=10}"/>
         <Setter Property="FontIconFontSize" Value="{OnIdiom Desktop=24, Tablet=18, Default=14}"/>
     </Style>
 
-    <Style x:Key="SmallSfTabViewItemDefaultStyle" TargetType="tabView:SfTabItem" BasedOn="{StaticResource DefaultSfTabViewItemStyle}">
+    <Style x:Key="Style.Syncfusion.SfTabItem.Small" TargetType="tabView:SfTabItem" BasedOn="{StaticResource Style.Syncfusion.SfTabItem.Default}">
         <Setter Property="TitleFontSize" Value="{OnPlatform Android=Small, Default=Micro}"/>
         <Setter Property="FontIconFontSize" Value="{OnPlatform Android=Small, Default=Micro}"/>
     </Style>
 
-    <Style x:Key="MaterialIconSfTabViewItemStyle" TargetType="tabView:SfTabItem" BasedOn="{StaticResource DefaultSfTabViewItemStyle}">
+    <Style x:Key="Style.Syncfusion.SfTabItem.Icon.MaterialDesign" TargetType="tabView:SfTabItem" BasedOn="{StaticResource Style.Syncfusion.SfTabItem.Default}">
         <Setter Property="TitleFontFamily" Value="{StaticResource MaterialDesignIcons}"/>
         <Setter Property="TitleFontSize" Value="{OnPlatform Android=Default, Default=Small}"/>
         <Setter Property="FontIconFontSize" Value="{OnPlatform Android=Default, Default=Small}"/>

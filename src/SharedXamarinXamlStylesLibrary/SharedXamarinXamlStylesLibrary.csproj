@@ -54,6 +54,9 @@
     <Compile Update="Themes\ItemTemplates\GeneralItemTemplates.xaml.cs">
       <DependentUpon>GeneralItemTemplates.xaml</DependentUpon>
     </Compile>
+    <Compile Update="Themes\ItemTemplates\ShellItemTemplates.xaml.cs">
+      <DependentUpon>%(Filename)</DependentUpon>
+    </Compile>
     <Compile Update="Themes\SharedTemplates.xaml.cs">
       <DependentUpon>SharedTemplates.xaml</DependentUpon>
     </Compile>

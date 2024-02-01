@@ -13,7 +13,7 @@
         <ResourceDictionary Source="/Themes/SharedFonts.xaml" />
     </ResourceDictionary.MergedDictionaries>
 
-    <Style x:Key="DefaultSfTextInputLayoutStyle" TargetType="inputLayout:SfTextInputLayout">
+    <Style x:Key="Style.Syncfusion.SfTextInputLayout.Default" TargetType="inputLayout:SfTextInputLayout">
         <Setter Property="UnfocusedColor" Value="{AppThemeBinding Light={StaticResource Gray900}, Dark={StaticResource Gray100}}" />
         <Setter Property="FocusedColor" Value="{DynamicResource PrimaryColor}" />
         <Setter Property="ErrorColor" Value="{StaticResource Red}" />
@@ -55,5 +55,5 @@
         </Style.Triggers>
     </Style>
 
-    <Style TargetType="inputLayout:SfTextInputLayout" BasedOn="{StaticResource DefaultSfTextInputLayoutStyle}"/>
+    <Style TargetType="inputLayout:SfTextInputLayout" BasedOn="{StaticResource Style.Syncfusion.SfTextInputLayout.Default}"/>
 </ResourceDictionary>

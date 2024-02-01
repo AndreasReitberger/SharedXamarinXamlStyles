@@ -11,7 +11,7 @@
         <shared:SharedColors />
     </ResourceDictionary.MergedDictionaries>
     <!-- OPTIMIZED -->
-    <Style x:Key="DefaultSfPullToRefreshStyle" TargetType="PullToRefresh:SfPullToRefresh">
+    <Style x:Key="Style.Syncfusion.SfPullToRefresh.Default" TargetType="PullToRefresh:SfPullToRefresh">
         <Setter Property="ProgressStrokeColor" Value="{DynamicResource PrimaryColor}" />
         <Setter Property="ProgressBackgroundColor" Value="{AppThemeBinding Light={StaticResource Gray200}, Dark={StaticResource Gray800}}" />
         <Setter Property="ProgressStrokeWidth" Value="2" />
@@ -22,5 +22,5 @@
         <Setter Property="RefreshContentWidth" Value="48" />
     </Style>
 
-    <Style TargetType="PullToRefresh:SfPullToRefresh" BasedOn="{StaticResource DefaultSfPullToRefreshStyle}"/>
+    <Style TargetType="PullToRefresh:SfPullToRefresh" BasedOn="{StaticResource Style.Syncfusion.SfPullToRefresh.Default}"/>
 </ResourceDictionary>

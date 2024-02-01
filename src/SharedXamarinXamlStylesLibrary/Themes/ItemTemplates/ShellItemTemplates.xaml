@@ -1,29 +1,16 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <!--<?xaml-comp compile="true" ?>-->
 <ResourceDictionary
-    x:Class="AndreasReitberger.Shared.XForm.Syncfusion.Themes.ItemTemplates.ShellItemTemplates"
+    x:Class="AndreasReitberger.Shared.XForm.Themes.ItemTemplates.ShellItemTemplates"
     xmlns="http://xamarin.com/schemas/2014/forms"
-    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-    
-    xmlns:shared="clr-namespace:AndreasReitberger.Shared.XForm.Themes;assembly=SharedXamarinXamlStylesLibrary"
-    xmlns:ios="clr-namespace:Xamarin.Forms.PlatformConfiguration.iOSSpecific;assembly=Xamarin.Forms.Core"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"   
     >
     <ResourceDictionary.MergedDictionaries>
-        <shared:SharedColors />
-        <shared:SharedFonts />
+        <ResourceDictionary Source="/Themes/SharedColors.xaml" />
         <ResourceDictionary Source="/Themes/SharedFonts.xaml" />
     </ResourceDictionary.MergedDictionaries>
 
-    <Style x:Key="DefaultShellStyle" TargetType="Shell">
-        <Setter Property="BackgroundColor" Value="{AppThemeBinding Light={StaticResource White}, Dark={StaticResource Black}}"/>
-        <Setter Property="ForegroundColor" Value="{DynamicResource PrimaryColor}"/>
-        <Setter Property="TitleColor" Value="{DynamicResource PrimaryColor}"/>
-        <Setter Property="UnselectedColor" Value="{AppThemeBinding Light={StaticResource Gray900}, Dark={StaticResource Gray100}}"/>
-        <Setter Property="DisabledColor" Value="{AppThemeBinding Light={StaticResource Gray400}, Dark={StaticResource Gray500}}"/>
-        <Setter Property="FlyoutBackgroundColor" Value="{AppThemeBinding Light={StaticResource White}, Dark={StaticResource Black}}"/>
-    </Style>
-
-    <DataTemplate x:Key="DefaultFlyoutTemplate">
+    <DataTemplate x:Key="DataTemplate.Core.Flyout.Default">
         <Grid
             x:Name="FlyoutItemLayout"
             HeightRequest="{OnPlatform 44, Android=50}"

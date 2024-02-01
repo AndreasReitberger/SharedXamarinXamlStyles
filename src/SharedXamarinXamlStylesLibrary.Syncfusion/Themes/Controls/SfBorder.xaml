@@ -11,18 +11,20 @@
         <shared:SharedColors />
     </ResourceDictionary.MergedDictionaries>
     <!-- OPTIMIZED -->
-    <Style TargetType="border:SfBorder">
+    <Style x:Key="Style.Syncfusion.SfBorder.Default" TargetType="border:SfBorder">
         <Setter Property="BackgroundColor" Value="{AppThemeBinding Light={StaticResource White}, Dark={StaticResource Black}}" />
         <Setter Property="BorderColor" Value="{AppThemeBinding Light={StaticResource White}, Dark={StaticResource Black}}" />
         <Setter Property="CornerRadius" Value="25" />
     </Style>
 
-    <Style x:Key="ProfileSfBorderStyle" TargetType="border:SfBorder">
+    <Style TargetType="border:SfBorder" BasedOn="{StaticResource Style.Syncfusion.SfBorder.Default}" />
+
+    <Style x:Key="Style.Syncfusion.SfBorder.Profile" TargetType="border:SfBorder" BasedOn="{StaticResource Style.Syncfusion.SfBorder.Default}">
         <Setter Property="BorderWidth" Value="1" />
         <Setter Property="CornerRadius" Value="20" />
     </Style>
 
-    <Style x:Key="MenuSeparatorSfBorderStyle" TargetType="border:SfBorder" BasedOn="{StaticResource ProfileSfBorderStyle}">
+    <Style x:Key="Style.Syncfusion.SfBorder.MenuSeparator" TargetType="border:SfBorder" BasedOn="{StaticResource Style.Syncfusion.SfBorder.Profile}">
         <Setter Property="BorderWidth" Value="0" />
         <Setter Property="CornerRadius" Value="0" />
         <Setter Property="Margin" Value="1,2" />
@@ -30,12 +32,12 @@
         <Setter Property="BorderColor" Value="{AppThemeBinding Light={StaticResource Gray400}, Dark={StaticResource Gray500}}" />
     </Style>
 
-    <Style x:Key="PanelCardViewSfBorderStyle" TargetType="border:SfBorder">
+    <Style x:Key="Style.Syncfusion.SfBorder.PanelCardView" TargetType="border:SfBorder">
         <Setter Property="Margin" Value="8"/>
         <Setter Property="CornerRadius" Value="15" />
     </Style>
 
-    <Style x:Key="MinimalPanelCardViewSfBorderStyle" TargetType="border:SfBorder" BasedOn="{StaticResource PanelCardViewSfBorderStyle}">
+    <Style x:Key="Style.Syncfusion.SfBorder.MinimalPanelCardView" TargetType="border:SfBorder" BasedOn="{StaticResource Style.Syncfusion.SfBorder.PanelCardView}">
         <Setter Property="Margin" Value="4"/>
         <Setter Property="CornerRadius" Value="2" />
     </Style>

@@ -10,7 +10,7 @@
         <ResourceDictionary Source="/Themes/SharedColors.xaml" />
     </ResourceDictionary.MergedDictionaries>
     <!--  Common style for TapNavigationGrid  -->
-    <Style x:Key="DefaultTapAnimationGridStyle" TargetType="control:TapAnimationGrid">
+    <Style x:Key="Style.Core.TapAnimationGrid.Default" TargetType="control:TapAnimationGrid">
         <Setter Property="RowSpacing" Value="0"/>
         <Setter Property="IsAnimated" Value="False"/>
         <Setter Property="ColumnSpacing" Value="0"/>
@@ -22,7 +22,7 @@
         </Style.Triggers>
     </Style>
     <!--  Common style for SettingsGrid  -->
-    <Style x:Key="DefaultGridStyle" TargetType="Grid">
+    <Style x:Key="Style.Core.Grid.Default" TargetType="Grid">
         <Setter Property="RowSpacing" Value="0"/>
         <Setter Property="ColumnSpacing" Value="0"/>
         <Style.Triggers>
@@ -32,29 +32,29 @@
         </Style.Triggers>
     </Style>
 
-    <Style x:Key="DefaultSettingsGridStyle" TargetType="Grid" BasedOn="{StaticResource DefaultGridStyle}">
+    <Style x:Key="Style.Core.Grid.Settings" TargetType="Grid" BasedOn="{StaticResource Style.Core.Grid.Default}">
         <Setter Property="BackgroundColor" Value="{AppThemeBinding Light={StaticResource Gray100}, Dark={StaticResource Gray900}}" />
     </Style>
     <!--  Common style for WarningGrid  -->
-    <Style x:Key="WarningGridStyle" TargetType="Grid" BasedOn="{StaticResource DefaultGridStyle}">
+    <Style x:Key="Style.Core.Grid.Warning" TargetType="Grid" BasedOn="{StaticResource Style.Core.Grid.Default}">
         <Setter Property="BackgroundColor" Value="{StaticResource Yellow}" />
     </Style>
     <!--  Common style for ErrorGrid  -->
-    <Style x:Key="CriticalErrorGridStyle" TargetType="Grid" BasedOn="{StaticResource DefaultGridStyle}">
+    <Style x:Key="Style.Core.Grid.Error" TargetType="Grid" BasedOn="{StaticResource Style.Core.Grid.Default}">
         <Setter Property="BackgroundColor" Value="{StaticResource Red}" />
     </Style>
     <!--  Common style for SettingsGrid  -->
-    <Style x:Key="DefaultPanelGridStyle" TargetType="Grid" BasedOn="{StaticResource DefaultGridStyle}">
+    <Style x:Key="Style.Core.Grid.Panel" TargetType="Grid" BasedOn="{StaticResource Style.Core.Grid.Default}">
         <Setter Property="BackgroundColor" Value="{AppThemeBinding Light={StaticResource Light_PanelBackground}, Dark={StaticResource Dark_PanelBackground}}" />
     </Style>
     <!--  Common style for ModalGrid  -->
-    <Style x:Key="ModalPanelGridStyle" TargetType="Grid">
+    <Style x:Key="Style.Core.Grid.Panel.Modal" TargetType="Grid">
         <!--<Setter Property="CompressedLayout.IsHeadless" Value="true" />-->
         <Setter Property="ColumnDefinitions" Value="*,48" />
         <Setter Property="RowDefinitions" Value="Auto,*,Auto" />
     </Style>
     <!--  Common style for Shell.TitleView  -->
-    <Style x:Key="ShellTitleViewGridStyle" TargetType="Grid">
+    <Style x:Key="Style.Core.Grid.ShellTitleView" TargetType="Grid">
         <Setter Property="HeightRequest" Value="{OnPlatform iOS=44}" />
     </Style>
 </ResourceDictionary>

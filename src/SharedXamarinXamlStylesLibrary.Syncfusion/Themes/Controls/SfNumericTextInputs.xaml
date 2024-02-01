@@ -7,15 +7,13 @@
     xmlns:shared="clr-namespace:AndreasReitberger.Shared.XForm.Themes;assembly=SharedXamarinXamlStylesLibrary"
     xmlns:numericTextbox="clr-namespace:Syncfusion.SfNumericTextBox.XForms;assembly=Syncfusion.SfNumericTextBox.XForms"
     >
-    <!-- OPTIMIZED -->
     <ResourceDictionary.MergedDictionaries>
         <shared:SharedColors />
         <shared:SharedFonts />
         <ResourceDictionary Source="/Themes/SharedFonts.xaml" />
     </ResourceDictionary.MergedDictionaries>
 
-    <!-- Common style for masked edit input -->
-    <Style x:Key="DefaultSfNumericTextBoxStyle" TargetType="numericTextbox:SfNumericTextBox">
+    <Style x:Key="Style.Syncfusion.SfNumericTextBox.Default" TargetType="numericTextbox:SfNumericTextBox">
         <Setter Property="TextColor" Value="{AppThemeBinding Light={StaticResource Gray900}, Dark={StaticResource Gray100}}" />
         <Setter Property="FontFamily" Value="{StaticResource MontserratBold}" />
         <Setter Property="FontSize" Value="{OnIdiom Desktop=20, Tablet=20, Phone=14, Default=14}"/>
@@ -29,5 +27,5 @@
         </Style.Triggers>
     </Style>
 
-    <Style TargetType="numericTextbox:SfNumericTextBox" BasedOn="{StaticResource DefaultSfNumericTextBoxStyle}"/>
+    <Style TargetType="numericTextbox:SfNumericTextBox" BasedOn="{StaticResource Style.Syncfusion.SfNumericTextBox.Default}"/>
 </ResourceDictionary>

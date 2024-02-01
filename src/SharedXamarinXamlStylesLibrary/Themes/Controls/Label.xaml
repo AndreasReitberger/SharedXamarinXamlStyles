@@ -9,36 +9,15 @@
         <ResourceDictionary Source="/Themes/SharedColors.xaml" />
         <ResourceDictionary Source="/Themes/SharedFonts.xaml" />
     </ResourceDictionary.MergedDictionaries>
-    <!-- OPTIMIZED -->
 
-    <!-- DEFAULT LABEL STYLE -->
-    <Style x:Key="DefaultLabelStyle" TargetType="Label">
+    <Style x:Key="Style.Core.Label.Default" TargetType="Label">
         <Setter Property="FontFamily" Value="{StaticResource MontserratSemiBold}" />
         <Setter Property="TextColor" Value="{AppThemeBinding Light={StaticResource Gray900}, Dark={StaticResource Gray100}}"/>
         <Setter Property="LineHeight" Value="{OnPlatform Default=1.25, iOS=-1}"/>
         <Setter Property="FontSize" Value="Default"/>
     </Style>
 
-    <!-- Obsolete, will be removed -->
-    <Style x:Key="LabelStyle" TargetType="Label" BasedOn="{StaticResource DefaultLabelStyle}">
-        <!--<Setter Property="FontSize" Value="{OnIdiom Desktop=14, Tablet=14, Default=12}"/>-->
-        <Setter Property="FontSize" Value="Default"/>
-    </Style>
-
-    <!-- ICON ONLY LABELS -->
-    <!--  Moved to Syncfusion
-    <Style x:Key="IconLabelStyle" TargetType="Label">
-        <Setter Property="Margin" Value="16,8" />
-        <Setter Property="TextColor" Value="{AppThemeBinding Light={StaticResource Gray600}, Dark={StaticResource Gray400}}" />
-        <Setter Property="FontSize" Value="Medium" />
-        <Setter Property="HorizontalTextAlignment" Value="Center" />
-        <Setter Property="VerticalTextAlignment" Value="Center" />
-        <Setter Property="FontFamily" Value="{StaticResource FontIcons}" />
-    </Style>
-    -->
-
-    <!--  Common style for icon label  -->
-    <Style x:Key="MaterialSettingsIconLabelStyle" TargetType="Label">
+    <Style x:Key="Style.Core.Label.IconSettings.MaterialDesign" TargetType="Label">
         <Setter Property="Margin" Value="16,8" />
         <Setter Property="TextColor" Value="{AppThemeBinding Light={StaticResource Gray600}, Dark={StaticResource Gray400}}" />
         <Setter Property="FontSize" Value="Medium" />
@@ -47,87 +26,69 @@
         <Setter Property="FontFamily" Value="{StaticResource MaterialDesignIcons}" />
     </Style>
 
-    <Style x:Key="TextInputLayoutMaterialIconLabelStyle" TargetType="Label" BasedOn="{StaticResource MaterialSettingsIconLabelStyle}">
+    <Style x:Key="Style.Core.Label.Icon.MaterialDesign.TextInputLayout" TargetType="Label" BasedOn="{StaticResource Style.Core.Label.IconSettings.MaterialDesign}">
         <Setter Property="HorizontalTextAlignment" Value="Start" />
         <Setter Property="Margin" Value="0" />
     </Style>
     
-    <Style x:Key="MaterialFontFamilyIconLabelStyle" TargetType="Label">
+    <Style x:Key="Style.Core.Label.Icon.MaterialDesign" TargetType="Label">
         <Setter Property="FontFamily" Value="{StaticResource MaterialDesignIcons}" />
         <Setter Property="FontSize" Value="{OnIdiom Desktop=28, Tablet=26, Phone=24, Default=24}"/>
         <Setter Property="TextColor" Value="{AppThemeBinding Light={StaticResource White}, Dark={StaticResource Black}}"/>
         <Setter Property="LineHeight" Value="{OnPlatform Default=1.25, iOS=-1}"/>
     </Style>
 
-    <Style x:Key="PrimaryMaterialFontFamilyIconLabelStyle" TargetType="Label" BasedOn="{StaticResource MaterialFontFamilyIconLabelStyle}">
+    <Style x:Key="Style.Core.Label.IconPrimary.MaterialDesign" TargetType="Label" BasedOn="{StaticResource Style.Core.Label.Icon.MaterialDesign}">
         <Setter Property="TextColor" Value="{DynamicResource PrimaryColor}"/>
     </Style>
 
-    <!-- LABELS -->
-    <!--  Different label sizes based on LabelStyle  -->
-
-    <Style x:Key="MediumLabelStyle" TargetType="Label" BasedOn="{StaticResource LabelStyle}">
+    <Style x:Key="Style.Core.Label.Medium" TargetType="Label" BasedOn="{StaticResource Style.Core.Label.Default}">
         <Setter Property="FontFamily" Value="{StaticResource MontserratMedium}" />
         <Setter Property="FontSize" Value="Medium" />
-        <!--<Setter Property="FontSize" Value="{OnIdiom Desktop=20, Tablet=18, Default=16}" />-->
         <Setter Property="Margin" Value="16, 12" />
-        <!--<Setter Property="LineBreakMode" Value="WordWrap" />-->
     </Style>
 
-    <Style x:Key="SmallLabelStyle" TargetType="Label" BasedOn="{StaticResource LabelStyle}">
+    <Style x:Key="Style.Core.Label.Small" TargetType="Label" BasedOn="{StaticResource Style.Core.Label.Default}">
         <Setter Property="FontFamily" Value="{StaticResource MontserratRegular}" />
         <Setter Property="FontSize" Value="Small"/>
-        <!--<Setter Property="FontSize" Value="{OnIdiom Desktop=16, Tablet=12, Default=10}"/>-->
     </Style>
 
-    <Style x:Key="VerySmallLabelStyle" TargetType="Label" BasedOn="{StaticResource SmallLabelStyle}">
-        <!--<Setter Property="FontSize" Value="{OnIdiom Desktop=14, Tablet=10, Default=8}"/>-->
+    <Style x:Key="Style.Core.Label.VerySmall" TargetType="Label" BasedOn="{StaticResource Style.Core.Label.Small}">
         <Setter Property="FontSize" Value="Micro"/>
     </Style>
 
-    <Style x:Key="SetupLabelStyle" TargetType="Label" BasedOn="{StaticResource LabelStyle}">
+    <Style x:Key="Style.Core.Label.Setup" TargetType="Label" BasedOn="{StaticResource Style.Core.Label.Default}">
         <Setter Property="TextColor" Value="{AppThemeBinding Light={StaticResource White}, Dark={StaticResource Black}}"/>
     </Style>
 
-    <Style x:Key="LinkLabelStyle" TargetType="Label" BasedOn="{StaticResource LabelStyle}">
+    <Style x:Key="Style.Core.Label.Link" TargetType="Label" BasedOn="{StaticResource Style.Core.Label.Default}">
         <Setter Property="TextColor" Value="{StaticResource Blue}"/>
     </Style>
 
-    <!-- Primary Label -->
-    <Style x:Key="PrimaryLabelStyle" TargetType="Label" BasedOn="{StaticResource LabelStyle}">
+    <Style x:Key="Style.Core.Label.Primary" TargetType="Label" BasedOn="{StaticResource Style.Core.Label.Default}">
         <Setter Property="TextColor" Value="{DynamicResource PrimaryColor}"/>
     </Style>
 
-    <!-- Primary Dark Label style -->
-    <Style x:Key="PrimaryDarkLabelStyle" TargetType="Label" BasedOn="{StaticResource PrimaryLabelStyle}">
+    <Style x:Key="Style.Core.Label.PrimaryDark" TargetType="Label" BasedOn="{StaticResource Style.Core.Label.Primary}">
         <Setter Property="TextColor" Value="{AppThemeBinding Light={StaticResource Gray900}, Dark={StaticResource Gray100}}"/>
     </Style>
 
-    <!-- Warning (on yellow background )-->
-    <Style x:Key="WarningLabelStyle" TargetType="Label" BasedOn="{StaticResource MediumLabelStyle}">
+    <Style x:Key="Style.Core.Label.Warning" TargetType="Label" BasedOn="{StaticResource Style.Core.Label.Medium}">
         <Setter Property="TextColor" Value="{StaticResource Black}"/>
         <Setter Property="LineBreakMode" Value="WordWrap"/>
     </Style>
 
-    <!-- Error (on red background )-->
-    <Style x:Key="ErrorLabelStyle" TargetType="Label" BasedOn="{StaticResource WarningLabelStyle}">
+    <Style x:Key="Style.Core.Label.Error" TargetType="Label" BasedOn="{StaticResource Style.Core.Label.Warning}">
         <Setter Property="TextColor" Value="{StaticResource White}"/>
     </Style>
 
-    <!-- Shell Flyout Menu Label -->
-    <Style x:Key="ShellLabelStyle" TargetType="Label" BasedOn="{StaticResource MediumLabelStyle}">
+    <Style x:Key="Style.Core.Label.Shell" TargetType="Label" BasedOn="{StaticResource Style.Core.Label.Medium}">
         <Setter Property="TextColor" Value="{AppThemeBinding Light={StaticResource Gray800}, Dark={StaticResource Gray200}}"/>
         <Setter Property="FontSize" Value="{OnPlatform Android={OnIdiom Desktop=20, Tablet=14, Default=12}, Default={OnIdiom Desktop=16, Default=14}}" />
     </Style>
 
-    <Style x:Key="SettingsLabelStyle" TargetType="Label" BasedOn="{StaticResource LabelStyle}">
+    <Style x:Key="Style.Core.Label.Settings" TargetType="Label" BasedOn="{StaticResource Style.Core.Label.Default}">
         <Setter Property="Margin" Value="16,0,0,0" />
-        <!--
-        <Setter Property="FontSize" Value="{OnPlatform 
-            Android={OnIdiom Desktop=16, Tablet=16, Default=12}, 
-            Default={OnIdiom Desktop=16, Tablet=14, Default=12}}"
-            />
-        -->
         <Setter Property="FontSize" Value="Small" />
         <Setter Property="TextColor" Value="{AppThemeBinding Light={StaticResource Gray800}, Dark={StaticResource Gray200}}"/>
         <Setter Property="LineHeight" Value="{OnPlatform Default=-1, Android=1.25}"/>
@@ -135,69 +96,36 @@
         <Setter Property="VerticalTextAlignment" Value="Center"/>
     </Style>
 
-    <Style x:Key="SettingsSmallLabelStyle" TargetType="Label" BasedOn="{StaticResource SmallLabelStyle}">
+    <Style x:Key="Style.Core.Label.SettingsSmall" TargetType="Label" BasedOn="{StaticResource Style.Core.Label.Small}">
         <Setter Property="Margin" Value="16,0,0,0" />
         <Setter Property="TextColor" Value="{AppThemeBinding Light={StaticResource Gray700}, Dark={StaticResource Gray300}}"/>
         <Setter Property="VerticalTextAlignment" Value="Center"/>
     </Style>
 
-    <!-- HEADLINES -->
-    <!-- Default headline label style -->
-    <Style x:Key="HeadlineLabelStyle" TargetType="Label" BasedOn="{StaticResource DefaultLabelStyle}">
+    <Style x:Key="Style.Core.Label.Headline" TargetType="Label" BasedOn="{StaticResource Style.Core.Label.Default}">
         <Setter Property="VerticalTextAlignment" Value="Center"/>
         <Setter Property="HorizontalTextAlignment" Value="Center"/>
         <Setter Property="FontFamily" Value="{StaticResource MontserratBold}" />
-        <!--
-        <Setter Property="FontSize" Value="{OnPlatform 
-            Android={OnIdiom Phone=18, Default=22}, 
-            Default={OnIdiom Phone=20, Default=24}}"
-                />
-        -->
         <Setter Property="FontSize" Value="Large" />
         <Setter Property="FontAttributes" Value="Bold"/>
         <Setter Property="TextColor" Value="{StaticResource White}"/>
     </Style>
 
-    <Style x:Key="PrimaryHeadlineLabelStyle" TargetType="Label" BasedOn="{StaticResource HeadlineLabelStyle}">
+    <Style x:Key="Style.Core.Label.HeadlinePrimary" TargetType="Label" BasedOn="{StaticResource Style.Core.Label.Headline}">
         <Setter Property="TextColor" Value="{DynamicResource PrimaryColor}"/>
-        <!--
-        <Setter Property="FontSize" Value="{OnPlatform 
-            Android={OnIdiom Phone=14, Default=18}, 
-            Default={OnIdiom Phone=16, Default=20}}"
-                />
-        -->
         <Setter Property="FontSize" Value="Large" />
     </Style>
 
-    <Style x:Key="TitleViewHeadlineLabelStyle" TargetType="Label" BasedOn="{StaticResource HeadlineLabelStyle}">
+    <Style x:Key="Style.Core.Label.TitleView" TargetType="Label" BasedOn="{StaticResource Style.Core.Label.Headline}">
         <Setter Property="TextColor" Value="{AppThemeBinding Light={StaticResource Gray900}, Dark={StaticResource Gray100}}"/>
         <Setter Property="FontSize" Value="Medium" />
     </Style>
 
-    <!-- Primary Dark Headline -->
-    <Style x:Key="PrimaryDarkHeadlineLabelStyle" TargetType="Label" BasedOn="{StaticResource HeadlineLabelStyle}">
+    <Style x:Key="Style.Core.Label.HeadlinePrimaryDark" TargetType="Label" BasedOn="{StaticResource Style.Core.Label.Headline}">
         <Setter Property="TextColor" Value="{DynamicResource PrimaryDarkColor}"/>
     </Style>
 
-    <!--  Moved to Syncfusion
-    <Style x:Key="SwipeTemplateButtonStyle" TargetType="Label">
-        <Setter Property="TextColor" Value="{DynamicResource PrimaryColor}" />
-        <Setter Property="HorizontalTextAlignment" Value="Center" />
-        <Setter Property="VerticalTextAlignment" Value="Center" />
-        <Setter Property="FontSize" Value="18" />
-        <Setter Property="FontFamily" Value="{StaticResource FontIcons}" />
-    </Style>
-    -->
-    <!--  Common style for option labels  -->
-    <Style
-        x:Key="OptionButtonLabelStyle"
-        BasedOn="{StaticResource DefaultLabelStyle}"
-        TargetType="Label">
-        <Setter Property="HorizontalTextAlignment" Value="Center" />
-    </Style>
-
-
-    <Style x:Key="GroupingHeaderLabelStyle" TargetType="Label">
+    <Style x:Key="Style.Core.Label.GroupingHeader" TargetType="Label">
         <Setter Property="TextColor" Value="{AppThemeBinding Light={StaticResource Gray600}, Dark={StaticResource Gray400}}" />
         <Setter Property="FontSize" Value="18" />
         <Setter Property="VerticalTextAlignment" Value="Center" />
@@ -206,32 +134,15 @@
         <Setter Property="LineHeight" Value="{OnPlatform Default=1.5, iOS=-1}" />
     </Style>
 
-    <Style x:Key="MaterialFontIconSpanStyle" TargetType="Span">
+    <Style x:Key="Style.Core.Span.Icon.MaterialDesign" TargetType="Span">
         <Setter Property="FontFamily" Value="{StaticResource MaterialDesignIcons}" />
         <Setter Property="FontSize" Value="{OnIdiom Desktop=28, Tablet=26, Phone=24, Default=24}"/>
         <Setter Property="TextColor" Value="{AppThemeBinding Light={StaticResource Gray900}, Dark={StaticResource Gray100}}"/>
         <Setter Property="LineHeight" Value="{OnPlatform Default=1.25, iOS=-1}"/>
     </Style>
 
-    <!-- Moved to Syncfusion 
-    <Style x:Key="FontIconSpanStyle" TargetType="Span" BasedOn="{StaticResource MaterialFontIconSpanStyle}">
-        <Setter Property="FontFamily" Value="{StaticResource FontIcons}" />
-    </Style>
-    -->
-
-    <Style x:Key="MaterialFontFamilyIconSmallLabelStyle" TargetType="Label" BasedOn="{StaticResource MaterialFontFamilyIconLabelStyle}">
+    <Style x:Key="Style.Core.Label.IconSmall.MaterialDesign" TargetType="Label" BasedOn="{StaticResource Style.Core.Label.Icon.MaterialDesign}">
         <Setter Property="FontSize" Value="{OnIdiom Desktop=20, Tablet=20, Phone=16, Default=16}"/>
     </Style>
 
-    <Style x:Key="MaterialSwipeTemplateButtonStyle" TargetType="Label">
-        <Setter Property="TextColor" Value="{DynamicResource PrimaryColor}" />
-        <Setter Property="HorizontalTextAlignment" Value="Center" />
-        <Setter Property="VerticalTextAlignment" Value="Center" />
-        <Setter Property="FontSize" Value="18" />
-        <Setter Property="FontFamily" Value="{StaticResource MaterialDesignIcons}" />
-    </Style>
-    
-    <Style x:Key="SwipeTemplateMaterialButtonStyle" TargetType="Label" BasedOn="{StaticResource MaterialSwipeTemplateButtonStyle}">
-
-    </Style>
 </ResourceDictionary>

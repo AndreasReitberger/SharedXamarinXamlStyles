@@ -18,7 +18,7 @@
         <ResourceDictionary Source="/Themes/SharedFonts.xaml" />
     </ResourceDictionary.MergedDictionaries>
 
-    <Style x:Key="DefaultSfSwitchStyle" TargetType="buttons:SfSwitch">
+    <Style x:Key="Style.Syncfusion.SfSwitch.Default" TargetType="buttons:SfSwitch">
         <Setter Property="AllowIndeterminateState" Value="False"/>
         <Setter Property="HeightRequest" Value="28"/>
         <!--
@@ -60,6 +60,6 @@
         -->
     </Style>
 
-    <Style TargetType="buttons:SfSwitch" BasedOn="{StaticResource DefaultSfSwitchStyle}" />
+    <Style TargetType="buttons:SfSwitch" BasedOn="{StaticResource Style.Syncfusion.SfSwitch.Default}" />
 
 </ResourceDictionary>

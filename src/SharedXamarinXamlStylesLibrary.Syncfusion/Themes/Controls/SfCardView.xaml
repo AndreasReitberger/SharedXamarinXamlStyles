@@ -12,16 +12,17 @@
     </ResourceDictionary.MergedDictionaries>
     <!-- OPTIMIZED -->
     <!--  Common style for sfCardView  -->
-    <Style x:Key="DefaultCardViewStyle" TargetType="cards:SfCardView">
+    <Style x:Key="Style.Syncfusion.SfCardView.Default" TargetType="cards:SfCardView">
         <Setter Property="CornerRadius" Value="30"/>
         <Setter Property="HasShadow" Value="True"/>
         <Setter Property="BackgroundColor" Value="{AppThemeBinding Light={StaticResource Gray100}, Dark={StaticResource Gray900}}" />
         <Setter Property="ShadowColor" Value="{AppThemeBinding Light={StaticResource Gray800}, Dark={StaticResource Gray200}}" />
         <Setter Property="FadeOutOnSwiping" Value="False" />
     </Style>
+    <Style TargetType="cards:SfCardView" BasedOn="{StaticResource Style.Syncfusion.SfCardView.Default}"/>
 
     <!--  Common style for sfCardView  -->
-    <Style x:Key="ControlPanelCardViewStyle" TargetType="cards:SfCardView" BasedOn="{StaticResource DefaultCardViewStyle}">
+    <Style x:Key="Style.Syncfusion.SfCardView.ControlPanel" TargetType="cards:SfCardView" BasedOn="{StaticResource Style.Syncfusion.SfCardView.Default}">
         <Setter Property="CornerRadius" Value="16"/>
         <Setter Property="HasShadow" Value="False"/>
         <Setter Property="BorderThickness" Value="1"/>
