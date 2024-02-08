@@ -35,6 +35,7 @@
         
         <!-- Core conrols with syncfusion resources -->
         <ResourceDictionary Source="/Themes/Controls/Core/Button.xaml" />
+        <ResourceDictionary Source="/Themes/Controls/Core/EnhancedListView.xaml" />
         <ResourceDictionary Source="/Themes/Controls/Core/Label.xaml" />
     </ResourceDictionary.MergedDictionaries>
 </ResourceDictionary>
