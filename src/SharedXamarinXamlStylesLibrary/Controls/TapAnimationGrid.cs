@@ -1,6 +1,5 @@
 ﻿using System.Threading.Tasks;
 using System.Windows.Input;
-using Xamarin.Forms;
 using Xamarin.Forms.Internals;
 
 namespace AndreasReitberger.Shared.XForm.Controls
@@ -36,7 +35,7 @@ namespace AndreasReitberger.Shared.XForm.Controls
             BindableProperty.Create(nameof(IsAnimated), typeof(bool), typeof(TapAnimationGrid), false, BindingMode.TwoWay,
                 null, propertyChanged: OnTapped);
 
-        ICommand tappedCommand;
+        ICommand? tappedCommand;
 
         #endregion
 

@@ -1,7 +1,4 @@
-﻿using System;
-using System.Globalization;
-using Syncfusion.XForms.BadgeView;
-using Xamarin.Forms;
+﻿using Syncfusion.XForms.BadgeView;
 using Xamarin.Forms.Internals;
 
 namespace AndreasReitberger.Shared.XForm.Syncfusion.Converters
@@ -17,9 +14,11 @@ namespace AndreasReitberger.Shared.XForm.Syncfusion.Converters
         /// <param name="parameter">Gets the parameter.</param>
         /// <param name="culture">Gets the culture.</param>
         /// <returns>Return the badge icon.</returns>
-        public object Convert(object value, Type targetType, object parameter, CultureInfo culture)
+        public object? Convert(object? value, Type targetType, object parameter, CultureInfo culture)
         {
-            return (string)value == "Available" ? BadgeIcon.Dot : BadgeIcon.None;
+            if (value is string icon)
+                return icon == "Available" ? BadgeIcon.Dot : BadgeIcon.None;
+            return BadgeIcon.None;
         }
 
         /// <summary>
@@ -30,7 +29,7 @@ namespace AndreasReitberger.Shared.XForm.Syncfusion.Converters
         /// <param name="parameter">Gets the parameter.</param>
         /// <param name="culture">Gets the culture.</param>
         /// <returns>Returns null.</returns>        
-        public object ConvertBack(object value, Type targetType, object parameter, CultureInfo culture)
+        public object? ConvertBack(object? value, Type targetType, object parameter, CultureInfo culture)
         {
             return null;
         }

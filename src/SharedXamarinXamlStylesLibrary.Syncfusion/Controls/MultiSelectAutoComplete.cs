@@ -42,10 +42,10 @@ namespace AndreasReitberger.Shared.XForm.Syncfusion.Controls
 
         static void OnSelectionChanged(BindableObject bindable, object oldValue, object newValue)
         {
-            MultiSelectAutoComplete control = bindable as MultiSelectAutoComplete;
+            MultiSelectAutoComplete? control = bindable as MultiSelectAutoComplete;
             if (newValue is IList selectedItems)
             {
-                control.SetValue(SelectedItemsListProperty, selectedItems);
+                control?.SetValue(SelectedItemsListProperty, selectedItems);
             }
         }
     }

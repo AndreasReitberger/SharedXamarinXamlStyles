@@ -53,7 +53,7 @@ namespace AndreasReitberger.Shared.XForm.Controls
         /// <summary>
         /// Gets or sets the title label.
         /// </summary>
-        Label titleLabel;
+        Label? titleLabel;
 
         #endregion
 
@@ -61,30 +61,30 @@ namespace AndreasReitberger.Shared.XForm.Controls
 
         public TitleView()
         {
-            this.ColumnSpacing = 2;
-            this.RowSpacing = 8;
-            this.Padding = new Thickness(0, 8, 0, 0);
+            ColumnSpacing = 2;
+            RowSpacing = 8;
+            Padding = new Thickness(0, 8, 0, 0);
 
-            this.ColumnDefinitions = new ColumnDefinitionCollection
-            {
+            ColumnDefinitions =
+            [
                 new ColumnDefinition { Width = 8 },
                 new ColumnDefinition(),
                 new ColumnDefinition(),
                 new ColumnDefinition(),
                 new ColumnDefinition { Width = 8 },
-            };
+            ];
 
-            this.RowDefinitions = new RowDefinitionCollection
-            {
+            RowDefinitions =
+            [
                 new RowDefinition { Height = GridLength.Auto },
                 new RowDefinition { Height = 1 }
-            };
+            ];
 
             var boxView = new BoxView { Color = Color.FromHex("#ebecef") };
 
-            Children.Add(this.LeadingView, 1, 0);
-            Children.Add(this.Content, 2, 0);
-            Children.Add(this.TrailingView, 3, 0);
+            Children.Add(LeadingView, 1, 0);
+            Children.Add(Content, 2, 0);
+            Children.Add(TrailingView, 3, 0);
             Children.Add(boxView, 0, 1);
             SetColumnSpan(boxView, 5);
         }
@@ -99,7 +99,7 @@ namespace AndreasReitberger.Shared.XForm.Controls
         public View LeadingView
         {
             get { return (View)GetValue(LeadingViewProperty); }
-            set { this.SetValue(LeadingViewProperty, value); }
+            set { SetValue(LeadingViewProperty, value); }
         }
 
         /// <summary>
@@ -108,7 +108,7 @@ namespace AndreasReitberger.Shared.XForm.Controls
         public View TrailingView
         {
             get { return (View)GetValue(TrailingViewProperty); }
-            set { this.SetValue(TrailingViewProperty, value); }
+            set { SetValue(TrailingViewProperty, value); }
         }
 
         /// <summary>
@@ -117,7 +117,7 @@ namespace AndreasReitberger.Shared.XForm.Controls
         public View Content
         {
             get { return (View)GetValue(ContentProperty); }
-            set { this.SetValue(ContentProperty, value); }
+            set { SetValue(ContentProperty, value); }
         }
 
         /// <summary>
@@ -126,7 +126,7 @@ namespace AndreasReitberger.Shared.XForm.Controls
         public string Title
         {
             get { return (string)GetValue(TitleProperty); }
-            set { this.SetValue(TitleProperty, value); }
+            set { SetValue(TitleProperty, value); }
         }
 
         /// <summary>
@@ -135,7 +135,7 @@ namespace AndreasReitberger.Shared.XForm.Controls
         public string FontFamily
         {
             get { return (string)GetValue(FontFamilyProperty); }
-            set { this.SetValue(FontFamilyProperty, value); }
+            set { SetValue(FontFamilyProperty, value); }
         }
 
         /// <summary>
@@ -144,7 +144,7 @@ namespace AndreasReitberger.Shared.XForm.Controls
         public FontAttributes FontAttributes
         {
             get { return (FontAttributes)GetValue(FontAttributesProperty); }
-            set { this.SetValue(FontAttributesProperty, value); }
+            set { SetValue(FontAttributesProperty, value); }
         }
 
         /// <summary>
@@ -153,7 +153,7 @@ namespace AndreasReitberger.Shared.XForm.Controls
         public double FontSize
         {
             get { return (double)GetValue(FontSizeProperty); }
-            set { this.SetValue(FontSizeProperty, value); }
+            set { SetValue(FontSizeProperty, value); }
         }
 
         #endregion
@@ -171,7 +171,7 @@ namespace AndreasReitberger.Shared.XForm.Controls
             var titleView = bindable as TitleView;
             var newView = (View)newValue;
             newView.HorizontalOptions = LayoutOptions.Start;
-            titleView.Children.Add(newView, 1, 0);
+            titleView?.Children.Add(newView, 1, 0);
         }
 
         /// <summary>
@@ -185,7 +185,7 @@ namespace AndreasReitberger.Shared.XForm.Controls
             var titleView = bindable as TitleView;
             var newView = (View)newValue;
             newView.HorizontalOptions = LayoutOptions.End;
-            titleView.Children.Add(newView, 3, 0);
+            titleView?.Children.Add(newView, 3, 0);
         }
 
         /// <summary>
@@ -199,12 +199,11 @@ namespace AndreasReitberger.Shared.XForm.Controls
             var titleView = bindable as TitleView;
             var newView = (View)newValue;
 
-            if (!string.IsNullOrEmpty(titleView.Title))
+            if (!string.IsNullOrEmpty(titleView?.Title))
             {
                 titleView.Children.Remove(titleView.titleLabel);
             }
-
-            titleView.Children.Add(newView, 2, 0);
+            titleView?.Children.Add(newView, 2, 0);
         }
 
         /// <summary>
@@ -218,7 +217,7 @@ namespace AndreasReitberger.Shared.XForm.Controls
             var titleView = bindable as TitleView;
             var newText = (string)newValue;
 
-            if (!string.IsNullOrEmpty(newText))
+            if (!string.IsNullOrEmpty(newText) && titleView is not null)
             {
                 titleView.titleLabel = new Label
                 {
@@ -256,8 +255,7 @@ namespace AndreasReitberger.Shared.XForm.Controls
         static void OnFontFamilyPropertyChanged(BindableObject bindable, object oldValue, object newValue)
         {
             var titleView = bindable as TitleView;
-
-            if (titleView.titleLabel != null)
+            if (titleView?.titleLabel != null)
             {
                 titleView.titleLabel.FontFamily = (string)newValue;
             }
@@ -273,7 +271,7 @@ namespace AndreasReitberger.Shared.XForm.Controls
         {
             var titleView = bindable as TitleView;
 
-            if (titleView.titleLabel != null)
+            if (titleView?.titleLabel != null)
             {
                 titleView.titleLabel.FontAttributes = (FontAttributes)newValue;
             }
@@ -289,7 +287,7 @@ namespace AndreasReitberger.Shared.XForm.Controls
         {
             var titleView = bindable as TitleView;
 
-            if (titleView.titleLabel != null)
+            if (titleView?.titleLabel != null)
             {
                 titleView.titleLabel.FontSize = (double)newValue;
             }

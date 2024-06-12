@@ -42,10 +42,10 @@ namespace AndreasReitberger.Shared.XForm.Syncfusion.Controls
 
         static void OnSelectionChanged(BindableObject bindable, object oldValue, object newValue)
         {
-            MultiSelectComboBox comboBox = bindable as MultiSelectComboBox;
+            MultiSelectComboBox? comboBox = bindable as MultiSelectComboBox;
             if (newValue is IList selectedItems)
             {
-                comboBox.SetValue(SelectedItemsListProperty, selectedItems);
+                comboBox?.SetValue(SelectedItemsListProperty, selectedItems);
             }
         }
     }

@@ -1,12 +1,16 @@
 ﻿using AndreasReitberger.Shared.XForm.Syncfusion.Interfaces;
+using CommunityToolkit.Mvvm.ComponentModel;
 
 namespace AndreasReitberger.Shared.XForm.Syncfusion.Filtering
 {
-    public class ListViewFilterProperty : IListViewFilterProperty
+    public partial class ListViewFilterProperty : ObservableObject, IListViewFilterProperty
     {
         #region Properties
-        public string LocalisedName { get; set; } = "";
-        public string Property { get; set; }
+        [ObservableProperty]
+        string localisedName = string.Empty;
+
+        [ObservableProperty]
+        string property = string.Empty;
         #endregion
 
         #region overrides
