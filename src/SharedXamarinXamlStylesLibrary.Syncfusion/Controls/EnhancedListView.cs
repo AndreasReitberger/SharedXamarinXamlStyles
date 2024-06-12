@@ -46,7 +46,7 @@ namespace AndreasReitberger.Shared.XForm.Syncfusion.Controls
         /// </summary>
         //string searchText;
         //ListViewFilterBase filter;
-        SortDescriptor defaultSortDescriptor;
+        SortDescriptor? defaultSortDescriptor;
         #endregion
 
         #region Property
@@ -73,9 +73,9 @@ namespace AndreasReitberger.Shared.XForm.Syncfusion.Controls
             set { SetValue(IsFilterProperty, value); }
         }
 
-        public SortDescriptor DefaultSortDescriptor
+        public SortDescriptor? DefaultSortDescriptor
         {
-            get { return (SortDescriptor)GetValue(DefaultSortDescriptorProperty); }
+            get { return (SortDescriptor?)GetValue(DefaultSortDescriptorProperty); }
             set { SetValue(DefaultSortDescriptorProperty, value); }
         }
         #endregion
@@ -101,11 +101,11 @@ namespace AndreasReitberger.Shared.XForm.Syncfusion.Controls
 
         static void OnSelectionChanged(BindableObject bindable, object oldValue, object newValue)
         {
-            EnhancedListView listView = bindable as EnhancedListView;
+            EnhancedListView? listView = bindable as EnhancedListView;
             if (newValue is IList selectedItems)
             {
-                listView.SetValue(SelectedItemsListProperty, selectedItems);
-                if (selectedItems?.Count > 0 && listView.SelectedItems.Count == 0)
+                listView?.SetValue(SelectedItemsListProperty, selectedItems);
+                if (selectedItems?.Count > 0 && listView?.SelectedItems.Count == 0)
                 {
                     foreach (var item in selectedItems)
                         listView.SelectedItems.Add(item);
@@ -259,7 +259,7 @@ namespace AndreasReitberger.Shared.XForm.Syncfusion.Controls
         #endregion
 
         #region Event Handlers
-        public event EventHandler<EnhancedListViewFilterChangedEventArgs> FilterChanged;
+        public event EventHandler<EnhancedListViewFilterChangedEventArgs>? FilterChanged;
         protected virtual void OnFilterChanged(EnhancedListViewFilterChangedEventArgs e)
         {
             FilterChanged?.Invoke(this, e);

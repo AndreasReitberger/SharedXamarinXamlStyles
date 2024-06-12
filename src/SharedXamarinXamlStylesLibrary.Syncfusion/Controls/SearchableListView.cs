@@ -58,7 +58,7 @@ namespace AndreasReitberger.Shared.XForm.Syncfusion.Controls
         /// </summary>
         //string searchText;
         //ListViewFilterBase filter;
-        SortDescriptor defaultSortDescriptor;
+        SortDescriptor? defaultSortDescriptor;
         #endregion
 
         #region Property
@@ -71,7 +71,7 @@ namespace AndreasReitberger.Shared.XForm.Syncfusion.Controls
             get { return (string)GetValue(SearchTextProperty); }
             set { SetValue(SearchTextProperty, value); }
         }
-        public IListViewFilterBase Filter
+        public IListViewFilterBase? Filter
         {
             get { return (IListViewFilterBase)GetValue(FilterProperty); }
             set { SetValue(FilterProperty, value); }
@@ -83,9 +83,9 @@ namespace AndreasReitberger.Shared.XForm.Syncfusion.Controls
             set { SetValue(IsFilterProperty, value); }
         }
 
-        public SortDescriptor DefaultSortDescriptor
+        public SortDescriptor? DefaultSortDescriptor
         {
-            get { return (SortDescriptor)GetValue(DefaultSortDescriptorProperty); }
+            get { return (SortDescriptor?)GetValue(DefaultSortDescriptorProperty); }
             set { SetValue(DefaultSortDescriptorProperty, value); }
         }
 
@@ -126,10 +126,10 @@ namespace AndreasReitberger.Shared.XForm.Syncfusion.Controls
 
         static void OnSelectionChanged(BindableObject bindable, object oldValue, object newValue)
         {
-            SearchableListView listView = bindable as SearchableListView;
+            SearchableListView? listView = bindable as SearchableListView;
             if (newValue is IList selectedItems)
             {
-                listView.SetValue(SelectedItemsListProperty, selectedItems);
+                listView?.SetValue(SelectedItemsListProperty, selectedItems);
             }
         }
 
