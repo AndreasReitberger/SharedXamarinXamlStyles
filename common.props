@@ -1,8 +1,8 @@
 
 <Project>
     <PropertyGroup>
-        <Version>1.0.1-preview1</Version>
-        <!--<PackageIcon>logo_128.png</PackageIcon>-->
+        <Version>1.0.1</Version>
+        <PackageIcon>ar_128.png</PackageIcon>
         <NeutralLanguage>en</NeutralLanguage>
         <PackageProjectUrl>https://github.com/AndreasReitberger/SharedXamarinXamlStyles</PackageProjectUrl>
         <RepositoryUrl>https://github.com/AndreasReitberger/SharedXamarinXamlStyles</RepositoryUrl>
@@ -13,8 +13,9 @@
         <Authors>Andreas Reitberger</Authors>
         <Copyright>Andreas Reitberger</Copyright>
     	<Company>Andreas Reitberger</Company>
-    	<LangVersion>11</LangVersion>
+    	<LangVersion>12</LangVersion>
         <PublishReadyToRun>false</PublishReadyToRun>
+		<Nullable>enable</Nullable>
 
         <!--Source-Linking-->
         <PublishRepositoryUrl>true</PublishRepositoryUrl>
@@ -23,14 +24,13 @@
 		<GeneratePackageOnBuild>True</GeneratePackageOnBuild>
     </PropertyGroup>
 
-<!--
     <ItemGroup>
-      <None Include="..\..\art\logo_128.png">
+      <None Include="..\..\art\ar_128.png">
         <Pack>True</Pack>
         <PackagePath></PackagePath>
       </None>
    </ItemGroup>
--->
+
   <ItemGroup>
     <PackageReference Include="Microsoft.SourceLink.GitHub" Version="8.0.0" PrivateAssets="All"/>
   </ItemGroup>
