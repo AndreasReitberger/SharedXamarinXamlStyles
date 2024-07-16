@@ -27,26 +27,26 @@
 	</ItemGroup>
 	
   <ItemGroup>
-    <PackageReference Include="Syncfusion.Xamarin.Buttons" Version="26.1.41" />
-    <PackageReference Include="Syncfusion.Xamarin.Cards" Version="26.1.41" />
-    <PackageReference Include="Syncfusion.Xamarin.Expander" Version="26.1.41" />
-    <PackageReference Include="Syncfusion.Xamarin.SfAutoComplete" Version="26.1.41" />
-    <PackageReference Include="Syncfusion.Xamarin.SfBadgeView" Version="26.1.41" />
-    <PackageReference Include="Syncfusion.Xamarin.SfBusyIndicator" Version="26.1.41" />
-    <PackageReference Include="Syncfusion.Xamarin.SfCalendar" Version="26.1.41" />
-    <PackageReference Include="Syncfusion.Xamarin.SfChart" Version="26.1.41" />
-    <PackageReference Include="Syncfusion.Xamarin.SfComboBox" Version="26.1.41" />
-    <PackageReference Include="Syncfusion.Xamarin.SfGauge" Version="26.1.41" />
-    <PackageReference Include="Syncfusion.Xamarin.SfListView" Version="26.1.41" />
-    <PackageReference Include="Syncfusion.Xamarin.SfMaskedEdit" Version="26.1.41" />
-    <PackageReference Include="Syncfusion.Xamarin.SfNumericTextBox" Version="26.1.41" />
-    <PackageReference Include="Syncfusion.Xamarin.SfNumericUpDown" Version="26.1.41" />
-    <PackageReference Include="Syncfusion.Xamarin.SfPicker" Version="26.1.41" />
-    <PackageReference Include="Syncfusion.Xamarin.SfProgressBar" Version="26.1.41" />
-    <PackageReference Include="Syncfusion.Xamarin.SfPullToRefresh" Version="26.1.41" />
-    <PackageReference Include="Syncfusion.Xamarin.SfRangeSlider" Version="26.1.41" />
-    <PackageReference Include="Syncfusion.Xamarin.SfRotator" Version="26.1.41" />
-    <PackageReference Include="Syncfusion.Xamarin.SfTabView" Version="26.1.41" />
+    <PackageReference Include="Syncfusion.Xamarin.Buttons" Version="26.1.42" />
+    <PackageReference Include="Syncfusion.Xamarin.Cards" Version="26.1.42" />
+    <PackageReference Include="Syncfusion.Xamarin.Expander" Version="26.1.42" />
+    <PackageReference Include="Syncfusion.Xamarin.SfAutoComplete" Version="26.1.42" />
+    <PackageReference Include="Syncfusion.Xamarin.SfBadgeView" Version="26.1.42" />
+    <PackageReference Include="Syncfusion.Xamarin.SfBusyIndicator" Version="26.1.42" />
+    <PackageReference Include="Syncfusion.Xamarin.SfCalendar" Version="26.1.42" />
+    <PackageReference Include="Syncfusion.Xamarin.SfChart" Version="26.1.42" />
+    <PackageReference Include="Syncfusion.Xamarin.SfComboBox" Version="26.1.42" />
+    <PackageReference Include="Syncfusion.Xamarin.SfGauge" Version="26.1.42" />
+    <PackageReference Include="Syncfusion.Xamarin.SfListView" Version="26.1.42" />
+    <PackageReference Include="Syncfusion.Xamarin.SfMaskedEdit" Version="26.1.42" />
+    <PackageReference Include="Syncfusion.Xamarin.SfNumericTextBox" Version="26.1.42" />
+    <PackageReference Include="Syncfusion.Xamarin.SfNumericUpDown" Version="26.1.42" />
+    <PackageReference Include="Syncfusion.Xamarin.SfPicker" Version="26.1.42" />
+    <PackageReference Include="Syncfusion.Xamarin.SfProgressBar" Version="26.1.42" />
+    <PackageReference Include="Syncfusion.Xamarin.SfPullToRefresh" Version="26.1.42" />
+    <PackageReference Include="Syncfusion.Xamarin.SfRangeSlider" Version="26.1.42" />
+    <PackageReference Include="Syncfusion.Xamarin.SfRotator" Version="26.1.42" />
+    <PackageReference Include="Syncfusion.Xamarin.SfTabView" Version="26.1.42" />
     <PackageReference Include="Xamarin.Forms" Version="5.0.0.2662" />
 	<PackageReference Include="Xamarin.Essentials" Version="1.8.1" />
   </ItemGroup>
