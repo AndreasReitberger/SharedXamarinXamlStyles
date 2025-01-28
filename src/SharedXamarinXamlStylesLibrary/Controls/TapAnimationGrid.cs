@@ -87,22 +87,11 @@ namespace AndreasReitberger.Shared.XForm.Controls
         /// <summary>
         /// Gets or sets the tapped command.
         /// </summary>
-        public ICommand TappedCommand => tappedCommand
-                ?? (tappedCommand = new Command(() =>
-                {
-                    if (Tapped)
-                    {
-                        Tapped = false;
-                    }
-                    else
-                    {
-                        Tapped = true;
-                    }
-                    if (Command != null)
-                    {
-                        Command.Execute(CommandParameter);
-                    }
-                }));
+        public ICommand TappedCommand => tappedCommand ??= new Command(() =>
+        {
+            Tapped = !Tapped;
+            Command?.Execute(CommandParameter);
+        });
 
         #endregion
 

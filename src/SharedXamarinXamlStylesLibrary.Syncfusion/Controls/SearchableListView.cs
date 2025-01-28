@@ -288,10 +288,12 @@ namespace AndreasReitberger.Shared.XForm.Syncfusion.Controls
 
         void SelectedItems_CollectionChanged(object sender, System.Collections.Specialized.NotifyCollectionChangedEventArgs e)
         {
+            /*
             if (sender is ObservableCollection<object> items)
             {
 
             }
+            */
         }
         #endregion
 
