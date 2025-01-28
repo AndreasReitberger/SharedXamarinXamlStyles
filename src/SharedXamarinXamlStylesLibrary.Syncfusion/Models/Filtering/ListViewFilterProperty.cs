@@ -7,27 +7,23 @@ namespace AndreasReitberger.Shared.XForm.Syncfusion.Filtering
     {
         #region Properties
         [ObservableProperty]
-        string localisedName = string.Empty;
+        public partial string LocalisedName { get; set; } = string.Empty;
 
         [ObservableProperty]
-        string property = string.Empty;
+        public partial string Property { get; set; } = string.Empty;
         #endregion
 
         #region overrides
-        public override string ToString()
-        {
-            return LocalisedName;
-        }
+        public override string ToString() => LocalisedName;
+        
         public override bool Equals(object obj)
         {
-            if (!(obj is ListViewFilterProperty item))
+            if (obj is not ListViewFilterProperty item)
                 return false;
             return Property.Equals(item.Property);
         }
-        public override int GetHashCode()
-        {
-            return Property.GetHashCode();
-        }
+        public override int GetHashCode() => Property.GetHashCode();
+        
         #endregion
     }
 }

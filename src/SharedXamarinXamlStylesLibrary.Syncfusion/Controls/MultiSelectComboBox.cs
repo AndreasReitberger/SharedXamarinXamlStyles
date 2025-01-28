@@ -14,7 +14,7 @@ namespace AndreasReitberger.Shared.XForm.Syncfusion.Controls
 
         void ComboBoxItemSelect_SelectionChanged(object sender, SelectionChangedEventArgs e)
         {
-            if (!(e.Value is IList list))
+            if (e.Value is not IList list)
             {
                 // Single item (if token is set to 'none')
                 list = new ArrayList
