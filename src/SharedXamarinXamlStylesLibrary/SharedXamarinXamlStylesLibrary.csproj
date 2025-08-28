@@ -41,7 +41,7 @@
 	</ItemGroup>
 	
   <ItemGroup>
-    <PackageReference Include="SharedXFormCoreLibrary" Version="1.0.2" />
+    <PackageReference Include="SharedXFormCoreLibrary" Version="1.0.3" />
     <PackageReference Include="Xamarin.Forms" Version="5.0.0.2662" />
 	<PackageReference Include="Xamarin.Essentials" Version="1.8.1" />
   </ItemGroup>

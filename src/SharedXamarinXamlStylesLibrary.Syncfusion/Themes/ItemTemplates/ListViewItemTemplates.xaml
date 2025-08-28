@@ -10,9 +10,9 @@
     xmlns:shared="clr-namespace:AndreasReitberger.Shared.XForm.Themes;assembly=SharedXamarinXamlStylesLibrary"
     xmlns:icons="clr-namespace:AndreasReitberger.Shared.XForm.FontIcons;assembly=SharedXamarinXamlStylesLibrary"
     xmlns:iconsSyncfusion="clr-namespace:AndreasReitberger.Shared.XForm.Syncfusion.FontIcons"
-    xmlns:documentation="clr-namespace:AndreasReitberger.Shared.XForm.Core.Documentation;assembly=SharedXFormCoreLibrary"
-    xmlns:eventLogger="clr-namespace:AndreasReitberger.Shared.XForm.Core.EventLogger;assembly=SharedXFormCoreLibrary"
-    xmlns:language="clr-namespace:AndreasReitberger.Shared.XForm.Core.Localization;assembly=SharedXFormCoreLibrary"
+    xmlns:documentation="clr-namespace:AndreasReitberger.Shared.Core.Documentation;assembly=SharedNetCoreLibrary"
+    xmlns:eventLogger="clr-namespace:AndreasReitberger.Shared.Core.EventLogger;assembly=SharedNetCoreLibrary"
+    xmlns:language="clr-namespace:AndreasReitberger.Shared.Core.Localization;assembly=SharedNetCoreLibrary"
     >
     <ResourceDictionary.MergedDictionaries>
         <shared:SharedColors />
@@ -219,7 +219,7 @@
     </DataTemplate>
 
     <!-- Documentation -->
-    <DataTemplate x:Key="DataTemplate.Core.ChangelogInfo.Default" x:DataType="documentation:ChangelogInfo">
+    <DataTemplate x:Key="DataTemplate.Core.ChangelogInfo.Default" x:DataType="documentation:ChangeInfo">
         <ViewCell>
             <Grid
                 x:Name="Grid"
