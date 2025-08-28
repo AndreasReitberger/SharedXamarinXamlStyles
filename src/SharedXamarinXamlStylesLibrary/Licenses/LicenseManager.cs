@@ -1,4 +1,4 @@
-﻿using AndreasReitberger.Shared.XForm.Core.Documentation;
+﻿using AndreasReitberger.Shared.Core.Documentation;
 
 namespace AndreasReitberger.Shared.XForm.Licenses
 {

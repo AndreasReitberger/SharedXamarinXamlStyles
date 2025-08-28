@@ -5,7 +5,7 @@
     xmlns="http://xamarin.com/schemas/2014/forms"
     xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
     
-    xmlns:documentation="clr-namespace:AndreasReitberger.Shared.XForm.Core.Documentation;assembly=SharedXFormCoreLibrary"
+    xmlns:documentation="clr-namespace:AndreasReitberger.Shared.Core.Documentation;assembly=SharedNetCoreLibrary"
     xmlns:converters="clr-namespace:AndreasReitberger.Shared.XForm.Core.Converters;assembly=SharedXFormCoreLibrary"
     >
     <ResourceDictionary.MergedDictionaries>
