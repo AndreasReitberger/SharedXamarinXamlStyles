@@ -27,7 +27,7 @@
 	</ItemGroup>
 	
   <ItemGroup>
-    <PackageReference Include="SharedXFormCoreLibrary" Version="1.0.3" />
+    <PackageReference Include="SharedXFormCoreLibrary" Version="1.0.4" />
     <PackageReference Include="Syncfusion.Xamarin.Buttons" Version="30.2.4" />
     <PackageReference Include="Syncfusion.Xamarin.Cards" Version="30.2.4" />
     <PackageReference Include="Syncfusion.Xamarin.Expander" Version="30.2.4" />
